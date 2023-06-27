@@ -1,0 +1,96 @@
+<!--
+=========================================================
+* Material Kit 2 - v3.0.4
+=========================================================
+
+* Product Page:  https://www.creative-tim.com/product/material-kit 
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="es" itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <style>
+    
+    body {
+        background-image: url("{% static 'images/petrullero upscaled.jpeg' %}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }  
+    /* Agregar un pseudo-elemento para la superposición */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Superposición negra con 50% de opacidad */
+            z-index: -1;
+        }
+    
+  </style>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
+<link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+<title>
+  {% block title %}{% endblock title %}
+</title>
+<!--     Fonts and icons     -->
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+<!-- Nucleo Icons -->
+<link href="{% static 'css/nucleo-icons.css' %}" rel="stylesheet" />
+<link href="{% static 'css/nucleo-svg.css' %}" rel="stylesheet" />
+<!-- Font Awesome Icons -->
+<script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+<!-- Material Icons -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+<!-- CSS Files -->
+<link id="pagestyle" href="{% static 'css/material-kit.css' %}" rel="stylesheet" />
+{% block extrastyle %}
+  <style>
+    /* Nueva regla CSS para el color del texto */
+    body, h1, h2, h3, h4, h5, h6, p, a {
+        color: #FF8C00; /* Esto establece el color del texto a Naranja Clásico */
+    }
+  </style>
+{% endblock extrastyle %}
+</head>
+
+<body 
+{% block body %}
+
+{% endblock body %} >
+
+  {% block header %}
+  <div style="margin-bottom: 150px;">
+
+    {% include 'includes/navigation.html' %}
+  </div>
+
+  {% endblock header %}
+
+  <div class="mx-lg-5 mx-md-3 mx-sm-1 px-lg-5 px-md-3 px-sm-0">
+
+    {% block content %}{% endblock content %}
+  </div>
+
+  {% block footer %}
+  
+    {% include 'includes/footer_background.html' %}
+
+  {% endblock footer %}
+
+  {% include 'includes/scripts.html' %}
+
+  {% block javascripts %}{% endblock javascripts %}
+
+</body>
+</html>
