@@ -1,12 +1,10 @@
+
 {% extends 'base.html' %}
 
-{% block title %} Perfil {% endblock %}
-
 {% block content %}
-    <h1>Perfil de {{ user.username }}</h1>
-    <p>Bienvenido, {{ user.first_name }} {{ user.last_name }}!</p>
-    <p>Email: {{ user.email }}</p>
-    <a href="{% url 'parte_policial' %}" class="btn">Redactar Parte</a>
+<h1>{% if status == 'success' %}Guardado exitosamente{% else %}Error al guardar el parte{% endif %}</h1>
+<a href="{% url 'mis_partes_policiales' %}"><button>Ver mis partes policiales</button></a>
+
     <style>
         .btn {
             display: inline-block;
@@ -20,5 +18,5 @@
             cursor: pointer;
         }
     </style>
-    
 {% endblock %}
+

@@ -183,12 +183,12 @@ class OrdenCombustible(models.Model):
 class PartePolicial(models.Model):    
     fecha = models.DateField(max_length=45, blank=True, null=True)
     sel_tparte= [
-            ('Tipo 01','Mantenimiento preventivo'),  
-            ('Tipo 02','Mantenimiento emergente'),  
-            ('Tipo 03','Novedades'),            
+            ('Mantenimiento Preventivo','Mantenimiento preventivo'),  
+            ('Mantenimiento emergente','Mantenimiento emergente'),  
+            ('Novedades','Novedades'),            
              ] 
-    tipo_parte = models.CharField(db_column='Tipo de combustible', blank=True, null=True, choices=sel_tparte, max_length=26)   
-    observaciones = models.TextField(max_length=45, blank=True, null=True)
+    tipo_parte = models.CharField(db_column='Tipo de Parte', blank=True, null=True, choices=sel_tparte, max_length=26)   
+    observaciones = models.TextField(max_length=450, blank=True, null=True)
     personalPolicial = models.ForeignKey(PersonalPolicial, models.DO_NOTHING,)
     
     class Meta:

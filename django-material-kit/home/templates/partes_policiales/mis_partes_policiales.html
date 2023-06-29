@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Mis Partes Policiales</h1>
+    <ul>
+        {% for parte in partes_policiales %}
+            <li>
+                Fecha: {{ parte.fecha }},
+                Tipo de Parte: {{ parte.tipo_parte }},
+                Observaciones: {{ parte.observaciones }}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'parte_policial' %}"><button>Registrar nuevo parte policial</button></a>
+{% endblock %}
