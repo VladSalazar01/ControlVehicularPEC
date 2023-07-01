@@ -12,5 +12,19 @@
             </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'parte_policial' %}"><button>Registrar nuevo parte policial</button></a>
+    <a href="{% url 'parte_policial' %}"class="btn">Registrar nuevo parte policial</a><br>
+    <a href="{% url 'mis_partes_policiales' %}" class="btn">Ver mis partes policiales</a>
+    <style>
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 {% endblock %}

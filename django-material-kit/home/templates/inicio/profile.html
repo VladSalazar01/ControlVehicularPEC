@@ -6,7 +6,8 @@
     <h1>Perfil de {{ user.username }}</h1>
     <p>Bienvenido, {{ user.first_name }} {{ user.last_name }}!</p>
     <p>Email: {{ user.email }}</p>
-    <a href="{% url 'parte_policial' %}" class="btn">Redactar Parte</a>
+    <a href="{% url 'parte_policial' %}" class="btn">Redactar Parte</a><br>
+    <a href="{% url 'mis_partes_policiales' %}" class="btn">Ver mis partes policiales</a>
     <style>
         .btn {
             display: inline-block;
