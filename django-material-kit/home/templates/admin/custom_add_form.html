@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <h1>Añadir Usuario</h1>
+    <form method="post">
+        {% csrf_token %}
+        <h2>Información de Usuario</h2>
+        <p>Nombre de usuario: {{ combined_form.username }}</p>
+        <p>Constaseña: {{ combined_form.password }}</p>
+        <p>Confirmar constraseña: {{ combined_form.confirm_password }}</p>
+        <p>Nombres: {{ combined_form.first_name }}</p>
+        <p>Apellidos: {{ combined_form.last_name }}</p>
+        <p>{{ combined_form.direccion.label_tag }}: {{ combined_form.direccion }}</p>
+        <p>{{ combined_form.fecha_de_nacimiento.label_tag }}: {{ combined_form.fecha_de_nacimiento }}</p>
+        <p>{{ combined_form.genero.label_tag }}: {{ combined_form.genero }}</p>
+        <p>{{ combined_form.identificacion.label_tag }}: {{ combined_form.identificacion }}</p>
+        <p>{{ combined_form.rango.label_tag }}: {{ combined_form.rango }}</p>
+        <p>{{ combined_form.tipo_sange.label_tag }}: {{ combined_form.tipo_sange }}</p>
+        <p>{{ combined_form.titular.label_tag }}: {{ combined_form.titular }}</p>
+        <p>{{ combined_form.subcircuito.label_tag }}: {{ combined_form.subcircuito }}</p>
+        <p>{{ combined_form.role.label_tag }}: {{ combined_form.role }}</p>
+        <input type="submit" value="Submit">
+    </form>
+{% endblock %}

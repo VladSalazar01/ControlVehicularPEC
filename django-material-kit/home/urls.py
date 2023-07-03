@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
-from django.urls import path
 from .views import *
+
 
 urlpatterns = [
     #path('', views.index, name='index'),
@@ -13,6 +13,6 @@ urlpatterns = [
     path('status/<str:status>/', status, name='status'),
     #partes policiales consultar
     path('mis_partes_policiales/', mis_partes_policiales, name='mis_partes_policiales'),
-
+  
 
 ]

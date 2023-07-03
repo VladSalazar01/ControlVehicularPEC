@@ -2,29 +2,111 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Mis Partes Policiales</h1>
-    <ul>
+<h1>Mis Partes Policiales</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Fecha</th>
+            <th>Tipo de Parte</th>
+            <th>Observaciones</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
         {% for parte in partes_policiales %}
-            <li>
-                Fecha: {{ parte.fecha }},
-                Tipo de Parte: {{ parte.tipo_parte }},
-                Observaciones: {{ parte.observaciones }}
-            </li>
+            <tr>
+                <td>{{ parte.fecha }}</td>
+                <td>{{ parte.tipo_parte }}</td>
+                <td>{{ parte.observaciones }}</td>
+                <td class="estado-{{ parte.estado|lower }}">{{ parte.estado }}</td>
+            </tr>
         {% endfor %}
-    </ul>
-    <a href="{% url 'parte_policial' %}"class="btn">Registrar nuevo parte policial</a><br>
-    <a href="{% url 'mis_partes_policiales' %}" class="btn">Ver mis partes policiales</a>
-    <style>
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 5px;
-            font-size: 16px;
-            text-align: center;
-            border: none;
-            background-color: #4CAF50;
-            color: white;
-            cursor: pointer;
+    </tbody>
+</table>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if partes_policiales.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ partes_policiales.previous_page_number }}">previous</a>
+        {% endif %}
+        
+        <span class="current">
+            Page {{ partes_policiales.number }} of {{ partes_policiales.paginator.num_pages }}.
+        </span>
+        
+        {% if partes_policiales.has_next %}
+            <a href="?page={{ partes_policiales.next_page_number }}">next</a>
+            <a href="?page={{ partes_policiales.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+<a href="{% url 'parte_policial' %}"><button>Registrar nuevo parte policial</button></a>
+
+{% endblock %}
+
+{% block extrastyle %}
+<style>
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .estado-rechazado {
+        background-color: red;
+        color: white;
+    }
+
+    .estado-en proceso {
+        background-color: yellow;
+        color: black;
+    }
+
+    .estado-completado {
+        background-color: green;
+        color: white;
+    }
+
+    .pagination {
+        margin: 10px 0;
+    }
+
+    .pagination .step-links {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .pagination .step-links a, .pagination .step-links span {
+        color: #0366d6;
+        padding: 5px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        margin-right: 5px;
+    }
+
+    .pagination .step-links .current {
+        background-color: #0366d6;
+        color: white;
+        border: none;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
         }
-    </style>
+</style>
 {% endblock %}

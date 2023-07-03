@@ -2,20 +2,28 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 #para validaciones (cedula)
-from django.core.exceptions import ValidationError
+from django.core.validators import RegexValidator
 
 #modelos para la expansion de auth.user
 class Usuario(models.Model): # usar para extension de aut.user       
     #rol = models.CharField(max_length=45, null=True)       [usar para solo lectura]     
-    direccion = models.CharField(max_length=45, null=True,blank=True)
+    direccion = models.CharField(max_length=200, null=True, blank=True)
     fecha_de_nacimiento = models.DateField(null=True,blank=True)
     GENEROop=   [('M','Masculino'),
                 ('F','Femenino'), ]
     genero = models.CharField(db_column='Genero', max_length=1, blank=True, null=True, choices=GENEROop)
+    identificacion_validator = RegexValidator(
+        regex=r'^\d{10}$',
+        message="La identificación debe ser exactamente 10 dígitos."
+    )
     identificacion = models.CharField(
-                                    max_length=50, db_column='Identificacion',
-                                    null=True, blank=False
-                                    )    
+        max_length=50,
+        db_column='Identificacion',
+        null=True,
+        blank=False,
+        unique=True, # Asegurarse de que la identificación sea única
+        validators=[identificacion_validator]
+    )       
     rnks = [
             ('Pol', 'Policía'),
             ('CS', 'Cabo Segundo'),
@@ -51,8 +59,6 @@ class Usuario(models.Model): # usar para extension de aut.user
         db_table = 'Usuario datos'
         verbose_name_plural='Datos de usuario'
         
-       
-
 class Tecnico(models.Model):   
     titular = models.BooleanField() #titular /auxiliar usar unicamente si se justifica
     usuario = models.ForeignKey(Usuario, models.DO_NOTHING)   
@@ -189,6 +195,12 @@ class PartePolicial(models.Model):
              ] 
     tipo_parte = models.CharField(db_column='Tipo de Parte', blank=True, null=True, choices=sel_tparte, max_length=26)   
     observaciones = models.TextField(max_length=450, blank=True, null=True)
+    ESTADOS = [
+        ('En Proceso', 'En Proceso'),
+        ('Completado', 'Completado'),
+        ('Rechazado', 'Rechazado'),
+    ]
+    estado = models.CharField(max_length=20, choices=ESTADOS, default='En Proceso')
     personalPolicial = models.ForeignKey(PersonalPolicial, models.DO_NOTHING,)
     
     class Meta:

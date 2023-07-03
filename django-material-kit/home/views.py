@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import *
 from .models import *
 from datetime import date
@@ -62,5 +63,54 @@ def status(request, status):
 def mis_partes_policiales(request):
     usuario = Usuario.objects.get(user=request.user)
     personal_policial = PersonalPolicial.objects.get(usuario=usuario)
-    partes_policiales = PartePolicial.objects.filter(personalPolicial=personal_policial)
+    partes_policiales_list = PartePolicial.objects.filter(personalPolicial=personal_policial)
+    # Paginación
+    paginator = Paginator(partes_policiales_list, 3) # Muestra 5 partes por página
+    page = request.GET.get('page')
+    try:
+        partes_policiales = paginator.page(page)
+    except PageNotAnInteger:
+        # Si la página no es un entero, entrega la primera página.
+        partes_policiales = paginator.page(1)
+    except EmptyPage:
+        # Si la página está fuera de rango, entrega la última página de resultados.
+        partes_policiales = paginator.page(paginator.num_pages)
     return render(request, 'partes_policiales/mis_partes_policiales.html', {'partes_policiales': partes_policiales})
+
+
+#--agregar usuario desde admin panel------
+'''def custom_add_view(self, request):
+    if request.method == "POST":
+        combined_form = CombinedForm(request.POST)
+
+        if combined_form.is_valid():
+            user = User.objects.create_user(
+                username=combined_form.cleaned_data.get('username'),
+                password=combined_form.cleaned_data.get('password'),
+                first_name=combined_form.cleaned_data.get('first_name'),
+                last_name=combined_form.cleaned_data.get('last_name')
+            )
+            usuario = combined_form.save(commit=False)
+            usuario.user = user
+            usuario.save()
+
+            role = combined_form.cleaned_data.get('role')
+            if role == 'personal_policial':
+                PersonalPolicial.objects.create(
+                    usuario=usuario,
+                    subcircuito=combined_form.cleaned_data.get('subcircuito')
+                )
+            elif role == 'tecnico':
+                Tecnico.objects.create(
+                    usuario=usuario,
+                    titular=combined_form.cleaned_data.get('titular')
+                )
+
+            return redirect('admin:index')
+
+    else:
+        combined_form = CombinedForm()
+
+    return render(request, 'admin/custom_add_form.html', {
+        'combined_form': combined_form
+    })'''

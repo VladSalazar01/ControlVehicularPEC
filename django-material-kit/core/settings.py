@@ -50,13 +50,13 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
-
-    
+    "django.contrib.staticfiles",    
 
     'theme_material_kit',
     "home",
 ]
+#lenguajes
+LANGUAGE_CODE = 'es'
 
 MIDDLEWARE = [
     
@@ -82,6 +82,7 @@ TEMPLATES = [
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [HOME_TEMPLATES],
         "APP_DIRS": True,
+        'DIRS': [os.path.join(BASE_DIR, 'myapp/templates')],
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
