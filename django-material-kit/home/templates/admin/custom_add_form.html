@@ -1,24 +1,88 @@
 {% extends "admin/base_site.html" %}
 
 {% block content %}
-    <h1>Añadir Usuario</h1>
-    <form method="post">
-        {% csrf_token %}
-        <h2>Información de Usuario</h2>
-        <p>Nombre de usuario: {{ combined_form.username }}</p>
-        <p>Constaseña: {{ combined_form.password }}</p>
-        <p>Confirmar constraseña: {{ combined_form.confirm_password }}</p>
-        <p>Nombres: {{ combined_form.first_name }}</p>
-        <p>Apellidos: {{ combined_form.last_name }}</p>
-        <p>{{ combined_form.direccion.label_tag }}: {{ combined_form.direccion }}</p>
-        <p>{{ combined_form.fecha_de_nacimiento.label_tag }}: {{ combined_form.fecha_de_nacimiento }}</p>
-        <p>{{ combined_form.genero.label_tag }}: {{ combined_form.genero }}</p>
-        <p>{{ combined_form.identificacion.label_tag }}: {{ combined_form.identificacion }}</p>
-        <p>{{ combined_form.rango.label_tag }}: {{ combined_form.rango }}</p>
-        <p>{{ combined_form.tipo_sange.label_tag }}: {{ combined_form.tipo_sange }}</p>
-        <p>{{ combined_form.titular.label_tag }}: {{ combined_form.titular }}</p>
-        <p>{{ combined_form.subcircuito.label_tag }}: {{ combined_form.subcircuito }}</p>
-        <p>{{ combined_form.role.label_tag }}: {{ combined_form.role }}</p>
-        <input type="submit" value="Submit">
-    </form>
+    <div class="form-container">
+        <form method="post" id="combinedForm">
+            {% csrf_token %}   
+            <h1>Añadir Usuario</h1><br>                                             
+            <table style="border-collapse: collapse; width: 100%;">
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Nombre de usuario:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.username }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Correo electrónico:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.email }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Constaseña:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.password }}{{ combined_form.password.help_text }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Confirmar constraseña:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.confirm_password }}{{ combined_form.confirm_password.help_text }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Nombres:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.first_name }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><strong>Apellidos:</strong></td>
+                    <td style="vertical-align: top;">{{ combined_form.last_name }}</td>
+                </tr>   
+                <tr>
+                    <td style="text-align: left; vertical-align: top;">{{ combined_form.direccion.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.direccion }}</td>
+                </tr>  
+                <tr>
+                    <td style="text-align: left; vertical-align: top;">{{ combined_form.fecha_de_nacimiento.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.fecha_de_nacimiento }}</td>
+                </tr>  
+                <tr>
+                    <td style="text-align: left; vertical-align: top;">{{ combined_form.genero.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.genero }}</td>
+                </tr> 
+                <tr>
+                    <td style="text-align: left; vertical-align: top;">{{ combined_form.identificacion.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.identificacion }}{{ combined_form.identificacion.help_text }}</td>
+                </tr> 
+                <tr>
+                    <td style="text-align: left; vertical-align: top;">{{ combined_form.rango.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.rango }}</td>
+                    {% if combined_form.identificacion.errors %}
+                        <div class="errors">{{ combined_form.identificacion.errors }}</div>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><p>{{ combined_form.tipo_sange.label_tag }}:</td>
+                    <td style="vertical-align: top;">{{ combined_form.tipo_sange }}</td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; vertical-align: top;"><p>{{ combined_form.role.label_tag }}</td>
+                    <td style="vertical-align: top;">{{ combined_form.role }}</td>
+                </tr>
+            </table>                  
+                <p id="pTitular" style="display: none;">{{ combined_form.titular.label_tag }} {{ combined_form.titular }}</p>
+                <p id="pSubcircuito" style="display: none;">{{ combined_form.subcircuito.label_tag }} {{ combined_form.subcircuito }}</p>  
+            <input type="submit" value="Guardar" class="default">
+        </form>
+    </div>    
+    <script>
+        document.getElementById("id_role").addEventListener("change", function() {
+            var role = this.value;
+            var pTitular = document.getElementById("pTitular");
+            var pSubcircuito = document.getElementById("pSubcircuito");
+            if (role === "tecnico") {
+                pTitular.style.display = "block";
+                pSubcircuito.style.display = "none";
+            } else if (role === "personal_policial") {
+                pTitular.style.display = "none";
+                pSubcircuito.style.display = "block";
+            }
+        });
+    </script>
+{% endblock %}
+
+{% block extrascript %}
+    
 {% endblock %}

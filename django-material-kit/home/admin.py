@@ -46,7 +46,8 @@ class CombinedAdmin(admin.ModelAdmin):
                     username=combined_form.cleaned_data.get('username'),
                     password=combined_form.cleaned_data.get('password'),
                     first_name=combined_form.cleaned_data.get('first_name'),
-                    last_name=combined_form.cleaned_data.get('last_name')
+                    last_name=combined_form.cleaned_data.get('last_name'),
+                    email=combined_form.cleaned_data.get('email')
                 )
                 usuario = combined_form.save(commit=False)
                 usuario.user = user
