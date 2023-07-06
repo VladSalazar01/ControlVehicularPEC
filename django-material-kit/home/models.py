@@ -202,7 +202,8 @@ class PartePolicial(models.Model):
     ]
     estado = models.CharField(max_length=20, choices=ESTADOS, default='En Proceso')
     personalPolicial = models.ForeignKey(PersonalPolicial, models.DO_NOTHING,)
-    
+    def __str__(self):
+        return f"El parte {self.tipo_parte}, con fecha {self.fecha},"
     class Meta:
         db_table = 'Parte Policial'
         verbose_name_plural='Partes Policiales'
@@ -210,15 +211,16 @@ class PartePolicial(models.Model):
 #5trio ultimo
 class TallerMecanico(models.Model):    
     mecanico_responsable = models.CharField(max_length=45, null=True)
-    nombre = models.CharField(max_length=45, null=True)
-    direccion = models.TextField(max_length=45, null=True)
-    telefono = models.CharField(max_length=45, null=True)
+    nombre = models.CharField(max_length=45, null=True, blank=True)
+    direccion = models.TextField(max_length=600, null=True, blank=True)
+    telefono = models.CharField(max_length=45, null=True, blank=True)
     sel_ttaller= [
             ('Institucional','Taller institucional'),  
             ('Particular','Taller particular'),                      
              ] 
     tipo_taller = models.CharField(db_column='Tipo de taller', blank=True, null=True, choices=sel_ttaller, max_length=26)   
-
+    def __str__(self):
+        return f"{self.nombre},{self.tipo_taller},"
     class Meta:
         db_table = 'Taller mecanico'
         verbose_name_plural='Talleres Mecánicos'
@@ -241,10 +243,10 @@ class FlotaVehicular(models.Model):
     capacidad_de_pasajeros = models.IntegerField(null=True)
     subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)#foranea subcircuito
     def __str__(self):
-        return f"{self.marca},{self.modelo},{self.chasis},{self.placa},{self.kilometraje},{self.subcircuito.cod_subcircuito},{self.subcircuito.nombre_subcircuito}, "
+        return f"{self.marca},{self.modelo},{self.placa}"
     class Meta:
         db_table = 'Flota Vehicular'
-        verbose_name_plural='Flota vehicular'
+        verbose_name_plural='Vehículos'
 
 class Mantenimientos(models.Model):     
     taller = models.ForeignKey(TallerMecanico, on_delete=models.DO_NOTHING)#foranea taller   

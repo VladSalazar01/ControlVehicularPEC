@@ -121,7 +121,33 @@ admin.site.register(Subcircuitos, SubcircuitoAdmin)
 admin.site.register(OrdendeTrabajo)
 admin.site.register(OrdenMantenimiento)
 admin.site.register(OrdenCombustible)
-admin.site.register(PartePolicial)
-admin.site.register(TallerMecanico)
-admin.site.register(FlotaVehicular)
+
+class PartePolicialAdmin(admin.ModelAdmin):
+    list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial')
+    def nombre_personal_policial(self, obj):
+        return obj.personalPolicial.usuario.user.username 
+    nombre_personal_policial.short_description = 'Personal Policial'
+admin.site.register(PartePolicial, PartePolicialAdmin)
+
+class TallerMecanicoAdmin(admin.ModelAdmin):
+    list_display = ('mecanico_responsable', 'nombre', 'direccion', 'telefono', 'tipo_taller')    
+    def tipo_taller(self, obj):
+        return dict(obj.sel_ttaller).get(obj.tipo_taller, obj.tipo_taller)
+    tipo_taller.short_description = 'Tipo de Taller'
+admin.site.register(TallerMecanico, TallerMecanicoAdmin)
+
+class FlotaVehicularAdmin(admin.ModelAdmin):
+    # Lista de campos a mostrar en la vista de lista
+    list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre')    
+    # Método para mostrar el código del subcircuito 
+    def subcircuito_cod(self, obj):
+        return obj.subcircuito.cod_subcircuito   
+    def subcircuito_nombre(self, obj):
+        return obj.subcircuito.nombre_subcircuito    
+    # Nombres personalizados para las columnas
+    subcircuito_cod.short_description = 'Código Subcircuito'
+    subcircuito_nombre.short_description = 'Nombre Subcircuito'
+admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
+
+
 admin.site.register(Mantenimientos)
