@@ -1,11 +1,11 @@
 from django.contrib import admin
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.urls import path
 from .models import *
-
 from django.shortcuts import render, redirect
 from .forms import CombinedForm
 from django.contrib import messages
+
 
 # Register your models here.
 
@@ -58,19 +58,20 @@ class CombinedAdmin(admin.ModelAdmin):
                     PersonalPolicial.objects.create(
                         usuario=usuario,
                         subcircuito=combined_form.cleaned_data.get('subcircuito')
-                    )
+                    )                    
+                    group = Group.objects.get(name="Personal policial agentes")
+                    user.groups.add(group)
                 elif role == 'tecnico':
                     Tecnico.objects.create(
                         usuario=usuario,
                         titular=combined_form.cleaned_data.get('titular')
-                    )
-
+                    )                    
+                    group = Group.objects.get(name="Encargados de logística")
+                    user.groups.add(group)
                 messages.success(request, 'Usuario creado exitosamente')
                 return redirect('admin:index')
-
         else:
             combined_form = CombinedForm()
-
         return render(request, 'admin/custom_add_form.html', {
             'combined_form': combined_form
         })

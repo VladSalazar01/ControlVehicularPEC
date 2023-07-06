@@ -61,7 +61,7 @@ class Usuario(models.Model): # usar para extension de aut.user
         
 class Tecnico(models.Model):   
     titular = models.BooleanField() #titular /auxiliar usar unicamente si se justifica
-    usuario = models.ForeignKey(Usuario, models.DO_NOTHING)   
+    usuario = models.OneToOneField(Usuario, models.DO_NOTHING)   
     def __str__(self):
             return f"{self.usuario.user.first_name} {self.usuario.user.last_name}"
     class Meta:
@@ -130,9 +130,9 @@ class Subcircuitos(models.Model):
 
 class PersonalPolicial(models.Model):         
     subcircuito = models.ForeignKey(Subcircuitos, models.DO_NOTHING, related_name='PersonalPolicial_Subcircuito')#foranea asignacion    
-    usuario = models.ForeignKey(Usuario, models.DO_NOTHING, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
-    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)#foranea subcircuito
-
+    usuario = models.OneToOneField(Usuario, models.DO_NOTHING, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
+    def __str__(self):
+            return f"{self.usuario.user.first_name} {self.usuario.user.last_name}"
     class Meta:
         db_table = 'Personal Policial' 
         verbose_name_plural='Personal Policial'
@@ -240,7 +240,8 @@ class FlotaVehicular(models.Model):
     capacidad_de_carga = models.CharField(max_length=45, null=True)
     capacidad_de_pasajeros = models.IntegerField(null=True)
     subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)#foranea subcircuito
-
+    def __str__(self):
+        return f"{self.marca},{self.modelo},{self.chasis},{self.placa},{self.kilometraje},{self.subcircuito.cod_subcircuito},{self.subcircuito.nombre_subcircuito}, "
     class Meta:
         db_table = 'Flota Vehicular'
         verbose_name_plural='Flota vehicular'
