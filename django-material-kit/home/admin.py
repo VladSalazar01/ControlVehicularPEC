@@ -5,27 +5,17 @@ from .models import *
 from django.shortcuts import render, redirect
 from .forms import CombinedForm
 from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
+from .models import CustomPermission
+
+#grupos
 
 
-# Register your models here.
 
-'''class UsuarioAdmin(admin.ModelAdmin):
-    list_display = ('tipo_sange','rango', 'datos_usuario')
-    def datos_usuario(self, obj):
-        return f"{obj.user.first_name} {obj.user.last_name}"
-    
-admin.site.register(Usuario, UsuarioAdmin)
+class CustomPermissionAdmin(admin.ModelAdmin):
+    pass
 
-#display tecnico
-class TecnicoAdmin(admin.ModelAdmin):
-    list_display = ('nombre_tecnico','titular', 'rango')
-    def nombre_tecnico(self, obj):
-        return f"{obj.usuario.user.username} {obj.usuario.user.last_name}"
-    def rango(self, obj):
-        return f"{obj.usuario.rango} "    
-admin.site.register(Tecnico, TecnicoAdmin)
-
-admin.site.register(PersonalPolicial)'''
+admin.site.register(CustomPermission, CustomPermissionAdmin)
 
 #---personalizacion de admin panel para agregar usuarios---
 class CombinedAdmin(admin.ModelAdmin):

@@ -3,7 +3,21 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 #para validaciones (cedula)
 from django.core.validators import RegexValidator
+from django.contrib.auth.models import Permission
+from django.utils.translation import gettext_lazy as _
 
+#proximodel
+
+class CustomPermission(Permission):
+    class Meta:
+        proxy = True
+
+    def __str__(self):
+        # Cambia cómo se muestra el nombre del permiso
+        name = super().__str__()
+        name = name.replace('group', 'rol')
+        name = name.replace('Can add group', _('Puede agregar rol'))
+        return name
 #modelos para la expansion de auth.user
 class Usuario(models.Model): # usar para extension de aut.user       
     #rol = models.CharField(max_length=45, null=True)       [usar para solo lectura]     

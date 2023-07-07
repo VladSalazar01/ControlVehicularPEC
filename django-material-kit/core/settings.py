@@ -72,7 +72,9 @@ MIDDLEWARE = [
 
     
 ]
-
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
 ROOT_URLCONF = "core.urls"
 
 HOME_TEMPLATES = os.path.join(BASE_DIR, 'home', 'templates')
@@ -148,7 +150,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "es-es"
+LANGUAGE_CODE = "es"
 
 TIME_ZONE = "UTC"
 
