@@ -6,8 +6,22 @@ from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
 from django.utils.translation import gettext_lazy as _
 
-#proximodel
+##----catálogos----
+class Rango_ctlg(models.Model):  
+    nombre = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.nombre
+    
+'''class Marca_ctlg(models.Model):
+    name = models.CharField(max_length=200)
+
+class Modelo_car_ctlg(models.Model):
+    name = models.CharField(max_length=200)
+    brand = models.ForeignKey(Marca_ctlg, on_delete=models.CASCADE)'''
+
+##fin catalogos----
+#proximodel roles y permisos
 class CustomPermission(Permission):
     class Meta:
         proxy = True
@@ -18,9 +32,10 @@ class CustomPermission(Permission):
         name = name.replace('group', 'rol')
         name = name.replace('Can add group', _('Puede agregar rol'))
         return name
+     
 #modelos para la expansion de auth.user
-class Usuario(models.Model): # usar para extension de aut.user       
-    #rol = models.CharField(max_length=45, null=True)       [usar para solo lectura]     
+class Usuario(models.Model): # usar para extension de aut.user   
+    rol = models.CharField(max_length=50, null=True, blank=True)           
     direccion = models.CharField(max_length=200, null=True, blank=True)
     fecha_de_nacimiento = models.DateField(null=True,blank=True)
     GENEROop=   [('M','Masculino'),
@@ -38,7 +53,7 @@ class Usuario(models.Model): # usar para extension de aut.user
         unique=True, # Asegurarse de que la identificación sea única
         validators=[identificacion_validator]
     )       
-    rnks = [
+    '''rnks = [
             ('Pol', 'Policía'),
             ('CS', 'Cabo Segundo'),
             ('CP', 'Cabo Primero'),
@@ -52,8 +67,8 @@ class Usuario(models.Model): # usar para extension de aut.user
             ('CaP', 'Capitán'),
             ('MaY', 'Mayor'),
             ('TeC', 'Teniente Coronel'),           
-             ]
-    rango = models.CharField(db_column='Rango', blank=True, null=True, choices=rnks, max_length=3)
+             ]'''
+    rango = models.ForeignKey(Rango_ctlg, on_delete=models.SET_NULL, null=True, blank=True)
     tds=   [
             ('A+', 'A positivo'),
             ('A-', 'A negativo'),
@@ -64,7 +79,7 @@ class Usuario(models.Model): # usar para extension de aut.user
             ('O+', 'O positivo'),
             ('O-', 'O negativo'),
              ]
-    tipo_sange = models.CharField(db_column='Tipo de sangre', blank=True, null=True, choices=tds, max_length=3)     
+    tipo_sangre = models.CharField(db_column='Tipo de sangre', blank=True, null=True, choices=tds, max_length=3)     
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_column='usuario', blank=True, null=True)#foranea one to one de user CASCADE
 
     def __str__(self):
@@ -77,7 +92,7 @@ class Tecnico(models.Model):
     titular = models.BooleanField() #titular /auxiliar usar unicamente si se justifica
     usuario = models.OneToOneField(Usuario, models.DO_NOTHING)   
     def __str__(self):
-            return f"{self.usuario.user.first_name} {self.usuario.user.last_name}"
+            return f"{self.usuario.user.first_name}-{self.usuario.user.last_name}"
     class Meta:
         db_table = 'Tecnico'
         verbose_name_plural='Encargados de logística'

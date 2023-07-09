@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator
 from .models import *
+from django.contrib.auth.models import Group
 
 #crear parte policial
 class PartePolicialForm(forms.ModelForm):
@@ -45,16 +46,17 @@ class CombinedForm(forms.ModelForm):
         help_text='Ingrese un número de identificación de 10 dígitos.',
         validators=[RegexValidator(r'^\d{10}$', 'Identificación solo adminte números')]
     )
-    titular = forms.BooleanField(required=False, label='Titular')
+    
+    titular = forms.BooleanField(required=False,label='Titular')
+    subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all(), required=False, label='Subcircuito')
     tipo_sange = forms.ChoiceField(
         choices=Usuario.tds, 
         required=False, 
         label='Tipo de sangre',
         widget=forms.Select(attrs={'class': 'form-control'})
     )
-    subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all(), required=False, label='Subcircuito')
-    role = forms.ChoiceField(choices=[('personal_policial', 'Personal Policial'), ('tecnico', 'Tecnico')], label='Rol')
-
+    rango = forms.ModelChoiceField(queryset=Rango_ctlg.objects.all(), required=False)  
+    rol = forms.ModelChoiceField(queryset=Group.objects.all(), label='Rol')
     class Meta:
         model = Usuario
         fields = ['direccion', 'fecha_de_nacimiento', 'genero', 'identificacion', 'rango', 'tipo_sange']

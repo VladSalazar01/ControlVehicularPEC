@@ -6,12 +6,8 @@ from django.shortcuts import render, redirect
 from .forms import CombinedForm
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
-from .models import CustomPermission
 
 #grupos
-
-
-
 class CustomPermissionAdmin(admin.ModelAdmin):
     pass
 
@@ -26,7 +22,7 @@ class CombinedAdmin(admin.ModelAdmin):
             path('add/', self.admin_site.admin_view(self.custom_add_view), name='custom-add'),
         ]
         return custom_urls + urls
-
+    
     def custom_add_view(self, request):
         if request.method == "POST":
             combined_form = CombinedForm(request.POST)
@@ -36,39 +32,41 @@ class CombinedAdmin(admin.ModelAdmin):
                     username=combined_form.cleaned_data.get('username'),
                     password=combined_form.cleaned_data.get('password'),
                     first_name=combined_form.cleaned_data.get('first_name'),
-                    last_name=combined_form.cleaned_data.get('last_name'),
-                    email=combined_form.cleaned_data.get('email')
+                    last_name=combined_form.cleaned_data.get('last_name')
                 )
                 usuario = combined_form.save(commit=False)
                 usuario.user = user
+                usuario.rol = combined_form.cleaned_data.get('rol').name
+                usuario.rango = combined_form.cleaned_data.get('rango')
                 usuario.save()
 
-                role = combined_form.cleaned_data.get('rol')
-                if role == 'personal_policial':
-                    PersonalPolicial.objects.create(
-                        usuario=usuario,
-                        subcircuito=combined_form.cleaned_data.get('subcircuito')
-                    )                    
-                    group = Group.objects.get(name="Personal policial agentes")
-                    user.groups.add(group)
-                elif role == 'tecnico':
-                    Tecnico.objects.create(
-                        usuario=usuario,
-                        titular=combined_form.cleaned_data.get('titular')
-                    )                    
-                    group = Group.objects.get(name="Encargados de logística")
-                    user.groups.add(group)
+                group = combined_form.cleaned_data.get('rol')               
+                user.groups.add(group)
+
+                # Si el rol es 'tecnico', crear un nuevo objeto Tecnico
+                if usuario.rol == 'Encargados de logística':
+                    Tecnico.objects.create(usuario=usuario, titular=combined_form.cleaned_data.get('titular'))
+
+                # Si el rol es 'personal_policial', crear un nuevo objeto PersonalPolicial
+                elif usuario.rol == 'Personal policial agentes':
+                    PersonalPolicial.objects.create(usuario=usuario, subcircuito=combined_form.cleaned_data.get('subcircuito'))
+
                 messages.success(request, 'Usuario creado exitosamente')
                 return redirect('admin:index')
+
         else:
             combined_form = CombinedForm()
+
         return render(request, 'admin/custom_add_form.html', {
             'combined_form': combined_form
         })
 
 admin.site.register(Usuario, CombinedAdmin)
 admin.site.register(PersonalPolicial, CombinedAdmin)
+
+
 admin.site.register(Tecnico, CombinedAdmin)
+admin.site.register(Rango_ctlg)
 #admin.site.register(Subcircuitos)
 #--fin personalizacion agregar  usuarios--
 
