@@ -1,0 +1,60 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    
+    <form method="post">
+        {% csrf_token %}
+        <h1>Editar Usuario</h1>
+        <p><strong>Nombre de usuario:</strong> {{ combined_form.username }}</p>
+        <p><strong>Correo electrónico:</strong> {{ combined_form.email }}</p>
+        <p><strong>Contraseña:</strong> {{ combined_form.password }}</p>
+        <p><strong>Confirmar contraseña:</strong> {{ combined_form.confirm_password }}</p>
+        <p><strong>Nombres: </strong>{{ combined_form.first_name }}</p>
+        <p><strong>Apellidos: </strong>{{ combined_form.last_name }}</p>
+        <p>{{ combined_form.direccion.label_tag }} {{ combined_form.direccion }}</p>
+        <p>{{ combined_form.fecha_de_nacimiento.label_tag }} {{ combined_form.fecha_de_nacimiento }}</p>
+        <p>{{ combined_form.genero.label_tag }} {{ combined_form.genero }}</p>
+        <p>{{ combined_form.identificacion.label_tag }} {{ combined_form.identificacion }}</p>
+
+        <p>{{ combined_form.rango.label_tag }} {{ combined_form.rango }}</p>
+                {% if combined_form.identificacion.errors %}
+                <div class="errors">{{ combined_form.identificacion.errors }}</div>
+                {% endif %}
+        <p>{{ combined_form.tipo_sangre.label_tag }} {{ combined_form.tipo_sangre }}</p>
+        <p>{{ combined_form.rol.label_tag }} {{ combined_form.rol }}</p>
+
+        <div id="pTitular" style="display: none;">
+            <label for="{{ combined_form.titular.id_for_label }}">{{ combined_form.titular.label }}</label>
+            <input type="checkbox" name="{{ combined_form.titular.html_name }}" id="{{ combined_form.titular.id_for_label }}">
+        </div>
+        <div id="pSubcircuito" style="display: none;">
+            <label for="{{ combined_form.subcircuito.id_for_label }}">{{ combined_form.subcircuito.label }}</label>
+            <select name="{{ combined_form.subcircuito.html_name }}" id="{{ combined_form.subcircuito.id_for_label }}">
+                {% for subcircuito in combined_form.subcircuito.field.queryset %}
+                    <option value="{{ subcircuito.pk }}">{{ subcircuito }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <input type="submit" value="Guardar" class="default">
+
+    </form>
+
+    <script>
+        document.getElementById("id_rol").addEventListener("change", function() {
+            var role = this.options[this.selectedIndex].text;
+            var pTitular = document.getElementById("pTitular");
+            var pSubcircuito = document.getElementById("pSubcircuito");
+            if (role === "Encargados de logística") {
+                pTitular.style.display = "block";
+                pSubcircuito.style.display = "none";
+            } else if (role === "Personal policial agentes") {
+                pTitular.style.display = "none";
+                pSubcircuito.style.display = "block";
+            } else {
+                pTitular.style.display = "none";
+                pSubcircuito.style.display = "none";
+            }
+        });
+    </script>
+{% endblock %}

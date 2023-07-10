@@ -18,6 +18,7 @@ class CombinedForm(forms.ModelForm):
     first_name = forms.CharField(max_length=30, required=True, label='Nombres')
     last_name = forms.CharField(max_length=30, required=True, label='Apellidos')
     username = forms.CharField(max_length=30, required=True, label='Nombre de usuario')
+    email = forms.EmailField(required=True, label='Correo electrónico')
     password = forms.CharField(
         widget=forms.PasswordInput,
         required=True,
@@ -30,7 +31,7 @@ class CombinedForm(forms.ModelForm):
         help_text='Confirme su contraseña.',
         validators=[MinLengthValidator(8)]
     )
-    email = forms.EmailField(required=True, label='Correo electrónico')
+    
     direccion = forms.CharField(widget=forms.Textarea(attrs={'maxlength': 200}), required=False, label='Dirección')
     fecha_de_nacimiento = forms.DateField(
         widget=forms.SelectDateWidget(years=range(date.today().year - 100, date.today().year - 18)),
@@ -45,21 +46,20 @@ class CombinedForm(forms.ModelForm):
         },
         help_text='Ingrese un número de identificación de 10 dígitos.',
         validators=[RegexValidator(r'^\d{10}$', 'Identificación solo adminte números')]
-    )
-    
+    )    
     titular = forms.BooleanField(required=False,label='Titular')
     subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all(), required=False, label='Subcircuito')
-    tipo_sange = forms.ChoiceField(
+    tipo_sangre = forms.ChoiceField(
         choices=Usuario.tds, 
         required=False, 
         label='Tipo de sangre',
         widget=forms.Select(attrs={'class': 'form-control'})
     )
     rango = forms.ModelChoiceField(queryset=Rango_ctlg.objects.all(), required=False)  
-    rol = forms.ModelChoiceField(queryset=Group.objects.all(), label='Rol')
+    rol = forms.ModelMultipleChoiceField(queryset=Group.objects.all())
     class Meta:
         model = Usuario
-        fields = ['direccion', 'fecha_de_nacimiento', 'genero', 'identificacion', 'rango', 'tipo_sange']
+        fields = ['direccion', 'fecha_de_nacimiento', 'genero', 'identificacion', 'rango', 'tipo_sangre']
 
     def clean(self):
         cleaned_data = super().clean()
@@ -71,6 +71,34 @@ class CombinedForm(forms.ModelForm):
     
     def clean_identificacion(self):
         identificacion = self.cleaned_data.get('identificacion')
-        if Usuario.objects.filter(identificacion=identificacion).exists():
-            raise ValidationError('Un usuario con esta identificación ya existe.')
-        return identificacion
+        if self.instance.id is not None:  # Estamos en el proceso de edición
+            return identificacion
+        else:  # Estamos en el proceso de creación
+            if Usuario.objects.filter(identificacion=identificacion).exists():
+                raise forms.ValidationError("La identificación ya está en uso.")
+            return identificacion
+    
+    def __init__(self, *args, user_instance=None, tecnico_instance=None, personal_policial_instance=None,  group_instance=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        if user_instance:
+            self.fields['username'].initial = user_instance.username
+            self.fields['email'].initial = user_instance.email
+            self.fields['password'].initial = user_instance.password
+            self.fields['first_name'].initial = user_instance.first_name
+            self.fields['last_name'].initial = user_instance.last_name
+        if group_instance:
+            self.fields['rol'].initial = group_instance.values_list('id', flat=True)
+        if tecnico_instance:
+            self.fields['titular'].initial = tecnico_instance.titular
+        if personal_policial_instance:
+            self.fields['subcircuito'].initial = personal_policial_instance.subcircuito
+
+    def validate_unique(self):
+        exclude = self._get_validation_exclusions()
+        if 'identificacion' in exclude:
+            exclude.remove('identificacion')  # No incluir 'identificacion' en la validación de unicidad
+
+        try:
+            self.instance.validate_unique(exclude=exclude)
+        except forms.ValidationError as e:
+            self._update_errors(e)

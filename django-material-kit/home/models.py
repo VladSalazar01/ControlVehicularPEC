@@ -1,17 +1,24 @@
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+import requests
 #para validaciones (cedula)
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
 from django.utils.translation import gettext_lazy as _
 
 ##----catálogos----
+def get_vehicle_data(make, year):
+    url = f"https://vpic.nhtsa.dot.gov/api/vehicles/GetModelsForMakeYear/make/{make}/modelyear/{year}?format=json"
+    response = requests.get(url)
+    data = response.json()
+    return data['Results'] if data['Count'] > 0 else []
 class Rango_ctlg(models.Model):  
     nombre = models.CharField(max_length=50)
 
     def __str__(self):
         return self.nombre
+
     
 '''class Marca_ctlg(models.Model):
     name = models.CharField(max_length=200)
@@ -35,7 +42,7 @@ class CustomPermission(Permission):
      
 #modelos para la expansion de auth.user
 class Usuario(models.Model): # usar para extension de aut.user   
-    rol = models.CharField(max_length=50, null=True, blank=True)           
+    #rol = models.CharField(max_length=50, null=True, blank=True)   #sabía que esta no iba aqui pero no        
     direccion = models.CharField(max_length=200, null=True, blank=True)
     fecha_de_nacimiento = models.DateField(null=True,blank=True)
     GENEROop=   [('M','Masculino'),
@@ -50,7 +57,6 @@ class Usuario(models.Model): # usar para extension de aut.user
         db_column='Identificacion',
         null=True,
         blank=False,
-        unique=True, # Asegurarse de que la identificación sea única
         validators=[identificacion_validator]
     )       
     '''rnks = [
@@ -159,7 +165,7 @@ class Subcircuitos(models.Model):
 
 class PersonalPolicial(models.Model):         
     subcircuito = models.ForeignKey(Subcircuitos, models.DO_NOTHING, related_name='PersonalPolicial_Subcircuito')#foranea asignacion    
-    usuario = models.OneToOneField(Usuario, models.DO_NOTHING, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
+    usuario = models.OneToOneField(Usuario, models.CASCADE, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
     def __str__(self):
             return f"{self.usuario.user.first_name} {self.usuario.user.last_name}"
     class Meta:
@@ -255,14 +261,16 @@ class TallerMecanico(models.Model):
         verbose_name_plural='Talleres Mecánicos'
 
 class FlotaVehicular(models.Model):
+       
     sel_tvehiculo= [
             ('Auto','Automóvil'),  
             ('Moto','Motocicleta'),  
             ('Camioneta','Camioneta'),            
-             ]     
+            ]     
     tipo_vehiculo = models.CharField(db_column='Tipo de Vehículo', blank=True, null=True, choices=sel_tvehiculo, max_length=26)   
     placa = models.CharField(max_length=45, null=True)
     chasis = models.CharField(max_length=45, null=True)
+    año = models.IntegerField(null=True, blank=True)
     marca = models.CharField(max_length=45, null=True)
     modelo = models.CharField(max_length=45, null=True)
     motor = models.CharField(db_column='Motor Marca', max_length=45, null=True)
@@ -271,6 +279,7 @@ class FlotaVehicular(models.Model):
     capacidad_de_carga = models.CharField(max_length=45, null=True)
     capacidad_de_pasajeros = models.IntegerField(null=True)
     subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)#foranea subcircuito
+
     def __str__(self):
         return f"{self.marca},{self.modelo},{self.placa}"
     class Meta:

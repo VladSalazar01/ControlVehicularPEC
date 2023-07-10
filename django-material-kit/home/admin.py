@@ -15,41 +15,126 @@ admin.site.register(CustomPermission, CustomPermissionAdmin)
 
 #---personalizacion de admin panel para agregar usuarios---
 class CombinedAdmin(admin.ModelAdmin):
+    list_display = ('email', 'first_name', 'last_name', 'tipo_sangre', 'rango', 'identificacion', 'roles')
+    def roles(self, obj):
+        return ", ".join([group.name for group in obj.user.groups.all()])
+    roles.short_description = 'Roles'
+    def email(self, obj):
+        return obj.user.email
+    email.short_description = 'Correo electrónico'
+    def first_name(self, obj):
+        return obj.user.first_name
+    first_name.short_description = 'Nombres'
+    def last_name(self, obj):
+        return obj.user.last_name
+    last_name.short_description = 'Apellidos'
+    def rango(self, obj):
+        return obj.usuario.rango
+    rango.short_description = 'Rango'
+    def tipo_sangre(self, obj):
+        return obj.tipo_sangre
+    tipo_sangre.short_description = 'Tipo de sangre'
+    def identificacion(self, obj):
+        return obj.usuario.identificacion
+    identificacion.short_description = 'Identificación'   
+        
 
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
             path('add/', self.admin_site.admin_view(self.custom_add_view), name='custom-add'),
+            path('<int:id>/change/', self.admin_site.admin_view(self.custom_change_view), name='custom-change'),  # Nueva vista de edición
         ]
         return custom_urls + urls
     
+    def custom_change_view(self, request, id):
+        usuario = Usuario.objects.get(id=id)
+        user = usuario.user
+        groups = user.groups.all() 
+        try:
+            tecnico = Tecnico.objects.get(usuario=usuario)
+        except Tecnico.DoesNotExist:
+            tecnico = None
+        try:
+            personal_policial = PersonalPolicial.objects.get(usuario=usuario)
+        except PersonalPolicial.DoesNotExist:
+            personal_policial = None
+
+        if request.method == "POST":
+            combined_form = CombinedForm(request.POST, instance=usuario)
+            if combined_form.is_valid():
+                identificacion = combined_form.cleaned_data.get('identificacion')
+
+                if Usuario.objects.filter(identificacion=identificacion).exclude(id=usuario.id).exists():
+                    messages.error(request, 'La identificación ya está en uso.')
+                else:
+                    user.username = combined_form.cleaned_data.get('username')                    
+                    user.email = combined_form.cleaned_data.get('email')
+                    user.password = combined_form.cleaned_data.get('password')
+                    user.first_name = combined_form.cleaned_data.get('first_name')
+                    user.last_name = combined_form.cleaned_data.get('last_name')
+                    user.save()
+                    usuario.tipo_sangre = combined_form.cleaned_data.get('tipo_sangre')  
+                    usuario.rango = combined_form.cleaned_data.get('rango')
+                    usuario.save()
+
+                    new_groups = combined_form.cleaned_data.get('rol')
+                    if new_groups.filter(name='Tecnico').exists() and tecnico is not None:
+                        tecnico.titular = combined_form.cleaned_data.get('titular')
+                        tecnico.save()
+                    if new_groups.filter(name='PersonalPolicial').exists() and personal_policial is not None:
+                        personal_policial.subcircuito = combined_form.cleaned_data.get('subcircuito')
+                        personal_policial.save()
+
+                    user.groups.clear()  # Elimina todas las asignaciones de grupo existentes
+                    user.groups.add(*new_groups)  # Asigna los nuevos grupos
+                    messages.success(request, 'Usuario actualizado exitosamente')
+                    return redirect('admin:index')
+
+        else:
+            combined_form = CombinedForm(  
+            instance=usuario,
+            group_instance=groups,
+            user_instance=user,
+            tecnico_instance=tecnico,
+            personal_policial_instance=personal_policial
+        )
+        return render(request, 'admin/custom_change_form.html', {
+            'combined_form': combined_form,
+            'user': user,
+            'tecnico': tecnico,
+            'personal_policial': personal_policial
+        })
+        
     def custom_add_view(self, request):
         if request.method == "POST":
             combined_form = CombinedForm(request.POST)
 
             if combined_form.is_valid():
-                user = User.objects.create_user(
+                user = User.objects.create_user(                    
                     username=combined_form.cleaned_data.get('username'),
+                    email=combined_form.cleaned_data.get('email'),
                     password=combined_form.cleaned_data.get('password'),
                     first_name=combined_form.cleaned_data.get('first_name'),
                     last_name=combined_form.cleaned_data.get('last_name')
                 )
-                usuario = combined_form.save(commit=False)
+                usuario = combined_form.save(commit=False)                
                 usuario.user = user
-                usuario.rol = combined_form.cleaned_data.get('rol').name
-                usuario.rango = combined_form.cleaned_data.get('rango')
+                usuario.tipo_sangre = combined_form.cleaned_data.get('tipo_sangre')  # Asegúrate de que se está manejando el campo 'tipo_sangre'
                 usuario.save()
 
-                group = combined_form.cleaned_data.get('rol')               
-                user.groups.add(group)
+                groups = combined_form.cleaned_data.get('rol')
+                user.groups.add(*groups)  # Asigna los nuevos grupos
 
-                # Si el rol es 'tecnico', crear un nuevo objeto Tecnico
-                if usuario.rol == 'Encargados de logística':
-                    Tecnico.objects.create(usuario=usuario, titular=combined_form.cleaned_data.get('titular'))
+                if groups.filter(name='Encargados de logística').exists():
+                    # Se seleccionó el rol 'Tecnico'
+                    tecnico = Tecnico(usuario=usuario, titular=combined_form.cleaned_data.get('titular'))
+                    tecnico.save()
 
-                # Si el rol es 'personal_policial', crear un nuevo objeto PersonalPolicial
-                elif usuario.rol == 'Personal policial agentes':
-                    PersonalPolicial.objects.create(usuario=usuario, subcircuito=combined_form.cleaned_data.get('subcircuito'))
+                if groups.filter(name='Personal policial agentes').exists():
+                    # Se seleccionó el rol 'PersonalPolicial'
+                    personal_policial = PersonalPolicial(usuario=usuario, subcircuito=combined_form.cleaned_data.get('subcircuito'))
+                    personal_policial.save()
 
                 messages.success(request, 'Usuario creado exitosamente')
                 return redirect('admin:index')
@@ -60,11 +145,10 @@ class CombinedAdmin(admin.ModelAdmin):
         return render(request, 'admin/custom_add_form.html', {
             'combined_form': combined_form
         })
+    
 
 admin.site.register(Usuario, CombinedAdmin)
 admin.site.register(PersonalPolicial, CombinedAdmin)
-
-
 admin.site.register(Tecnico, CombinedAdmin)
 admin.site.register(Rango_ctlg)
 #admin.site.register(Subcircuitos)
@@ -135,7 +219,12 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     # Nombres personalizados para las columnas
     subcircuito_cod.short_description = 'Código Subcircuito'
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
+
+    class Media:
+        js = ('static/js/admin_autocomplete.js',)
+
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
 
 
 admin.site.register(Mantenimientos)
+
