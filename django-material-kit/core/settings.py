@@ -164,7 +164,21 @@ LANGUAGES = [
     # ... other languages
 ]
 
-
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': 'Registro_usuarios.log',  # Cambia 'debug.log' por 'Registro_usuarios.log'
+        },
+    },
+    'root': {
+        'handlers': ['file'],
+        'level': 'DEBUG',
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
@@ -272,11 +286,11 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": [],#["home.personalpolicial", "Home.tecnico"],
+    "hide_models": ["home.personalpolicial", "Home.tecnico"],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "home.usuario", "home.personalpolicial", "Home.tecnico",
-                              "Home.dependencia","Home.distrito","Home.circuito","Home.subcircuitos",
+                              "Home.Provincia","Home.Parroquia","Home.distrito","Home.circuito","Home.subcircuitos",
                               "Home.ordendetrabajo","Home.ordenmantenimiento","Home.ordencombustible",
                               "Home.mantenimientos","Home.flotavehicular","Home.tallermecanico",                             
                               "Home.partepolicial",

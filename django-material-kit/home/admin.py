@@ -6,7 +6,9 @@ from django.shortcuts import render, redirect
 from .forms import CombinedForm
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
+import logging
 
+logger = logging.getLogger(__name__)
 #grupos
 class CustomPermissionAdmin(admin.ModelAdmin):
     pass
@@ -77,7 +79,6 @@ class CombinedAdmin(admin.ModelAdmin):
                     usuario.tipo_sangre = combined_form.cleaned_data.get('tipo_sangre')  
                     usuario.rango = combined_form.cleaned_data.get('rango')
                     usuario.save()
-
                     new_groups = combined_form.cleaned_data.get('rol')
                     if new_groups.filter(name='Tecnico').exists() and tecnico is not None:
                         tecnico.titular = combined_form.cleaned_data.get('titular')
@@ -109,7 +110,6 @@ class CombinedAdmin(admin.ModelAdmin):
     def custom_add_view(self, request):
         if request.method == "POST":
             combined_form = CombinedForm(request.POST)
-
             if combined_form.is_valid():
                 user = User.objects.create_user(                    
                     username=combined_form.cleaned_data.get('username'),
@@ -122,20 +122,20 @@ class CombinedAdmin(admin.ModelAdmin):
                 usuario.user = user
                 usuario.tipo_sangre = combined_form.cleaned_data.get('tipo_sangre')  # Asegúrate de que se está manejando el campo 'tipo_sangre'
                 usuario.save()
+                logger.info('Usuario creado: %s', usuario)
 
                 groups = combined_form.cleaned_data.get('rol')
                 user.groups.add(*groups)  # Asigna los nuevos grupos
 
                 if groups.filter(name='Encargados de logística').exists():
-                    # Se seleccionó el rol 'Tecnico'
                     tecnico = Tecnico(usuario=usuario, titular=combined_form.cleaned_data.get('titular'))
                     tecnico.save()
+                    logger.info('Tecnico creado: %s', tecnico)
 
-                if groups.filter(name='Personal policial agentes').exists():
-                    # Se seleccionó el rol 'PersonalPolicial'
+                if groups.filter(name='Personal policial agentes').exists():   
                     personal_policial = PersonalPolicial(usuario=usuario, subcircuito=combined_form.cleaned_data.get('subcircuito'))
                     personal_policial.save()
-
+                    logger.info('Personal policial creado: %s', personal_policial)
                 messages.success(request, 'Usuario creado exitosamente')
                 return redirect('admin:index')
 
@@ -154,31 +154,35 @@ admin.site.register(Rango_ctlg)
 #admin.site.register(Subcircuitos)
 #--fin personalizacion agregar  usuarios--
 
-#display dependencia (actualizar metodos PND, solo si van a ser usados en list_display)
-class DependenciaAdmin(admin.ModelAdmin):
-    list_display = ('provincia','no_circuitos', 'parroquia')
-    def PND(self, obj):
-        return f"{obj.usuario.user.username} {obj.usuario.user.last_name}"
-    def PND2(self, obj):
-        return f"{obj.usuario.rango} "
-admin.site.register(Dependencia, DependenciaAdmin)
 
-#display distrito (actualizar metodos PND, solo si van a ser usados en list_display)
+class ProvinciaAdmin(admin.ModelAdmin):
+    list_display = ('nombre','numero_de_distritos')
+    def numero_de_distritos(self, obj):
+        return obj.distritos.count()
+    numero_de_distritos.short_description = 'Número de Distritos'
+admin.site.register(Provincia, ProvinciaAdmin)
+
+class ParroquiaAdmin(admin.ModelAdmin):
+    list_display = ('nombre','numero_de_subcircuitos')
+    def numero_de_subcircuitos(self, obj):
+        return obj.subcircuitos.count()
+    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
+admin.site.register(Parroquia, ParroquiaAdmin)
+
+
 class DistritoAdmin(admin.ModelAdmin):
-    list_display = ('cod_Distrito','nombre_Distrito', 'no_Circuitos')
-    def PND(self, obj):
-        return f"{obj.usuario.user.username} {obj.usuario.user.last_name}"
-    def PND2(self, obj):
-        return f"{obj.usuario.rango} "
+    list_display = ('cod_Distrito','provincia','nombre_Distrito', 'numero_de_circuitos')
+    def numero_de_circuitos(self, obj):
+        return obj.circuito.count()
+    numero_de_circuitos.short_description = 'Número de Circuitos'
 admin.site.register(Distrito, DistritoAdmin)
 
-#display circuito (actualizar metodos PND, solo si van a ser usados en list_display)
+
 class CircuitoAdmin(admin.ModelAdmin):
-    list_display = ('cod_Circuito','nombre_Circuito', 'no_Subcircuitos')
-    def PND(self, obj):
-        return f"{obj.usuario.user.username} {obj.usuario.user.last_name}"
-    def PND2(self, obj):
-        return f"{obj.usuario.rango} "
+    list_display = ('cod_Circuito','nombre_Circuito','numero_de_subcircuitos')
+    def numero_de_subcircuitos(self, obj):
+        return obj.subcircuito.count()
+    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
 admin.site.register(Circuito, CircuitoAdmin)
 
 #display subcircuito (actualizar metodos PND, solo si van a ser usados en list_display)
@@ -189,6 +193,8 @@ class SubcircuitoAdmin(admin.ModelAdmin):
     def PND2(self, obj):
         return f"{obj.usuario.rango} "
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
+
+
 
 admin.site.register(OrdendeTrabajo)
 admin.site.register(OrdenMantenimiento)

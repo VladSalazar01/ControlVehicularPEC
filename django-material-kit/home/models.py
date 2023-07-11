@@ -13,11 +13,14 @@ def get_vehicle_data(make, year):
     response = requests.get(url)
     data = response.json()
     return data['Results'] if data['Count'] > 0 else []
+
 class Rango_ctlg(models.Model):  
     nombre = models.CharField(max_length=50)
-
     def __str__(self):
-        return self.nombre
+        return f"{self.nombre}"
+    class Meta:
+        db_table = 'Rango' 
+        verbose_name_plural='Rangos'  
 
     
 '''class Marca_ctlg(models.Model):
@@ -108,33 +111,27 @@ class Tecnico(models.Model):
 #--fin modelos para la expansion de auth.user--
 
 #Administracion de dependencias
-class Dependencia(models.Model):  
-    sel_provincia = [
-            ('Loja', 'Loja'),  
-            ('otr', 'otra..'),          
-             ]
-    provincia = models.CharField(db_column='Provincia', blank=True, null=True, choices=sel_provincia, max_length=26)
-    no_circuitos = models.CharField(max_length=45, null=True)
-    sel_parroquia= [
-            ('VILCABAMBA', 'VILCABAMBA(VICTORIA)'),  
-            ('QUINARA','(QUINARA)'), 
-            ('MALACATOS','MALACATOS(VALLADOLID)'),
-            ('CHUQUIRIBAMBA','(CHUQUIRIBAMBA)'),
-            ('TAQUIL','TAQUIL(MIGUEL RIOFRIO)'),
-            ('Loja','LOJA(LOJA)'),
-             ]
-    parroquia = models.CharField(db_column='Parroqia', blank=True, null=True, choices=sel_parroquia, max_length=26)
+class Provincia(models.Model):    
+    nombre = models.CharField(max_length=100)
     def __str__(self):
-            return f"{self.provincia}, {self.parroquia}"
+        return f"{self.nombre}"
     class Meta:
-        db_table = 'Dependencia'
-        verbose_name_plural='Dependencias'
+        db_table = 'Provincia' 
+        verbose_name_plural='Provincias'  
+
+class Parroquia(models.Model):    
+    nombre = models.CharField(max_length=100)
+    provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE, related_name='parroquias')
+    def __str__(self):
+        return f"{self.provincia},{self.nombre}"
+    class Meta:
+        db_table = 'Parroquia' 
+        verbose_name_plural='Parroquias'  
 
 class Distrito(models.Model):    
-    cod_Distrito = models.CharField(max_length=45, null=True)# necesita ser único
-    nombre_Distrito = models.CharField(max_length=45, null=True)
-    no_Circuitos = models.IntegerField(null=True)
-    distritoDependencia = models.ForeignKey(Dependencia, on_delete=models.DO_NOTHING, db_column='idDependencia')
+    cod_Distrito = models.CharField(max_length=45, unique=True, blank=True)# necesita ser único
+    nombre_Distrito = models.CharField(max_length=45, null=True)    
+    provincia = models.ForeignKey(Provincia, on_delete=models.DO_NOTHING, related_name='distritos')
     def __str__(self):
         return f"{self.cod_Distrito}, {self.nombre_Distrito}"
     class Meta:
@@ -142,10 +139,9 @@ class Distrito(models.Model):
         verbose_name_plural='Distritos'  
 
 class Circuito(models.Model):   
-    cod_Circuito = models.CharField(max_length=45, null=True)
-    nombre_Circuito = models.CharField(max_length=45, null=True)
-    no_Subcircuitos = models.IntegerField(null=True)
-    circuitoDistrito = models.ForeignKey(Distrito, on_delete=models.DO_NOTHING, db_column='Distrito_id')
+    cod_Circuito = models.CharField(max_length=10, unique=True, blank=True)
+    nombre_Circuito = models.CharField(max_length=45, null=True)   
+    circuitoDistrito = models.ForeignKey(Distrito, on_delete=models.CASCADE,related_name='circuito', db_column='Distrito_id')
     def __str__(self):
             return f"{self.cod_Circuito}, {self.nombre_Circuito}"
     class Meta:
@@ -153,9 +149,10 @@ class Circuito(models.Model):
         verbose_name_plural='Circuitos'  
 
 class Subcircuitos(models.Model):
-    cod_subcircuito = models.CharField(max_length=45, blank=True, null=True)
+    cod_subcircuito = models.CharField(max_length=45, unique=True, blank=True)
     nombre_subcircuito = models.CharField(max_length=45, blank=True, null=True)
-    subcircuitoCircuito = models.ForeignKey(Circuito, models.DO_NOTHING, db_column='Circuito_idCircuito')
+    subcircuitoCircuito = models.ForeignKey(Circuito, on_delete=models.CASCADE, related_name='subcircuito',db_column='Circuito_idCircuito')
+    parroquia = models.ForeignKey(Parroquia, on_delete=models.DO_NOTHING, related_name='subcircuitos')
     def __str__(self):
         return f"{self.cod_subcircuito}, {self.nombre_subcircuito}"
     class Meta:
