@@ -195,9 +195,15 @@ class SubcircuitoAdmin(admin.ModelAdmin):
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
 
 
+class OrdendeTrabajoAdmin(admin.ModelAdmin):
+    list_display = ('fecha','estado', 'tipo_orden', 'tecnico')    
+admin.site.register(OrdendeTrabajo, OrdendeTrabajoAdmin)
 
-admin.site.register(OrdendeTrabajo)
-admin.site.register(OrdenMantenimiento)
+class OrdenMantenimientoAdmin(admin.ModelAdmin):
+    list_display = ('tipo_mantenimiento','ordende_trabajo')  
+admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
+
+
 admin.site.register(OrdenCombustible)
 
 class PartePolicialAdmin(admin.ModelAdmin):

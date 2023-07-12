@@ -58,5 +58,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             });
         });
+
+        // Nueva adición: los enlaces secundarios no cierran el menú desplegable.
+        modelosOrdenesTrabajo.forEach(function(modelo) {
+            modelo.addEventListener('click', function(event) {
+                event.stopPropagation();
+            });
+        });
     }
 });
