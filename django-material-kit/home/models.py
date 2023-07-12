@@ -21,7 +21,6 @@ class Rango_ctlg(models.Model):
     class Meta:
         db_table = 'Rango' 
         verbose_name_plural='Rangos'  
-
     
 '''class Marca_ctlg(models.Model):
     name = models.CharField(max_length=200)
@@ -31,6 +30,13 @@ class Modelo_car_ctlg(models.Model):
     brand = models.ForeignKey(Marca_ctlg, on_delete=models.CASCADE)'''
 
 ##fin catalogos----
+
+##EVALUACIÓN buzon de quejas---
+
+
+
+##fin evaluacion buzon de quejas----
+
 #proximodel roles y permisos
 class CustomPermission(Permission):
     class Meta:
@@ -184,7 +190,8 @@ class OrdendeTrabajo(models.Model):
              ]
     tipo_orden = models.CharField(db_column='Tipo de orden', blank=True, null=True, choices=sel_torden, max_length=26)
     tecnico = models.ForeignKey(Tecnico, on_delete=models.DO_NOTHING)#foranea tipo de orden
-
+    def __str__(self):
+            return f"{self.fecha} {self.tipo_orden}"
     class Meta:
        db_table = 'Ordenes de Trabajo' 
        verbose_name_plural='Ordenes de trabajo'
