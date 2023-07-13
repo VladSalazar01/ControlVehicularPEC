@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+{% load i18n static admin_urls %}
+
+{% block object-tools-items %}
+    <li>
+        <a href="{% url 'reporte_quejas_sugerencias' %}" class="btn">
+            <span class="fas fa-chart-bar" aria-hidden="true"></span>
+            {% trans "Ir a Reportes" %}
+        </a>
+    </li>
+    {{ block.super }}
+{% endblock %}

@@ -2,31 +2,62 @@
 
 {% extends "admin/base_site.html" %}
 {% block content %}
-  <h2>Reporte de Quejas y Sugerencias</h2>
-  
-  <p>Reporte solicitado por: {{ user.username }}</p>
-  <p>Fecha de inicio: {{ request.GET.fecha_inicio }}</p>
-  <p>Fecha final: {{ request.GET.fecha_fin }}</p>
-  <form method="get">
-    Fecha inicio: <input type="date" name="fecha_inicio" value="{{ request.GET.fecha_inicio }}">
-    Fecha fin: <input type="date" name="fecha_fin" value="{{ request.GET.fecha_fin }}">
-    <input type="submit" value="Filtrar">
-    <button onclick="history.back()">Atrás</button>
-  </form>
-  <table>
-    <tr>
+<style>
+  .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  .row .half {
+      flex: 0.5;
+  }
+  .filters form div {
+      margin-bottom: 10px;
+  }
+</style>
+
+<h2>Reporte de Quejas y Sugerencias</h2><br>
+
+<div class="row">
+  <div class="half filters">
+      <form method="get">
+          <div>
+              Fecha inicio: <input type="date" name="fecha_inicio" value="{{ request.GET.fecha_inicio }}">
+          </div>
+          <div>
+              Fecha fin: <input type="date" name="fecha_fin" value="{{ request.GET.fecha_fin }}">
+          </div>
+          <div>
+              <input type="submit" value="Filtrar">
+          </div>
+          <div>
+              <button onclick="history.back()">Atrás</button>
+          </div>
+      </form>
+  </div>
+
+  <div class="half">
+      <p>Reporte solicitado por: {{ request.user }}</p>
+      <p>Fecha de inicio: {{ request.GET.fecha_inicio }}</p>
+      <p>Fecha final: {{ request.GET.fecha_fin }}</p>
+      <a href="{% url 'reporte_quejas_sugerencias_pdf' %}?fecha_inicio={{ request.GET.fecha_inicio }}&fecha_fin={{ request.GET.fecha_fin }}">Exportar a PDF</a>
+  </div>
+</div>
+
+<table>
+  <tr>
       <th>Tipo</th>
       <th>Circuito</th>
       <th>Subcircuito</th>
       <th>Número de reportes</th>
-    </tr>
-    {% for queja_sugerencia in quejas_sugerencias %}
+  </tr>
+  {% for queja_sugerencia in quejas_sugerencias %}
       <tr>
-        <td>{{ queja_sugerencia.tipo }}</td>
-        <td>{{ queja_sugerencia.circuito__nombre_Circuito }}</td>
-        <td>{{ queja_sugerencia.subcircuito__nombre_subcircuito }}</td>
-        <td>{{ queja_sugerencia.total }}</td>
+          <td>{{ queja_sugerencia.tipo }}</td>
+          <td>{{ queja_sugerencia.circuito__nombre_Circuito }}</td>
+          <td>{{ queja_sugerencia.subcircuito__nombre_subcircuito }}</td>
+          <td>{{ queja_sugerencia.total }}</td>
       </tr>
-    {% endfor %}
-  </table>
+  {% endfor %}
+</table>
 {% endblock %}

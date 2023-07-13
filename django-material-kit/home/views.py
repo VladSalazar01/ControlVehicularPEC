@@ -120,7 +120,7 @@ def reporte_quejas_sugerencias_pdf(request):
         quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
     quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
 
-    template = get_template('admin/reporte_quejas_sugerencias.html')
+    template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias.html')
     html = template.render(Context({'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user}))
 
     response = HttpResponse(content_type='application/pdf')

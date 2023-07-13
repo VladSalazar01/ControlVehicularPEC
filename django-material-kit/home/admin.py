@@ -247,15 +247,20 @@ admin.site.register(Mantenimientos)
 
 #EVALUACIÓN buzon de quejas
 class QuejaSugerenciaAdmin(admin.ModelAdmin):   
-    list_display = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito', 'reporte_link') 
+    list_display = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito') 
     readonly_fields = ('fecha_creacion',)
-    #list_display = ('__str__')
-
+    change_list_template = 'admin/reportes_quejas/change_list.html'
+    
+    def changelist_view(self, request, extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['reporte_url'] = reverse('reporte_quejas_sugerencias')
+        return super().changelist_view(request, extra_context=extra_context)
+'''
     def reporte_link(self, obj):
         url = reverse('reporte_quejas_sugerencias')
         return format_html('<a href="{}">Generación de Reportes</a>', url)
     reporte_link.short_description = 'Reporte'
-
+'''
 '''    def reporte_link(self, obj):
         url = reverse('reporte_quejas_sugerencias_pdf')
         return format_html('<a href="{}">Ver Reporte PDF</a>', url)

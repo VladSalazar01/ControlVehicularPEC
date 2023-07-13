@@ -7,45 +7,69 @@
   </style>
   <h2>Formulario de queja o sugerencia</h2>
   <form method="post">
-    {% csrf_token %}
-    Circuito: <span class="required">*</span>
-    {{ form.circuito }}
-    Subcircuito: <span class="required">*</span>
-    <select id="id_subcircuito" name="subcircuito">
-      <option value="">Seleccione un circuito</option>
-    </select>
-   
-    Tipo de queja: <span class="required">*</span>
-    {{ form.tipo }}
-    Detalles: <span class="required">*</span>
-    {{ form.detalles }}
-    {{ form.contacto.label_tag }}
-    {{ form.contacto }}
-    {{ form.nombres.label_tag }} <span class="required">*</span>
-    {{ form.nombres }}
-    {{ form.apellidos.label_tag }} <span class="required">*</span>
-    {{ form.apellidos }}
-    <button type="submit" class="btn btn-primary">Enviar</button>
-    <a href="{% url 'welcome' %}" class="btn btn-secondary">Cancelar</a>
+    <table style="border-collapse: collapse; width: 100%;">
+      {% csrf_token %}
+      <tr>
+      <td style="text-align: left; vertical-align: top;"><strong>Circuito: <span class="required">*</span></strong></td>
+      <td style="vertical-align: top;">{{ form.circuito }}</td>
+      </tr>
+      <tr>
+      <td style="text-align: left; vertical-align: top;"><strong>Subcircuito: <span class="required">*</span></strong></td>
+      <td style="vertical-align: top;"><select id="id_subcircuito" name="subcircuito">
+        <option value="">Seleccione un circuito</option>
+      </select></td>
+      </tr>
+
+      <tr>  
+        <td style="text-align: left; vertical-align: top;"><strong>Tipo de queja: <span class="required">*</span></strong></td>
+        <td style="vertical-align: top;">{{ form.tipo }}</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: top;"><strong>Detalles: <span class="required">*</span></strong></td>
+        <td style="vertical-align: top;">{{ form.detalles }}</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: top;"><strong>Contacto correo electrónico o celular:</strong></td>
+        <td style="vertical-align: top;">{{ form.contacto }}</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: top;"><strong>Nombres: <span class="required">*</span></strong></td>
+        <td style="vertical-align: top;">{{ form.nombres }}</td>
+      </tr>
+      <tr>
+        <td style="text-align: left; vertical-align: top;"><strong>Apellidos: <span class="required">*</span></strong></td>
+        <td style="vertical-align: top;">{{ form.apellidos }}</td>
+      </tr>
+
+
+
+
+      <button type="submit" class="btn btn-primary">Enviar</button>
+      <a href="{% url 'welcome' %}" class="btn btn-secondary">Cancelar</a>
+    </table>
   </form>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script>
-    $('#id_circuito').change(function () {
-      var url = "/get_subcircuitos/" + $(this).val() + "/";
-      $.ajax({
-        url: url,
-        success: function (data) {
-          var select = $("#id_subcircuito");
-          select.empty();
-          $.each(data, function (index, text) {
-            select.append(
-                $('<option></option>').val(text.id).html(text.cod_nombre)
-            );
-          });
-        }
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $('#id_circuito').change(function () {
+        var url = "/get_subcircuitos/" + $(this).val() + "/";
+        $.ajax({
+          url: url,
+          success: function (data) {
+            var select = $("#id_subcircuito");
+            select.empty();
+            $.each(data, function (index, text) {
+              select.append(
+                  $('<option></option>').val(text.id).html(text.cod_nombre)
+              );
+            });
+          }
+        });
       });
-    });
-  </script>
+    </script>
 {% endblock %}
 
 
