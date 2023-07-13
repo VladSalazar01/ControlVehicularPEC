@@ -6,6 +6,13 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import *
 from .models import *
 from datetime import date
+from django.http import JsonResponse
+from django.db.models import F, Value, CharField, Count
+from django.db.models.functions import Concat
+from django.contrib.admin.views.decorators import staff_member_required
+from xhtml2pdf import pisa
+from django.template.loader import get_template
+from django.template import Context
 
 # Create your views here.
 
@@ -77,7 +84,57 @@ def mis_partes_policiales(request):
         partes_policiales = paginator.page(paginator.num_pages)
     return render(request, 'partes_policiales/mis_partes_policiales.html', {'partes_policiales': partes_policiales})
 
+#EVALUACION
+def queja_sugerencia(request):
+    if request.method == 'POST':
+        form = QuejaSugerenciaForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'quejas/agradecimiento.html')
+    else:
+        form = QuejaSugerenciaForm()
+    return render(request, 'quejas/queja_sugerencia.html', {'form': form})
 
+def get_subcircuitos(request, circuito_id):
+    subcircuitos = Subcircuitos.objects.filter(subcircuitoCircuito=circuito_id).annotate(cod_nombre=Concat(F('cod_subcircuito'), Value(', '), F('nombre_subcircuito'), output_field=CharField())).values('id', 'cod_nombre')
+    subcircuito_list = list(subcircuitos)
+    return JsonResponse(subcircuito_list, safe=False)
+
+@staff_member_required
+def reporte_quejas_sugerencias(request):
+    inicio = request.GET.get('fecha_inicio')
+    fin = request.GET.get('fecha_fin')
+    quejas_sugerencias = QuejaSugerencia.objects.all()
+    if inicio and fin:
+        quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
+    quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
+    return render(request, 'admin/reportes_quejas/reporte_quejas_sugerencias.html', {'quejas_sugerencias': quejas_sugerencias})
+
+
+@staff_member_required
+def reporte_quejas_sugerencias_pdf(request):
+    inicio = request.GET.get('fecha_inicio')
+    fin = request.GET.get('fecha_fin')
+    quejas_sugerencias = QuejaSugerencia.objects.all()
+    if inicio and fin:
+        quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
+    quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
+
+    template = get_template('admin/reporte_quejas_sugerencias.html')
+    html = template.render(Context({'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user}))
+
+    response = HttpResponse(content_type='application/pdf')
+    response['Content-Disposition'] = 'attachment; filename="reporte.pdf"'
+
+    pisa_status = pisa.CreatePDF(html, dest=response)
+
+    if pisa_status.err:
+       return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
+    return response
+
+
+
+#EVALUACION
 #--agregar usuario desde admin panel------
 '''def custom_add_view(self, request):
     if request.method == "POST":

@@ -102,3 +102,9 @@ class CombinedForm(forms.ModelForm):
             self.instance.validate_unique(exclude=exclude)
         except forms.ValidationError as e:
             self._update_errors(e)
+
+#buzon de quejas form
+class QuejaSugerenciaForm(forms.ModelForm):
+    class Meta:
+        model = QuejaSugerencia
+        fields = ['circuito', 'subcircuito', 'tipo', 'detalles', 'contacto', 'nombres', 'apellidos']

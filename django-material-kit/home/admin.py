@@ -7,6 +7,11 @@ from .forms import CombinedForm
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
 import logging
+from django.urls import reverse
+from django.utils.html import format_html
+
+
+
 
 logger = logging.getLogger(__name__)
 #grupos
@@ -239,4 +244,21 @@ admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
 
 
 admin.site.register(Mantenimientos)
+
+#EVALUACIÓN buzon de quejas
+class QuejaSugerenciaAdmin(admin.ModelAdmin):   
+    list_display = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito', 'reporte_link') 
+    readonly_fields = ('fecha_creacion',)
+    #list_display = ('__str__')
+
+    def reporte_link(self, obj):
+        url = reverse('reporte_quejas_sugerencias')
+        return format_html('<a href="{}">Generación de Reportes</a>', url)
+    reporte_link.short_description = 'Reporte'
+
+'''    def reporte_link(self, obj):
+        url = reverse('reporte_quejas_sugerencias_pdf')
+        return format_html('<a href="{}">Ver Reporte PDF</a>', url)
+    reporte_link.short_description = 'Reporte PDF'''
+admin.site.register(QuejaSugerencia, QuejaSugerenciaAdmin)
 

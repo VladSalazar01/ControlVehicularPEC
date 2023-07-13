@@ -31,11 +31,7 @@ class Modelo_car_ctlg(models.Model):
 
 ##fin catalogos----
 
-##EVALUACIÓN buzon de quejas---
 
-
-
-##fin evaluacion buzon de quejas----
 
 #proximodel roles y permisos
 class CustomPermission(Permission):
@@ -176,6 +172,23 @@ class PersonalPolicial(models.Model):
         verbose_name_plural='Personal Policial'
   
 #3trio problemas con los nombres de atributos, muy larcos mucho sub-gion
+
+##EVALUACIÓN buzon de quejas---
+class QuejaSugerencia(models.Model):
+    TIPO_CHOICES = [
+        ('Reclamo', 'Reclamo'),
+        ('Sugerencia', 'Sugerencia'),
+    ]
+    circuito = models.ForeignKey(Circuito, on_delete=models.DO_NOTHING)
+    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)
+    tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
+    detalles = models.TextField()
+    contacto = models.CharField(max_length=100, blank=True)
+    nombres = models.CharField(max_length=100)
+    apellidos = models.CharField(max_length=100)   
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+
+##fin evaluacion buzon de quejas----
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateField(null=True)
