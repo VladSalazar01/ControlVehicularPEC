@@ -187,7 +187,6 @@ class QuejaSugerencia(models.Model):
     nombres = models.CharField(max_length=100)
     apellidos = models.CharField(max_length=100)   
     fecha_creacion = models.DateTimeField(auto_now_add=True)
-
 ##fin evaluacion buzon de quejas----
 
 class OrdendeTrabajo(models.Model):     
@@ -277,8 +276,7 @@ class TallerMecanico(models.Model):
         db_table = 'Taller mecanico'
         verbose_name_plural='Talleres Mecánicos'
 
-class FlotaVehicular(models.Model):
-       
+class FlotaVehicular(models.Model):       
     sel_tvehiculo= [
             ('Auto','Automóvil'),  
             ('Moto','Motocicleta'),  

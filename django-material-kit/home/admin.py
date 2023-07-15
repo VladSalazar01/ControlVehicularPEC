@@ -9,9 +9,23 @@ from django.utils.translation import gettext_lazy as _
 import logging
 from django.urls import reverse
 from django.utils.html import format_html
+import requests
 
+def check_internet_connection():
+    try:
+        response = requests.get('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/5UXWX7C5*BA?format=json', timeout=5)
+        response.raise_for_status()
+        print('Conexión exitosa.')
+    except requests.exceptions.RequestException as err:
+        print('Error al hacer la solicitud:', err)
+    except requests.exceptions.HTTPError as http_err:
+        print('HTTP error:', http_err)
+    except requests.exceptions.ConnectionError as conn_err:
+        print('Error de conexión:', conn_err)
+    except requests.exceptions.Timeout as time_err:
+        print('Timeout:', time_err)
 
-
+check_internet_connection()
 
 logger = logging.getLogger(__name__)
 #grupos
@@ -226,21 +240,46 @@ class TallerMecanicoAdmin(admin.ModelAdmin):
 admin.site.register(TallerMecanico, TallerMecanicoAdmin)
 
 class FlotaVehicularAdmin(admin.ModelAdmin):
-    # Lista de campos a mostrar en la vista de lista
+    class Media:
+            js = ('js/flotavehicular.js',) 
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre')    
     # Método para mostrar el código del subcircuito 
     def subcircuito_cod(self, obj):
-        return obj.subcircuito.cod_subcircuito   
+        return obj.subcircuito.cod_subcircuito
+    subcircuito_cod.short_description = 'Código Subcircuito'   
     def subcircuito_nombre(self, obj):
-        return obj.subcircuito.nombre_subcircuito    
-    # Nombres personalizados para las columnas
-    subcircuito_cod.short_description = 'Código Subcircuito'
+        return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
 
-    class Media:
-        js = ('static/js/admin_autocomplete.js',)
 
+'''  
+#reescritura de metodo save
+    def save_model(self, request, obj, form, change):
+        vin = obj.chasis  
+        response = requests.get(f'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/{vin}?format=json')
+        data = response.json()
+
+        # Actualizar el objeto con los datos recuperados
+        if 'Results' in data:
+            for result in data['Results']:
+                if result['Variable'] == 'Model Year':
+                    obj.año = result['Value']
+                elif result['Variable'] == 'Make':
+                    obj.marca = result['Value']
+                elif result['Variable'] == 'Model':
+                    obj.modelo = result['Value']
+
+        super().save_model(request, obj, form, change)
+'''
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
+#fin reescritura metodo save   
+
+
+'''
+    class Media:
+        js = ('js/admin_autocomplete.js',)
+'''
+
 
 
 admin.site.register(Mantenimientos)
@@ -255,15 +294,6 @@ class QuejaSugerenciaAdmin(admin.ModelAdmin):
         extra_context = extra_context or {}
         extra_context['reporte_url'] = reverse('reporte_quejas_sugerencias')
         return super().changelist_view(request, extra_context=extra_context)
-'''
-    def reporte_link(self, obj):
-        url = reverse('reporte_quejas_sugerencias')
-        return format_html('<a href="{}">Generación de Reportes</a>', url)
-    reporte_link.short_description = 'Reporte'
-'''
-'''    def reporte_link(self, obj):
-        url = reverse('reporte_quejas_sugerencias_pdf')
-        return format_html('<a href="{}">Ver Reporte PDF</a>', url)
-    reporte_link.short_description = 'Reporte PDF'''
+
 admin.site.register(QuejaSugerencia, QuejaSugerenciaAdmin)
 
