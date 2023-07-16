@@ -47,7 +47,7 @@ class CustomPermission(Permission):
      
 #modelos para la expansion de auth.user
 class Usuario(models.Model): # usar para extension de aut.user   
-    #rol = models.CharField(max_length=50, null=True, blank=True)   #sabía que esta no iba aqui pero no        
+        
     direccion = models.CharField(max_length=200, null=True, blank=True)
     fecha_de_nacimiento = models.DateField(null=True,blank=True)
     GENEROop=   [('M','Masculino'),
@@ -101,7 +101,7 @@ class Usuario(models.Model): # usar para extension de aut.user
         
 class Tecnico(models.Model):   
     titular = models.BooleanField() #titular /auxiliar usar unicamente si se justifica
-    usuario = models.OneToOneField(Usuario, models.DO_NOTHING)   
+    usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)   
     def __str__(self):
             return f"{self.usuario.user.first_name}-{self.usuario.user.last_name}"
     class Meta:
@@ -198,12 +198,12 @@ class OrdendeTrabajo(models.Model):
     estado = models.CharField(db_column='Estado de Orden', blank=True, null=True, choices=sel_estado, max_length=26)
     sel_torden= [
             ('Mantenimiento', 'Orden de Mantenimiento'),  
-            ('Combsustible','Orden de combustible'),             
+            ('Combustible','Orden de combustible'),             
              ]
     tipo_orden = models.CharField(db_column='Tipo de orden', blank=True, null=True, choices=sel_torden, max_length=26)
-    tecnico = models.ForeignKey(Tecnico, on_delete=models.DO_NOTHING)#foranea tipo de orden
+    tecnico = models.ForeignKey(Tecnico, on_delete=models.DO_NOTHING)
     def __str__(self):
-            return f"{self.fecha} {self.tipo_orden}"
+            return f"{self.fecha} - {self.tipo_orden}"
     class Meta:
        db_table = 'Ordenes de Trabajo' 
        verbose_name_plural='Ordenes de trabajo'

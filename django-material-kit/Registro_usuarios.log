@@ -2042,3 +2042,384 @@ https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=j
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/home/ordendetrabajo/add/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1781, in _changeform_view
+    fieldsets = self.get_fieldsets(request, obj)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 388, in get_fieldsets
+    return [(None, {"fields": self.get_fields(request, obj)})]
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 379, in get_fields
+    form = self._get_form_for_get_fields(request, obj)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 758, in _get_form_for_get_fields
+    return self.get_form(request, obj, fields=None)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 223, in get_form
+    return super().get_form(request, obj, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 809, in get_form
+    return modelform_factory(self.model, **defaults)
+TypeError: modelform_factory() got an unexpected keyword argument 'user'
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/ordendetrabajo/add/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\CVPL2\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\CVPL2\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: 'extends' cannot appear more than once in the same template
+Internal Server Error: /admin/home/ordendetrabajo/add/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 132, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 129, in get_parent
+    return self.find_template(parent, context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 107, in find_template
+    template, origin = context.template.engine.find_template(
+  File "C:\CVPL2\env\lib\site-packages\django\template\engine.py", line 161, in find_template
+    raise TemplateDoesNotExist(name, tried=tried)
+django.template.exceptions.TemplateDoesNotExist: jazzmin/base_site.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 63, in render
+    reraise(exc, self.backend)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 84, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: jazzmin/base_site.html
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordendetrabajo/add/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 222, in save_model
+    obj.tecnico = request.user
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\fields\related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <User: AdminVlad>>": "OrdendeTrabajo.tecnico" must be a "Tecnico" instance.
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Usuario creado: Tecnico002 encargado Dlogistica002
+Tecnico creado: Tecnico002-encargado Dlogistica002
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Usuario creado: Tecnico002 encargado Dlogistica002
+Tecnico creado: Tecnico002-encargado Dlogistica002
+books not found when generating links
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Usuario creado: Tecnico002 encargado Dlogistica002
+Tecnico creado: Tecnico002-encargado Dlogistica002
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Usuario creado: Tecnico003 encargado Dlogistica003
+Tecnico creado: Tecnico003-encargado Dlogistica003
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/ordendetrabajo/add/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1886, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1798, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 222, in save_model
+    obj.tecnico = request.user
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\fields\related_descriptors.py", line 266, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<SimpleLazyObject: <User: Tecnico3>>": "OrdendeTrabajo.tecnico" must be a "Tecnico" instance.
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

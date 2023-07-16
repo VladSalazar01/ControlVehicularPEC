@@ -103,6 +103,29 @@ class CombinedForm(forms.ModelForm):
         except forms.ValidationError as e:
             self._update_errors(e)
 
+#ordenes de trabajo formclass OrdenTrabajoForm(forms.ModelForm):
+class OrdenTrabajoForm(forms.ModelForm):
+    tipo_mantenimiento = forms.ChoiceField(choices=OrdenMantenimiento.sel_tmantenimiento, required=False)
+    tipo_de_combustible = forms.ChoiceField(choices=OrdenCombustible.sel_tcombustible, required=False)
+    cantidad_galones = forms.CharField(max_length=45, required=False)
+    cantidad_galones_detalle = forms.CharField(max_length=45, required=False)
+    tecnico = forms.ModelChoiceField(queryset=User.objects.all(), widget=forms.HiddenInput(), required=False)
+    fecha = forms.DateField(initial=timezone.now().date(), widget=forms.HiddenInput())
+
+    class Meta:
+        model = OrdendeTrabajo
+        fields = '__all__'
+        
+    def save(self, commit=True):
+        orden_trabajo = super().save(commit=False)
+        if commit:
+            orden_trabajo.save()
+            if self.cleaned_data['tipo_orden'] == 'Mantenimiento':
+                OrdenMantenimiento.objects.create(ordende_trabajo=orden_trabajo, tipo_mantenimiento=self.cleaned_data['tipo_mantenimiento'])
+            else:
+                OrdenCombustible.objects.create(ordende_trabajo=orden_trabajo, tipo_de_combustible=self.cleaned_data['tipo_de_combustible'], cantidad_galones=self.cleaned_data['cantidad_galones'], cantidad_galones_detalle=self.cleaned_data['cantidad_galones_detalle'])
+        return orden_trabajo
+
 #buzon de quejas form
 class QuejaSugerenciaForm(forms.ModelForm):
     class Meta:

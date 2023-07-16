@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, Group
 from django.urls import path
 from .models import *
 from django.shortcuts import render, redirect
-from .forms import CombinedForm
+from .forms import *
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
 import logging
@@ -215,7 +215,13 @@ admin.site.register(Subcircuitos, SubcircuitoAdmin)
 
 
 class OrdendeTrabajoAdmin(admin.ModelAdmin):
-    list_display = ('fecha','estado', 'tipo_orden', 'tecnico')    
+    list_display = ('fecha','estado', 'tipo_orden', 'tecnico') 
+    form = OrdenTrabajoForm
+
+    def save_model(self, request, obj, form, change):
+        obj.tecnico = request.user.usuario.tecnico
+        super().save_model(request, obj, form, change)
+
 admin.site.register(OrdendeTrabajo, OrdendeTrabajoAdmin)
 
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
@@ -250,27 +256,6 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     def subcircuito_nombre(self, obj):
         return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
-
-
-'''  
-#reescritura de metodo save
-    def save_model(self, request, obj, form, change):
-        vin = obj.chasis  
-        response = requests.get(f'https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/{vin}?format=json')
-        data = response.json()
-
-        # Actualizar el objeto con los datos recuperados
-        if 'Results' in data:
-            for result in data['Results']:
-                if result['Variable'] == 'Model Year':
-                    obj.año = result['Value']
-                elif result['Variable'] == 'Make':
-                    obj.marca = result['Value']
-                elif result['Variable'] == 'Model':
-                    obj.modelo = result['Value']
-
-        super().save_model(request, obj, form, change)
-'''
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
 #fin reescritura metodo save   
 
