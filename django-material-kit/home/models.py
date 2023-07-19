@@ -6,6 +6,7 @@ import requests
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
 from django.utils.translation import gettext_lazy as _
+from django.core.exceptions import ValidationError
 
 ##----catálogos----
 def get_vehicle_data(make, year):
@@ -94,7 +95,7 @@ class Usuario(models.Model): # usar para extension de aut.user
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_column='usuario', blank=True, null=True)#foranea one to one de user CASCADE
 
     def __str__(self):
-            return f"{self.user.first_name} {self.user.last_name}"
+            return f"{self.user.first_name}-{self.user.last_name}"
     class Meta:
         db_table = 'Usuario datos'
         verbose_name_plural='Datos de usuario'
@@ -163,31 +164,24 @@ class Subcircuitos(models.Model):
 #fin de admin subcircuito---
 
 class PersonalPolicial(models.Model):         
-    subcircuito = models.ForeignKey(Subcircuitos, models.DO_NOTHING, related_name='PersonalPolicial_Subcircuito')#foranea asignacion    
     usuario = models.OneToOneField(Usuario, models.CASCADE, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
+    flota_vehicular = models.ForeignKey('FlotaVehicular', on_delete=models.SET_NULL, null=True, blank=True, related_name='personal_policial') 
+    turno_inicio = models.TimeField(null=True, blank=True)
+    turno_fin = models.TimeField(null=True, blank=True)
+    def clean(self):
+        super().clean()  
+        if self.flota_vehicular:
+            personal_policial_mismo_vehiculo = PersonalPolicial.objects.filter(flota_vehicular=self.flota_vehicular).exclude(id=self.id)
+            for otro_personal in personal_policial_mismo_vehiculo:
+                if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
+                    raise ValidationError(f"El turno se superpone con el de {otro_personal}.")
     def __str__(self):
-            return f"{self.usuario.user.first_name} {self.usuario.user.last_name}"
+        return f"{self.usuario.user.first_name} ; {self.usuario.user.last_name}"
     class Meta:
         db_table = 'Personal Policial' 
         verbose_name_plural='Personal Policial'
   
 #3trio problemas con los nombres de atributos, muy larcos mucho sub-gion
-
-##EVALUACIÓN buzon de quejas---
-class QuejaSugerencia(models.Model):
-    TIPO_CHOICES = [
-        ('Reclamo', 'Reclamo'),
-        ('Sugerencia', 'Sugerencia'),
-    ]
-    circuito = models.ForeignKey(Circuito, on_delete=models.DO_NOTHING)
-    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)
-    tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
-    detalles = models.TextField()
-    contacto = models.CharField(max_length=100, blank=True)
-    nombres = models.CharField(max_length=100)
-    apellidos = models.CharField(max_length=100)   
-    fecha_creacion = models.DateTimeField(auto_now_add=True)
-##fin evaluacion buzon de quejas----
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateField(null=True)
@@ -293,10 +287,18 @@ class FlotaVehicular(models.Model):
     cilindraje = models.CharField(max_length=45, null=True)
     capacidad_de_carga = models.CharField(max_length=45, null=True)
     capacidad_de_pasajeros = models.IntegerField(null=True)
-    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)#foranea subcircuito
+    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING , related_name='flota_vehicular')
 
     def __str__(self):
         return f"{self.marca},{self.modelo},{self.placa}"
+    def clean(self):
+        # importar ValidationError al inicio del archivo
+        from django.core.exceptions import ValidationError
+        # Validar que solo hay de 1 a 4 PersonalPolicial relacionados
+        if self.pk is not None:  # Solo realizar esta validación si el objeto ya ha sido guardado
+            personal_policial_count = self.personal_policial.count()
+            if personal_policial_count < 1 or personal_policial_count > 4:
+                raise ValidationError('Un vehículo debe tener entre 1 y 4 Personal Policial asignados.')
     class Meta:
         db_table = 'Flota Vehicular'
         verbose_name_plural='Vehículos'
@@ -310,6 +312,20 @@ class Mantenimientos(models.Model):
         db_table = 'Mantenimiento'
         verbose_name_plural='Mantenimientos'
    
-  
+##EVALUACIÓN buzon de quejas---
+class QuejaSugerencia(models.Model):
+    TIPO_CHOICES = [
+        ('Reclamo', 'Reclamo'),
+        ('Sugerencia', 'Sugerencia'),
+    ]
+    circuito = models.ForeignKey(Circuito, on_delete=models.DO_NOTHING)
+    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING)
+    tipo = models.CharField(max_length=10, choices=TIPO_CHOICES)
+    detalles = models.TextField()
+    contacto = models.CharField(max_length=100, blank=True)
+    nombres = models.CharField(max_length=100)
+    apellidos = models.CharField(max_length=100)   
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
+##fin evaluacion buzon de quejas----  
 
 

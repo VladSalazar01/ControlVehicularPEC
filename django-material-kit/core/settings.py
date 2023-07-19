@@ -286,7 +286,7 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": ["home.personalpolicial", "Home.tecnico"],
+    "hide_models": [],#["home.personalpolicial", "Home.tecnico"],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "home.usuario", "home.personalpolicial", "Home.tecnico",
@@ -345,7 +345,7 @@ JAZZMIN_SETTINGS = {
     #############
     # Relative paths to custom CSS/JS scripts (must be present in static files)
     "custom_css": None,
-    "custom_js": None, #"js/jazz_side_barra_custom.js",
+    "custom_js": None,#"js/jazz_side_barra_custom.js",
     # Whether to link font from fonts.googleapis.com (use custom_css to supply font otherwise)
     "use_google_fonts_cdn": True,
     # Whether to show the UI customizer on the sidebar

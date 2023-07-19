@@ -66,6 +66,20 @@
                 <label for="{{ combined_form.titular.id_for_label }}">{{ combined_form.titular.label }}</label>
                 <input type="checkbox" name="{{ combined_form.titular.html_name }}" id="{{ combined_form.titular.id_for_label }}">
             </div>
+
+            <div class="form-group">
+                <label for="{{ combined_form.flota_vehicular.id_for_label }}">Flota Vehicular:</label>
+                {{ combined_form.flota_vehicular }}
+            </div>
+            <div class="form-group">
+                <label for="{{ combined_form.turno_inicio.id_for_label }}">Inicio de Turno:</label>
+                {{ combined_form.turno_inicio }}
+            </div>
+            <div class="form-group">
+                <label for="{{ combined_form.turno_fin.id_for_label }}">Fin de Turno:</label>
+                {{ combined_form.turno_fin }}
+
+
             <div id="pSubcircuito" style="display: none;">
                 <label for="{{ combined_form.subcircuito.id_for_label }}">{{ combined_form.subcircuito.label }}</label>
                 <select name="{{ combined_form.subcircuito.html_name }}" id="{{ combined_form.subcircuito.id_for_label }}">
@@ -74,7 +88,9 @@
                     {% endfor %}
                 </select>
             </div> 
+
             <input type="submit" value="Guardar" class="default">
+            <button onclick="history.back()">Atrás</button>
         </form>
     </div>    
     <script>

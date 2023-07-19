@@ -48,7 +48,23 @@ class CombinedForm(forms.ModelForm):
         validators=[RegexValidator(r'^\d{10}$', 'Identificación solo adminte números')]
     )    
     titular = forms.BooleanField(required=False,label='Titular')
-    subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all(), required=False, label='Subcircuito')
+    flota_vehicular = forms.ModelChoiceField(
+        queryset=FlotaVehicular.objects.all(),
+        required=False,
+        label='Flota Vehicular',
+        widget=forms.Select(attrs={'class': 'form-control'})
+    )
+    turno_inicio = forms.TimeField(
+        required=False,
+        label='Inicio de Turno',
+        widget=forms.TimeInput(attrs={'class': 'form-control'})
+    )
+    turno_fin = forms.TimeField(
+        required=False,
+        label='Fin de Turno',
+        widget=forms.TimeInput(attrs={'class': 'form-control'})
+    )
+
     tipo_sangre = forms.ChoiceField(
         choices=Usuario.tds, 
         required=False, 
@@ -91,7 +107,7 @@ class CombinedForm(forms.ModelForm):
         if tecnico_instance:
             self.fields['titular'].initial = tecnico_instance.titular
         if personal_policial_instance:
-            self.fields['subcircuito'].initial = personal_policial_instance.subcircuito
+            self.fields['flota_vehicular'].initial = personal_policial_instance.flota_vehicular
 
     def validate_unique(self):
         exclude = self._get_validation_exclusions()
