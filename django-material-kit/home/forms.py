@@ -14,6 +14,7 @@ class PartePolicialForm(forms.ModelForm):
         fields = ['tipo_parte', 'observaciones']
 
 #crear usuario----
+'''
 class CombinedForm(forms.ModelForm):
     first_name = forms.CharField(max_length=30, required=True, label='Nombres')
     last_name = forms.CharField(max_length=30, required=True, label='Apellidos')
@@ -118,7 +119,7 @@ class CombinedForm(forms.ModelForm):
             self.instance.validate_unique(exclude=exclude)
         except forms.ValidationError as e:
             self._update_errors(e)
-
+'''
 #ordenes de trabajo formclass OrdenTrabajoForm(forms.ModelForm):
 class OrdenTrabajoForm(forms.ModelForm):
     tipo_mantenimiento = forms.ChoiceField(choices=OrdenMantenimiento.sel_tmantenimiento, required=False)

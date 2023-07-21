@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     'theme_material_kit',
     "home",
+    "nested_inline",
 ]
 #lenguajes
 LANGUAGE_CODE = 'es'
@@ -152,7 +153,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "es"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Bogota"
 
 USE_I18N = True
 

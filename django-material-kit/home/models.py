@@ -2,11 +2,21 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 import requests
-#para validaciones (cedula)
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
 from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
+from django.db.models.signals import pre_save
+from django.dispatch import receiver
+
+#clase abstracta para el borrado suave
+class SoftDeletionModel(models.Model):
+    is_deleted = models.BooleanField(default=False)
+    def delete(self):
+        self.is_deleted = True
+        self.save()
+    class Meta:
+        abstract = True
 
 ##----catálogos----
 def get_vehicle_data(make, year):
@@ -47,9 +57,9 @@ class CustomPermission(Permission):
         return name
      
 #modelos para la expansion de auth.user
-class Usuario(models.Model): # usar para extension de aut.user   
-        
-    direccion = models.CharField(max_length=200, null=True, blank=True)
+class Usuario(SoftDeletionModel, models.Model):   
+    is_deleted = models.BooleanField(default=False)
+    direccion = models.TextField(max_length=810, null=True, blank=True)
     fecha_de_nacimiento = models.DateField(null=True,blank=True)
     GENEROop=   [('M','Masculino'),
                 ('F','Femenino'), ]
@@ -65,21 +75,6 @@ class Usuario(models.Model): # usar para extension de aut.user
         blank=False,
         validators=[identificacion_validator]
     )       
-    '''rnks = [
-            ('Pol', 'Policía'),
-            ('CS', 'Cabo Segundo'),
-            ('CP', 'Cabo Primero'),
-            ('SaS', 'Sargento Segundo'),
-            ('SaP', 'Sargento Primero'),
-            ('SoS', 'Suboficial Segundo'),
-            ('SoP', 'Suboficial Primero'),
-            
-            ('ST', 'Subteniente'),
-            ('Te', 'Teniente'),
-            ('CaP', 'Capitán'),
-            ('MaY', 'Mayor'),
-            ('TeC', 'Teniente Coronel'),           
-             ]'''
     rango = models.ForeignKey(Rango_ctlg, on_delete=models.SET_NULL, null=True, blank=True)
     tds=   [
             ('A+', 'A positivo'),
@@ -95,13 +90,14 @@ class Usuario(models.Model): # usar para extension de aut.user
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_column='usuario', blank=True, null=True)#foranea one to one de user CASCADE
 
     def __str__(self):
-            return f"{self.user.first_name}-{self.user.last_name}"
+            return f"F{self.user.first_name}-{self.user.last_name}"
     class Meta:
         db_table = 'Usuario datos'
         verbose_name_plural='Datos de usuario'
         
-class Tecnico(models.Model):   
-    titular = models.BooleanField() #titular /auxiliar usar unicamente si se justifica
+class Tecnico(SoftDeletionModel, models.Model):   
+    is_deleted = models.BooleanField(default=False)
+    titular = models.BooleanField(blank=True, null=True) #titular /auxiliar usar unicamente si se justifica
     usuario = models.OneToOneField(Usuario, on_delete=models.CASCADE)   
     def __str__(self):
             return f"{self.usuario.user.first_name}-{self.usuario.user.last_name}"
@@ -163,11 +159,13 @@ class Subcircuitos(models.Model):
         verbose_name_plural='Subcircuitos'
 #fin de admin subcircuito---
 
-class PersonalPolicial(models.Model):         
+class PersonalPolicial(SoftDeletionModel, models.Model): 
+    is_deleted = models.BooleanField(default=False)        
     usuario = models.OneToOneField(Usuario, models.CASCADE, db_column='usuario_UsuarioID', null=True,blank=True)#foranea user
     flota_vehicular = models.ForeignKey('FlotaVehicular', on_delete=models.SET_NULL, null=True, blank=True, related_name='personal_policial') 
     turno_inicio = models.TimeField(null=True, blank=True)
     turno_fin = models.TimeField(null=True, blank=True)
+    is_deleted = models.BooleanField(default=False)
     def clean(self):
         super().clean()  
         if self.flota_vehicular:
