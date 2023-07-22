@@ -1,12 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var inlines = document.querySelectorAll('.subcircuito-inline');
+    var inlines = Array.from(document.querySelectorAll('.subcircuito-inline'));
     inlines.forEach(function(inline) {
-        var header = inline.querySelector('h2');
-        var contents = inline.querySelector('.inline-related');
-        header.style.cursor = 'pointer';
-        header.addEventListener('click', function() {
-            contents.style.display = contents.style.display == 'none' ? 'block' : 'none';
+        var headers = inline.querySelectorAll('h2');
+        headers.forEach(function(header) {
+            var contents = Array.from(header.parentElement.querySelectorAll('.inline-related'));
+            if (contents[0].querySelector('input').value) {  // Checks if the inline has data
+                header.style.cursor = 'pointer';
+                header.addEventListener('click', function() {
+                    contents.forEach(function(content) {
+                        content.style.display = content.style.display == 'none' ? 'block' : 'none';
+                    });
+                });
+                contents.forEach(function(content) {
+                    content.style.display = 'none';
+                });
+            }
         });
-        contents.style.display = 'none';
     });
 });
+
+
+
+
+
+
