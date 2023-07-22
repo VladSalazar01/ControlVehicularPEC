@@ -45,6 +45,8 @@ if RENDER_EXTERNAL_HOSTNAME:
 INSTALLED_APPS = [
     'jazzmin',
 
+    'nested_admin',
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -54,7 +56,7 @@ INSTALLED_APPS = [
 
     'theme_material_kit',
     "home",
-    "nested_inline",
+    #"nested_inline",
 ]
 #lenguajes
 LANGUAGE_CODE = 'es'

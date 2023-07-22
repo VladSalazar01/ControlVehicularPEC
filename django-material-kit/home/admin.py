@@ -11,7 +11,8 @@ from django.urls import reverse
 from django.utils.html import format_html
 import requests
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from nested_inline.admin import NestedModelAdmin, NestedStackedInline, NestedTabularInline
+from nested_admin import NestedModelAdmin, NestedStackedInline
+
 
 def check_internet_connection():
     try:
@@ -42,46 +43,64 @@ admin.site.register(Rango_ctlg)
 #--fin personalizacion agregar  usuarios--
 
 
-class ProvinciaAdmin(admin.ModelAdmin):
+
+
+class ParroquiaInline(NestedStackedInline):
+    list_display = ('nombre','numero_de_subcircuitos')
+    model = Parroquia
+    extra = 1 
+    def numero_de_subcircuitos(self, obj):
+        return obj.subcircuitos.count()
+    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
+#admin.site.register(Parroquia, )
+class ProvinciaAdmin(NestedModelAdmin):
     list_display = ('nombre','numero_de_distritos')
+    inlines = [ParroquiaInline]
     def numero_de_distritos(self, obj):
         return obj.distritos.count()
     numero_de_distritos.short_description = 'Número de Distritos'
 admin.site.register(Provincia, ProvinciaAdmin)
 
-class ParroquiaAdmin(admin.ModelAdmin):
-    list_display = ('nombre','numero_de_subcircuitos')
-    def numero_de_subcircuitos(self, obj):
-        return obj.subcircuitos.count()
-    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
-admin.site.register(Parroquia, ParroquiaAdmin)
 
+class SubcircuitoInline(NestedStackedInline):
+    model = Subcircuitos
+    extra = 1
+    classes = ['subcircuito-inline']  
 
-class DistritoAdmin(admin.ModelAdmin):
-    list_display = ('cod_Distrito','provincia','nombre_Distrito', 'numero_de_circuitos')
-    def numero_de_circuitos(self, obj):
-        return obj.circuito.count()
-    numero_de_circuitos.short_description = 'Número de Circuitos'
-admin.site.register(Distrito, DistritoAdmin)
-
-class CircuitoAdmin(admin.ModelAdmin):
+class CircuitoInline(NestedStackedInline):
     list_display = ('cod_Circuito','nombre_Circuito','numero_de_subcircuitos')
+    model = Circuito
+    extra = 1
+    inlines = [SubcircuitoInline]
     def numero_de_subcircuitos(self, obj):
         return obj.subcircuito.count()
     numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
+    class Media:
+        js = ('js/admin_dependencias.js',) 
+class DistritoAdmin(NestedModelAdmin):
+    list_display = ('cod_Distrito','provincia','nombre_Distrito', 'numero_de_circuitos')
+    inlines = [CircuitoInline]
+    def numero_de_circuitos(self, obj):
+        return obj.circuito.count()
+    numero_de_circuitos.short_description = 'Número de Circuitos'
+    class Media:
+        js = ('js/admin_dependencias.js',)  
+admin.site.register(Distrito, DistritoAdmin)
+
+'''
+class CircuitoAdmin(admin.ModelAdmin):
+    list_display = ('cod_Circuito','nombre_Circuito','numero_de_subcircuitos')    
+    def numero_de_subcircuitos(self, obj):
+        return obj.subcircuito.count()    
+    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
 admin.site.register(Circuito, CircuitoAdmin)
 
-#display subcircuito (actualizar metodos PND, solo si van a ser usados en list_display)
 class SubcircuitoAdmin(admin.ModelAdmin):
     list_display = ('cod_subcircuito','nombre_subcircuito')
 class SubcircuitoInline(admin.StackedInline):
 
-    def PND(self, obj):
-        return f"{obj.usuario.user.username} {obj.usuario.user.last_name}"
-    def PND2(self, obj):
-        return f"{obj.usuario.rango} "
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
-
+'''
 
 class OrdendeTrabajoAdmin(admin.ModelAdmin):
     list_display = ('fecha','estado', 'tipo_orden', 'tecnico') 
