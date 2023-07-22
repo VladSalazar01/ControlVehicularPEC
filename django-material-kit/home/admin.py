@@ -87,6 +87,7 @@ class DistritoAdmin(NestedModelAdmin):
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
 
+#----deprecar antiguo gest dependencias
 '''
 class CircuitoAdmin(admin.ModelAdmin):
     list_display = ('cod_Circuito','nombre_Circuito','numero_de_subcircuitos')    
@@ -102,22 +103,40 @@ class SubcircuitoInline(admin.StackedInline):
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
 '''
 
+class OrdenMantenimientoAdmin(admin.ModelAdmin):
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:  # si la orden es nueva
+            obj.creador = request.user
+        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
+            obj.aprobador = request.user
+        super().save_model(request, obj, form, change)
+
+class OrdenCombustibleAdmin(admin.ModelAdmin):
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:  # si la orden es nueva
+            obj.creador = request.user
+        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
+            obj.aprobador = request.user
+        super().save_model(request, obj, form, change)
+
+admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
+admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
+
+#----deprecar antiguo gest oredens detrabajo
+'''
 class OrdendeTrabajoAdmin(admin.ModelAdmin):
     list_display = ('fecha','estado', 'tipo_orden', 'tecnico') 
-    form = OrdenTrabajoForm
-
+    #form = OrdenTrabajoForm
     def save_model(self, request, obj, form, change):
         obj.tecnico = request.user.usuario.tecnico
         super().save_model(request, obj, form, change)
-
 admin.site.register(OrdendeTrabajo, OrdendeTrabajoAdmin)
 
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     list_display = ('tipo_mantenimiento','ordende_trabajo')  
 admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
-
-
 admin.site.register(OrdenCombustible)
+'''
 
 class PartePolicialAdmin(admin.ModelAdmin):
     list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial')
@@ -133,8 +152,6 @@ class TallerMecanicoAdmin(admin.ModelAdmin):
     tipo_taller.short_description = 'Tipo de Taller'
 admin.site.register(TallerMecanico, TallerMecanicoAdmin)
 
-
-#admin.site.unregister(PersonalPolicial)  # Desregistra el PersonalPolicial del CombinedAdmin
 
 class PersonalPolicialAdmin(admin.ModelAdmin):
     list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin']
@@ -165,7 +182,8 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
         return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
-#fin reescritura metodo save   
+''
+
 
 '''
 class PersonalPolicialInline(NestedTabularInline):

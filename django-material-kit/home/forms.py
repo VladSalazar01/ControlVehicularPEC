@@ -120,7 +120,10 @@ class CombinedForm(forms.ModelForm):
         except forms.ValidationError as e:
             self._update_errors(e)
 '''
-#ordenes de trabajo formclass OrdenTrabajoForm(forms.ModelForm):
+
+#----ordenes de trabajo formclass OrdenTrabajoForm(forms.ModelForm):---DEPRECAR
+
+'''
 class OrdenTrabajoForm(forms.ModelForm):
     tipo_mantenimiento = forms.ChoiceField(choices=OrdenMantenimiento.sel_tmantenimiento, required=False)
     tipo_de_combustible = forms.ChoiceField(choices=OrdenCombustible.sel_tcombustible, required=False)
@@ -142,7 +145,7 @@ class OrdenTrabajoForm(forms.ModelForm):
             else:
                 OrdenCombustible.objects.create(ordende_trabajo=orden_trabajo, tipo_de_combustible=self.cleaned_data['tipo_de_combustible'], cantidad_galones=self.cleaned_data['cantidad_galones'], cantidad_galones_detalle=self.cleaned_data['cantidad_galones_detalle'])
         return orden_trabajo
-
+'''
 #buzon de quejas form
 class QuejaSugerenciaForm(forms.ModelForm):
     class Meta:

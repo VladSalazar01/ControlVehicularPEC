@@ -184,49 +184,45 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateField(null=True)
     sel_estado = [
-            ('Activa', 'Orden activa'),  
-            ('Despachada','Orden despachada'),             
-             ]
+        ('Activa', 'Orden activa'),  
+        ('Despachada','Orden despachada'),             
+    ]
     estado = models.CharField(db_column='Estado de Orden', blank=True, null=True, choices=sel_estado, max_length=26)
-    sel_torden= [
-            ('Mantenimiento', 'Orden de Mantenimiento'),  
-            ('Combustible','Orden de combustible'),             
-             ]
-    tipo_orden = models.CharField(db_column='Tipo de orden', blank=True, null=True, choices=sel_torden, max_length=26)
-    tecnico = models.ForeignKey(Tecnico, on_delete=models.DO_NOTHING)
-    def __str__(self):
-            return f"{self.fecha} - {self.tipo_orden}"
-    class Meta:
-       db_table = 'Ordenes de Trabajo' 
-       verbose_name_plural='Ordenes de trabajo'
 
-class OrdenMantenimiento(models.Model):
+    class Meta:
+        abstract = True
+
+class OrdenMantenimiento(OrdendeTrabajo):
     sel_tmantenimiento= [
-            ('M1', 'Mantenimiento tipo 01'),  
-            ('M2', 'Mantenimiento tipo 02'),             
-            ('M3', 'Mantenimiento tipo 03')
-             ]        
+        ('M1', 'Mantenimiento tipo 01'),  
+        ('M2', 'Mantenimiento tipo 02'),             
+        ('M3', 'Mantenimiento tipo 03')
+    ]        
     tipo_mantenimiento = models.CharField(db_column='Tipo de Mantenimiento', blank=True, null=True, choices=sel_tmantenimiento, max_length=26)
-    ordende_trabajo = models.ForeignKey(OrdendeTrabajo, on_delete=models.DO_NOTHING)#foranea tipo de orden
-
+    creador = models.ForeignKey(User, related_name='ordenes_mantenimiento_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    aprobador = models.ForeignKey(User, related_name='ordenes_mantenimiento_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    def __str__(self):
+            return f"{self.fecha} - {self.tipo_mantenimiento}"
     class Meta:
-       db_table = 'Ordenes de Mantenimiento'
-       verbose_name_plural='Ordenes de Mantenimiento'
+        db_table = 'Ordenes de Mantenimiento'
+        verbose_name_plural='Ordenes de Mantenimiento'
 
-class OrdenCombustible(models.Model): 
+class OrdenCombustible(OrdendeTrabajo): 
     sel_tcombustible= [
-            ('Diesel','Combustible Diesel'),  
-            ('Extra','Combustible Extra'),  
-            ('Super','Combustible Super'),            
-             ]  
+        ('Diesel','Combustible Diesel'),  
+        ('Extra','Combustible Extra'),  
+        ('Super','Combustible Super'),            
+    ]  
     tipo_de_combustible = models.CharField(db_column='Tipo de combustible', blank=True, null=True, choices=sel_tcombustible, max_length=26)   
     cantidad_galones = models.CharField(max_length=45, null=True)
-    cantidad_galones_detalle = models.CharField(max_length=45, null=True)    
-    ordende_trabajo = models.ForeignKey(OrdendeTrabajo, on_delete=models.DO_NOTHING)#foranea tipo de orden
-
+    cantidad_galones_detalle = models.CharField(max_length=45, null=True)
+    creador = models.ForeignKey(User, related_name='ordenes_combustible_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    aprobador = models.ForeignKey(User, related_name='ordenes_combustible_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    def __str__(self):
+            return f"{self.fecha} - {self.tipo_de_combustible} - {self.cantidad_galones_detalle}"
     class Meta:
-       db_table = 'Ordenes de Combustible'
-       verbose_name_plural='Ordenes de Combustible'
+        db_table = 'Ordenes de Combustible'
+        verbose_name_plural='Ordenes de Combustible'
 
 #4trio 
 class PartePolicial(models.Model):    
