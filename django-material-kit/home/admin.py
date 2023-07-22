@@ -12,6 +12,7 @@ from django.utils.html import format_html
 import requests
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from nested_admin import NestedModelAdmin, NestedStackedInline
+from django.utils import timezone
 
 
 def check_internet_connection():
@@ -103,21 +104,47 @@ class SubcircuitoInline(admin.StackedInline):
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
 '''
 
-class OrdenMantenimientoAdmin(admin.ModelAdmin):
-    def save_model(self, request, obj, form, change):
-        if not obj.pk:  # si la orden es nueva
-            obj.creador = request.user
-        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
-            obj.aprobador = request.user
-        super().save_model(request, obj, form, change)
 
-class OrdenCombustibleAdmin(admin.ModelAdmin):
+class OrdenMantenimientoAdmin(admin.ModelAdmin):
+    list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
+    readonly_fields = ('fecha',)
     def save_model(self, request, obj, form, change):
         if not obj.pk:  # si la orden es nueva
             obj.creador = request.user
+            obj.fecha = timezone.now()
         if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
             obj.aprobador = request.user
         super().save_model(request, obj, form, change)
+    def creador_link(self, obj):
+        link = reverse("admin:auth_user_change", args=[obj.creador.id])
+        return format_html('<a href="{}">{}</a>', link, obj.creador.username)
+    creador_link.short_description = 'Creado por'
+    def aprobador_link(self, obj):
+        if obj.aprobador:
+            link = reverse("admin:auth_user_change", args=[obj.aprobador.id])
+            return format_html('<a href="{}">{}</a>', link, obj.aprobador.username)
+        return "-"
+    aprobador_link.short_description = 'Aprobado por'
+class OrdenCombustibleAdmin(admin.ModelAdmin):
+    list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
+    readonly_fields = ('fecha',)
+    def save_model(self, request, obj, form, change):
+        if not obj.pk:  # si la orden es nueva
+            obj.creador = request.user
+            obj.fecha = timezone.now()
+        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
+            obj.aprobador = request.user
+        super().save_model(request, obj, form, change)
+    def creador_link(self, obj):
+        link = reverse("admin:auth_user_change", args=[obj.creador.id])
+        return format_html('<a href="{}">{}</a>', link, obj.creador.username)
+    creador_link.short_description = 'Creado por'
+    def aprobador_link(self, obj):
+        if obj.aprobador:
+            link = reverse("admin:auth_user_change", args=[obj.aprobador.id])
+            return format_html('<a href="{}">{}</a>', link, obj.aprobador.username)
+        return "-"
+    aprobador_link.short_description = 'Aprobado por'
 
 admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
