@@ -2,6 +2,7 @@
 
 {% block content %}
   <h2>Registro de Parte Policial</h2>
+  <h3>{{ form.non_field_errors }}</h3>
   <p>Fecha: {{ fecha }}</p> 
   <p>Nombre: {{ request.user.first_name }} {{ request.user.last_name }}</p>
   <p>Vehículo asignado (Placa): 
@@ -21,6 +22,7 @@
   <p>Subcircuito: {{ subcircuito }}</p>
   <form method="post">
     {% csrf_token %}
+    
     <p>{{ form.tipo_parte.label }}: {{ form.tipo_parte }}</p>
     <p>{{ form.observaciones.label }}: <br> 
         <textarea id="{{ form.observaciones.auto_id }}" name="{{ form.observaciones.html_name }}" style="width: 100%; height: 210px;">{{ form.observaciones.value|default_if_none:'' }}</textarea>
