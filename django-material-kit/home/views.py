@@ -14,6 +14,13 @@ from xhtml2pdf import pisa
 from django.template.loader import get_template
 from django.template import Context
 
+from django.utils.decorators import method_decorator
+from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.utils import timezone
+
+
+
 # Create your views here.
 
 def index(request):
@@ -43,7 +50,7 @@ def user_login(request):
 def profile(request):
     return render(request, 'inicio/profile.html')
 
-#crear partes policiales
+#crear partes policiales (DEPRECACIÓN)   
 @login_required
 def parte_policial(request):
     if request.method == 'POST':
@@ -55,13 +62,18 @@ def parte_policial(request):
             # Establecer la fecha al día actual
             parte_policial.fecha = date.today()
             parte_policial.save()
+
+            if form.cleaned_data['tipo_parte'] in ['Mantenimiento Preventivo', 'Mantenimiento Correctivo'] and form.cleaned_data['tipo_mantenimiento']:
+                OrdenMantenimiento.objects.create(fecha=parte_policial.fecha, estado='Activa', tipo_mantenimiento=form.cleaned_data['tipo_mantenimiento'], creador=request.user, orden_policial=parte_policial)
+            elif form.cleaned_data['tipo_parte'] == 'Solicitud de Combustible' and form.cleaned_data['tipo_de_combustible']:
+                OrdenCombustible.objects.create(fecha=parte_policial.fecha, estado='Activa', tipo_de_combustible=form.cleaned_data['tipo_de_combustible'], creador=request.user, orden_policial=parte_policial)
+
             return redirect('status', status='success')
         else:
             return redirect('status', status='error')
     else:
         form = PartePolicialForm()
-    return render(request, 'partes_policiales/parte_policial.html', {'form': form, 'fecha': date.today()})
-
+    return render(request, 'partes_policiales/parte_policial.html', {'form': form, 'fecha_actual': date.today()})
 @login_required
 def status(request, status):
     return render(request, 'partes_policiales/status.html', {'status': status})
@@ -72,18 +84,39 @@ def mis_partes_policiales(request):
     personal_policial = PersonalPolicial.objects.get(usuario=usuario)
     partes_policiales_list = PartePolicial.objects.filter(personalPolicial=personal_policial)
     # Paginación
-    paginator = Paginator(partes_policiales_list, 3) # Muestra 5 partes por página
+    paginator = Paginator(partes_policiales_list, 6) # Muestra 5 partes por página
     page = request.GET.get('page')
     try:
         partes_policiales = paginator.page(page)
-    except PageNotAnInteger:
-        # Si la página no es un entero, entrega la primera página.
+    except PageNotAnInteger:      
         partes_policiales = paginator.page(1)
-    except EmptyPage:
-        # Si la página está fuera de rango, entrega la última página de resultados.
+    except EmptyPage:     
         partes_policiales = paginator.page(paginator.num_pages)
     return render(request, 'partes_policiales/mis_partes_policiales.html', {'partes_policiales': partes_policiales})
 
+#nuevo partes policiales
+#agregar
+@method_decorator(login_required, name='dispatch')
+class PartePolicialCreateView(CreateView):
+    model = PartePolicial
+    form_class = PartePolicialForm
+    success_url = reverse_lazy('profile')  # redirige a la página de perfil después de la creación exitosa
+    template_name = 'partes_policiales/parte_policial2.html'  # especifica la plantilla a utilizar
+
+    def form_valid(self, form):
+        personal_policial = PersonalPolicial.objects.get(usuario__user=self.request.user)
+        form.instance.personalPolicial = personal_policial
+        form.instance.fecha = timezone.now()  # establece la fecha actual
+        return super().form_valid(form)
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        personal_policial = PersonalPolicial.objects.get(usuario__user=self.request.user)
+        flota_vehicular = personal_policial.flota_vehicular
+        context['vehiculo'] = flota_vehicular if flota_vehicular else "-Sin datos, contacte a logística-"
+        context['subcircuito'] = flota_vehicular.subcircuito if flota_vehicular and flota_vehicular.subcircuito else "-Sin datos, contacte a logística-"
+        context['fecha'] = timezone.now()  # establece la fecha actual en el contexto
+        return context
 #EVALUACION
 def queja_sugerencia(request):
     if request.method == 'POST':

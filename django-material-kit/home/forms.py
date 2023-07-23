@@ -6,13 +6,30 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MinLengthValidator
 from .models import *
 from django.contrib.auth.models import Group
-
+from django.contrib.admin.widgets import AdminSplitDateTime
 #crear parte policial
+'''
 class PartePolicialForm(forms.ModelForm):
+    tipo_parte = forms.ChoiceField(choices=PartePolicial.sel_tparte, widget=forms.Select(attrs={'id': 'tipo_parte'}))
+    fecha_solicitud = forms.DateTimeField(label="Fecha de Mantenimiento:", required=True)
+    estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
+
     class Meta:
         model = PartePolicial
-        fields = ['tipo_parte', 'observaciones']
+        exclude = ['fecha']  # excluimos la fecha del formulario
+'''
 
+class PartePolicialForm(forms.ModelForm):
+    fecha_solicitud = forms.DateTimeField(
+        label="Fecha de Mantenimiento:", 
+        required=True, 
+        widget=forms.DateTimeInput(attrs={'type': 'datetime-local'})
+    )
+    estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
+
+    class Meta:
+        model = PartePolicial
+        fields = ['tipo_parte', 'observaciones', 'estado', 'fecha_solicitud', 'kilometraje_actual']  # eliminamos 'fecha'
 #crear usuario----
 '''
 class CombinedForm(forms.ModelForm):

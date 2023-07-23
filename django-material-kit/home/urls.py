@@ -11,8 +11,16 @@ urlpatterns = [
     #partes policiales crear
     path('parte_policial/', parte_policial, name='parte_policial'),
     path('status/<str:status>/', status, name='status'),
+
+    
     #partes policiales consultar
     path('mis_partes_policiales/', mis_partes_policiales, name='mis_partes_policiales'),
+
+    #nuevo partes poilicles
+    #agregar
+    path('mantenimiento/', PartePolicialCreateView.as_view(), name='mantenimiento'),
+
+
     #evaluacion buzon de quejas
     path('queja_sugerencia/', views.queja_sugerencia, name='queja_sugerencia'),
     path('get_subcircuitos/<int:circuito_id>/', views.get_subcircuitos, name='get_subcircuitos'),

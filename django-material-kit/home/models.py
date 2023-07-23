@@ -226,12 +226,15 @@ class OrdenCombustible(OrdendeTrabajo):
 
 #4trio 
 class PartePolicial(models.Model):    
-    fecha = models.DateField(max_length=45, blank=True, null=True)
+    fecha = models.DateTimeField(max_length=45, blank=True, null=True)
+    fecha_solicitud = models.DateTimeField(null=True, blank=True)  
+    kilometraje_actual = models.IntegerField(null=True, blank=True)  
     sel_tparte= [
-            ('Mantenimiento Preventivo','Mantenimiento preventivo'),  
-            ('Mantenimiento emergente','Mantenimiento emergente'),  
-            ('Novedades','Novedades'),            
-             ] 
+        ('Mantenimiento Preventivo','Mantenimiento preventivo'),  
+        ('Mantenimiento Correctivo','Mantenimiento correctivo'),  
+        ('Solicitud de Combustible','Solicitud de combustible'),  
+        ('Novedades','Novedades'),            
+    ]  
     tipo_parte = models.CharField(db_column='Tipo de Parte', blank=True, null=True, choices=sel_tparte, max_length=26)   
     observaciones = models.TextField(max_length=450, blank=True, null=True)
     ESTADOS = [
@@ -241,6 +244,7 @@ class PartePolicial(models.Model):
     ]
     estado = models.CharField(max_length=20, choices=ESTADOS, default='En Proceso')
     personalPolicial = models.ForeignKey(PersonalPolicial, models.DO_NOTHING,)
+    
     def __str__(self):
         return f"El parte {self.tipo_parte}, con fecha {self.fecha},"
     class Meta:

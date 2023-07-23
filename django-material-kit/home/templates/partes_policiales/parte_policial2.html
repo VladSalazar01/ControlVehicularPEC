@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Registro de Parte Policial</h2>
+  <p>Fecha: {{ fecha }}</p>  <!-- se muestra la fecha -->
+  <p>Nombre: {{ request.user.first_name }} {{ request.user.last_name }}</p>
+  <p>Vehículo asignado (Placa): 
+    {% if vehiculo != '-Sin datos, contacte a logística-' %}
+        {{ vehiculo.placa }}
+    {% else %}
+        {{ vehiculo }}
+    {% endif %}
+  </p>
+  <p>Chasis: 
+    {% if vehiculo != '-Sin datos, contacte a logística-' %}
+        {{ vehiculo.chasis }}
+    {% else %}
+        {{ vehiculo }}
+    {% endif %}
+  </p>
+  <p>Subcircuito: {{ subcircuito }}</p>
+  <form method="post">
+    {% csrf_token %}
+    <p>{{ form.tipo_parte.label }}: {{ form.tipo_parte }}</p>
+    <p>{{ form.observaciones.label }}: {{ form.observaciones }}</p>
+    <p>{{ form.fecha_solicitud.label }}: {{ form.fecha_solicitud }}</p>
+    <p>{{ form.kilometraje_actual.label }}: {{ form.kilometraje_actual }}</p>
+    {{ form.estado }}  <!-- este campo está oculto -->
+    <button type="submit" class="btn btn-primary">Registrar</button>
+    <a href="{% url 'profile' %}" class="btn">Cancelar</a>  
+  </form>
+{% endblock %}

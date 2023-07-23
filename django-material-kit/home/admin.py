@@ -167,6 +167,7 @@ admin.site.register(OrdenCombustible)
 
 class PartePolicialAdmin(admin.ModelAdmin):
     list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial')
+    readonly_fields = ['personalPolicial', 'fecha']
     def nombre_personal_policial(self, obj):
         return obj.personalPolicial.usuario.user.username 
     nombre_personal_policial.short_description = 'Personal Policial'

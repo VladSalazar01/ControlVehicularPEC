@@ -7,10 +7,32 @@
         {% csrf_token %}
         <p>Fecha: {{ fecha_actual }}</p>
         {{ form.tipo_parte.label_tag }}<br>{{ form.tipo_parte }}<br>
+        <div id="tipo_mantenimiento_div" style="display: none;">
+            {{ form.tipo_mantenimiento.label_tag }}<br>{{ form.tipo_mantenimiento }}<br>
+        </div>
+        <div id="tipo_combustible_div" style="display: none;">
+            {{ form.tipo_de_combustible.label_tag }}<br>{{ form.tipo_de_combustible }}<br>
+        </div>
         {{ form.observaciones.label_tag }}<br>{{ form.observaciones }}<br>
         <button type="submit" class="btn">Guardar</button>
     </form>
     <br>
     <a href="{% url 'profile' %}" class="btn">Cancelar</a>  
-{% endblock %}
 
+    <script>
+    window.onload = function() {
+        document.getElementById('tipo_parte').addEventListener('change', function() {
+            if (this.value == 'Mantenimiento Preventivo' || this.value == 'Mantenimiento Correctivo') {
+                document.getElementById('tipo_mantenimiento_div').style.display = 'block';
+                document.getElementById('tipo_combustible_div').style.display = 'none';
+            } else if (this.value == 'Solicitud de Combustible') {
+                document.getElementById('tipo_mantenimiento_div').style.display = 'none';
+                document.getElementById('tipo_combustible_div').style.display = 'block';
+            } else {
+                document.getElementById('tipo_mantenimiento_div').style.display = 'none';
+                document.getElementById('tipo_combustible_div').style.display = 'none';
+            }
+        });
+    }
+    </script>
+{% endblock %}
