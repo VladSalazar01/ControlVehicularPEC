@@ -25,11 +25,36 @@ class PartePolicialForm(forms.ModelForm):
         required=True, 
         widget=forms.DateTimeInput(attrs={'type': 'datetime-local'})
     )
+    observaciones = forms.CharField(
+        widget=forms.Textarea(),
+        #widget=forms.Textarea(attrs={'rows':6, 'cols':121}),
+    )
     estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
 
     class Meta:
         model = PartePolicial
         fields = ['tipo_parte', 'observaciones', 'estado', 'fecha_solicitud', 'kilometraje_actual']  # eliminamos 'fecha'
+
+    def __init__(self, *args, **kwargs):
+        self.user = kwargs.pop('user')  # acceder al usuario
+        super().__init__(*args, **kwargs)
+
+    def clean(self):
+        cleaned_data = super().clean()
+        fecha_solicitud = cleaned_data.get("fecha_solicitud")
+        kilometraje_actual = cleaned_data.get("kilometraje_actual")
+
+        # Verificar si la fecha de solicitud es en el futuro
+        if fecha_solicitud and fecha_solicitud <= timezone.now():
+            raise ValidationError("La fecha de mantenimiento debe ser una fecha futura.")
+
+        # Verificar si el kilometraje es mayor al kilometraje actual del vehículo
+        personal_policial = PersonalPolicial.objects.get(usuario__user=self.user)
+        flota_vehicular = personal_policial.flota_vehicular
+        if flota_vehicular and kilometraje_actual and kilometraje_actual <= flota_vehicular.kilometraje:
+            raise ValidationError("El kilometraje actual debe ser mayor al kilometraje del vehículo.")
+
+
 #crear usuario----
 '''
 class CombinedForm(forms.ModelForm):

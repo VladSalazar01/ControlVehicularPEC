@@ -97,11 +97,17 @@ def mis_partes_policiales(request):
 #nuevo partes policiales
 #agregar
 @method_decorator(login_required, name='dispatch')
+@method_decorator(login_required, name='dispatch')
 class PartePolicialCreateView(CreateView):
     model = PartePolicial
     form_class = PartePolicialForm
     success_url = reverse_lazy('profile')  # redirige a la página de perfil después de la creación exitosa
     template_name = 'partes_policiales/parte_policial2.html'  # especifica la plantilla a utilizar
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs.update({'user': self.request.user})  # pasa el usuario al formulario
+        return kwargs
 
     def form_valid(self, form):
         personal_policial = PersonalPolicial.objects.get(usuario__user=self.request.user)
