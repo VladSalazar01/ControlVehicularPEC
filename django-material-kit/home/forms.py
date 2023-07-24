@@ -46,7 +46,7 @@ class PartePolicialForm(forms.ModelForm):
         personal_policial = PersonalPolicial.objects.get(usuario__user=self.user)
         flota_vehicular = personal_policial.flota_vehicular
         if not flota_vehicular:
-            self.add_error(None, "El parte no se ha guardado porque no tiene ningún vehículo asociado.")
+            self.add_error(None, "El parte no se ha registrado porque no tiene ningún vehículo asociado.")
 
         if fecha_solicitud and fecha_solicitud <= timezone.now():
             self.add_error(None, "La fecha de mantenimiento debe ser una fecha futura.")
@@ -54,6 +54,36 @@ class PartePolicialForm(forms.ModelForm):
         if flota_vehicular and kilometraje_actual and kilometraje_actual <= flota_vehicular.kilometraje:
             self.add_error(None, "El kilometraje actual debe ser mayor al kilometraje del vehículo.")
 
+class OrdenMantenimientoForm(forms.ModelForm):
+    TIPOS_MANTENIMIENTO = [
+        ('M1', 'Mantenimiento tipo 01'),
+        ('M2', 'Mantenimiento tipo 02'),
+        ('M3', 'Mantenimiento tipo 03')
+    ]
+    tipo_mantenimiento = forms.MultipleChoiceField(
+        choices=TIPOS_MANTENIMIENTO,
+        widget=forms.CheckboxSelectMultiple,
+    )
+
+    class Meta:
+        model = OrdenMantenimiento
+        exclude=['aprobador', 'fecha', 'creador']
+
+    def clean_tipo_mantenimiento(self):
+        tipo_mantenimiento = self.cleaned_data.get('tipo_mantenimiento')
+
+        # Si se seleccionó "M1" y "M2"
+        if 'M1' in tipo_mantenimiento and 'M2' in tipo_mantenimiento:
+            raise forms.ValidationError('No se puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" al mismo tiempo.')
+
+        return tipo_mantenimiento
+'''    
+    def clean_tipo_mantenimiento(self):
+        tipo_mantenimiento = self.cleaned_data.get('tipo_mantenimiento')
+        if 'M1' in tipo_mantenimiento and 'M2' in tipo_mantenimiento:
+            raise forms.ValidationError('No puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" a la vez.')
+        return tipo_mantenimiento
+''' 
 #crear usuario----
 '''
 class CombinedForm(forms.ModelForm):

@@ -106,8 +106,12 @@ admin.site.register(Subcircuitos, SubcircuitoAdmin)
 
 
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
-    readonly_fields = ('fecha',)
+    list_display = ['fecha', 'tipo_mantenimiento', 'creador', 'aprobador']
+    search_fields = ['fecha', 'tipo_mantenimiento', 'creador__username', 'aprobador__username']
+    list_filter = ['fecha', 'tipo_mantenimiento']
+    readonly_fields = ['fecha','creador', 'aprobador']
+    form = OrdenMantenimientoForm
+
     def save_model(self, request, obj, form, change):
         if not obj.pk:  # si la orden es nueva
             obj.creador = request.user
@@ -128,6 +132,9 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
 class OrdenCombustibleAdmin(admin.ModelAdmin):
     list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
     readonly_fields = ('fecha',)
+    search_fields = ['fecha', 'tipo_de_combustible', 'creador__username', 'aprobador__username']
+    list_filter = ['fecha', 'tipo_de_combustible']
+    readonly_fields = ['creador', 'aprobador']
     def save_model(self, request, obj, form, change):
         if not obj.pk:  # si la orden es nueva
             obj.creador = request.user
@@ -149,21 +156,7 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
 admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
 
-#----deprecar antiguo gest oredens detrabajo
-'''
-class OrdendeTrabajoAdmin(admin.ModelAdmin):
-    list_display = ('fecha','estado', 'tipo_orden', 'tecnico') 
-    #form = OrdenTrabajoForm
-    def save_model(self, request, obj, form, change):
-        obj.tecnico = request.user.usuario.tecnico
-        super().save_model(request, obj, form, change)
-admin.site.register(OrdendeTrabajo, OrdendeTrabajoAdmin)
 
-class OrdenMantenimientoAdmin(admin.ModelAdmin):
-    list_display = ('tipo_mantenimiento','ordende_trabajo')  
-admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
-admin.site.register(OrdenCombustible)
-'''
 
 class PartePolicialAdmin(admin.ModelAdmin):
     list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial')

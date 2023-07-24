@@ -8,6 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from django.core.exceptions import ValidationError
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
+from django.contrib.postgres.fields import ArrayField
 
 #clase abstracta para el borrado suave
 class SoftDeletionModel(models.Model):
@@ -197,8 +198,9 @@ class OrdenMantenimiento(OrdendeTrabajo):
         ('M1', 'Mantenimiento tipo 01'),  
         ('M2', 'Mantenimiento tipo 02'),             
         ('M3', 'Mantenimiento tipo 03')
-    ]        
-    tipo_mantenimiento = models.CharField(db_column='Tipo de Mantenimiento', blank=True, null=True, choices=sel_tmantenimiento, max_length=26)
+    ]      
+    tipo_mantenimiento = ArrayField(models.CharField(max_length=2, choices=sel_tmantenimiento), blank=True, null=True)
+    detalles_mantenimiento = models.TextField(editable=False, blank=True)
     creador = models.ForeignKey(User, related_name='ordenes_mantenimiento_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     aprobador = models.ForeignKey(User, related_name='ordenes_mantenimiento_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     def __str__(self):
@@ -206,6 +208,12 @@ class OrdenMantenimiento(OrdendeTrabajo):
     class Meta:
         db_table = 'Ordenes de Mantenimiento'
         verbose_name_plural='Ordenes de Mantenimiento'
+    def clean(self):
+        super().clean()
+        if self.tipo_mantenimiento is not None:
+            if 'M1' in self.tipo_mantenimiento and 'M2' in self.tipo_mantenimiento:
+                raise ValidationError('No se puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" al mismo tiempo.')
+
 
 class OrdenCombustible(OrdendeTrabajo): 
     sel_tcombustible= [
@@ -223,6 +231,7 @@ class OrdenCombustible(OrdendeTrabajo):
     class Meta:
         db_table = 'Ordenes de Combustible'
         verbose_name_plural='Ordenes de Combustible'
+
 
 #4trio 
 class PartePolicial(models.Model):    
