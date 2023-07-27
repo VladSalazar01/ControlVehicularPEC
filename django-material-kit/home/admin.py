@@ -13,6 +13,7 @@ import requests
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from nested_admin import NestedModelAdmin, NestedStackedInline
 from django.utils import timezone
+from django.core.exceptions import ValidationError
 
 
 def check_internet_connection():
@@ -104,21 +105,59 @@ class SubcircuitoInline(admin.StackedInline):
 admin.site.register(Subcircuitos, SubcircuitoAdmin)
 '''
 
+'''
+class TipoMantenimientoInlineFormset(forms.BaseInlineFormSet):
+    def clean(self):
+        super().clean()
+        tipos_mantenimiento = [form.cleaned_data['tipo_mantenimiento'].tipo for form in self.forms if form.cleaned_data.get('tipo_mantenimiento')]
+        if 'M1' in tipos_mantenimiento and 'M2' in tipos_mantenimiento:
+            raise ValidationError("No puedes elegir Mantenimiento 1 y Mantenimiento 2 al mismo tiempo.")
+
+class TipoMantenimientoInline(admin.TabularInline):
+    model = OrdenMantenimiento.tipos_mantenimiento.through
+    extra = 1
 
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
-    list_display = ['fecha', 'tipo_mantenimiento', 'creador', 'aprobador']
-    search_fields = ['fecha', 'tipo_mantenimiento', 'creador__username', 'aprobador__username']
-    list_filter = ['fecha', 'tipo_mantenimiento']
-    readonly_fields = ['fecha','creador', 'aprobador']
+    list_display = ['fecha', 'get_tipos_mantenimiento', 'creador', 'aprobador', 'enlace_a_tipos_mantenimiento']
+    search_fields = ['fecha', 'get_tipos_mantenimiento', 'creador__username', 'aprobador__username']
+    list_filter = ['fecha', 'tipos_mantenimiento']
+    readonly_fields = ['creador', 'aprobador']
     form = OrdenMantenimientoForm
+    inlines = [TipoMantenimientoInline]
 
+    def enlace_a_tipos_mantenimiento(self, obj):
+        if not obj.tipos_mantenimiento.exists():
+            url = reverse('admin:home_ordenmantenimiento_change', args=[obj.id])
+            url = f"{url}?tab=tipos_mantenimiento"  # add GET parameter to the url
+            return format_html('<a href="{}">Seleccione tipo de mantenimiento</a>', url)
+        return '-'
+
+    def get_inline_instances(self, request, obj=None):
+        if obj is None:  # this is the case when the object is being created
+            return []  # return an empty list to not display any inline
+        return super().get_inline_instances(request, obj)
+
+    def response_add(self, request, obj, post_url_continue=None):
+        try:
+            if "_continue" in request.POST:
+                return super().response_change(request, obj)
+            else:
+                return super().response_add(request, obj, post_url_continue)
+        except ValidationError:
+            return render(request, 'admin/orden_trabajo/error.html')     
+
+    def get_tipos_mantenimiento(self, obj):
+        return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
+    get_tipos_mantenimiento.short_description = 'Tipos de Mantenimiento'
+    get_tipos_mantenimiento.admin_order_field = 'tipos_mantenimiento'
     def save_model(self, request, obj, form, change):
-        if not obj.pk:  # si la orden es nueva
+        if not obj.pk:  
             obj.creador = request.user
             obj.fecha = timezone.now()
-        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
+        if 'estado' in form.changed_data and obj.estado == 'Despachada':  
             obj.aprobador = request.user
         super().save_model(request, obj, form, change)
+
     def creador_link(self, obj):
         link = reverse("admin:auth_user_change", args=[obj.creador.id])
         return format_html('<a href="{}">{}</a>', link, obj.creador.username)
@@ -129,6 +168,72 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
             return format_html('<a href="{}">{}</a>', link, obj.aprobador.username)
         return "-"
     aprobador_link.short_description = 'Aprobado por'
+
+
+admin.site.register(TipoMantenimiento)
+admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
+'''
+
+
+
+@admin.register(OrdenMantenimiento)
+class OrdenMantenimientoAdmin(admin.ModelAdmin):
+    change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
+    change_list_template = 'admin/orden_trabajo/ordenmantenimiento_change_list.html'
+    search_fields = ['fecha', 'tipos_mantenimiento__nombre', 'creador__username', 'aprobador__username']
+    list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
+    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador')
+
+    def get_tipo_mantenimiento(self, obj):
+        return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
+    get_tipo_mantenimiento.short_description = 'Tipos de Mantenimiento'
+
+    def get_form(self, request, obj=None, **kwargs):
+        form = super().get_form(request, obj, **kwargs)
+        form.base_fields['creador'].initial = request.user
+        return form
+    
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path('create/', self.create_ordenmantenimiento, name='create_ordenmantenimiento'),
+            path('<int:ordenmantenimiento_id>/update/', self.update_ordenmantenimiento, name='update_ordenmantenimiento'),
+        ]
+        return custom_urls + urls
+
+    def create_ordenmantenimiento(self, request):
+        if request.method == 'POST':
+            form = OrdenMantenimientoForm(request.POST)
+            if form.is_valid():
+                ordenmantenimiento = form.save()
+                return redirect('admin:update_ordenmantenimiento', ordenmantenimiento_id=ordenmantenimiento.id)
+        else:
+            form = OrdenMantenimientoForm()
+        return render(request, 'admin/orden_trabajo/create_ordenmantenimiento.html', {'form': form})
+
+    def update_ordenmantenimiento(self, request, ordenmantenimiento_id):
+        ordenmantenimiento = OrdenMantenimiento.objects.get(id=ordenmantenimiento_id)
+        if request.method == 'POST':
+            form = TipoMantenimientoForm(request.POST, instance=ordenmantenimiento)
+            if form.is_valid():
+                form.save()
+                return redirect('admin:home_ordenmantenimiento_changelist')
+        else:
+            form = TipoMantenimientoForm(instance=ordenmantenimiento)
+        return render(request, 'admin/orden_trabajo/update_ordenmantenimiento.html', {'form': form, 'ordenmantenimiento': ordenmantenimiento})
+    
+    def save_model(self, request, obj, form, change):
+        if not change:  # sólo para nuevos objetos, no para los ya existentes
+            obj.creador = request.user
+        if obj.estado == 'Despachada':
+            obj.aprobador = request.user
+        super().save_model(request, obj, form, change)
+
+    def changelist_view(self, request, extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['tipos_mantenimiento'] = TipoMantenimiento.objects.all()
+        return super().changelist_view(request, extra_context=extra_context)
+
 class OrdenCombustibleAdmin(admin.ModelAdmin):
     list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
     readonly_fields = ('fecha',)
@@ -142,6 +247,8 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
         if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
             obj.aprobador = request.user
         super().save_model(request, obj, form, change)
+
+
     def creador_link(self, obj):
         link = reverse("admin:auth_user_change", args=[obj.creador.id])
         return format_html('<a href="{}">{}</a>', link, obj.creador.username)
@@ -153,7 +260,7 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
         return "-"
     aprobador_link.short_description = 'Aprobado por'
 
-admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
+
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
 
 

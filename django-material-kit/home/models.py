@@ -180,7 +180,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
         db_table = 'Personal Policial' 
         verbose_name_plural='Personal Policial'
   
-#3trio problemas con los nombres de atributos, muy larcos mucho sub-gion
+
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateField(null=True)
@@ -192,29 +192,43 @@ class OrdendeTrabajo(models.Model):
 
     class Meta:
         abstract = True
-
-class OrdenMantenimiento(OrdendeTrabajo):
+    
+class TipoMantenimiento(models.Model):
     sel_tmantenimiento= [
         ('M1', 'Mantenimiento tipo 01'),  
         ('M2', 'Mantenimiento tipo 02'),             
         ('M3', 'Mantenimiento tipo 03')
-    ]      
-    tipo_mantenimiento = ArrayField(models.CharField(max_length=2, choices=sel_tmantenimiento), blank=True, null=True)
-    detalles_mantenimiento = models.TextField(editable=False, blank=True)
+    ]   
+    tipo = models.CharField(max_length=2, choices=sel_tmantenimiento)
+    descripcion = models.TextField(blank=True)
+    costo = models.DecimalField(max_digits=5, decimal_places=2)
+    def __str__(self):
+        return self.get_tipo_display()
+
+class OrdenMantenimiento(OrdendeTrabajo):
+    tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
     creador = models.ForeignKey(User, related_name='ordenes_mantenimiento_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     aprobador = models.ForeignKey(User, related_name='ordenes_mantenimiento_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     def __str__(self):
-            return f"{self.fecha} - {self.tipo_mantenimiento}"
+        return f"{self.fecha}"
     class Meta:
         db_table = 'Ordenes de Mantenimiento'
         verbose_name_plural='Ordenes de Mantenimiento'
+
     def clean(self):
         super().clean()
-        if self.tipo_mantenimiento is not None:
-            if 'M1' in self.tipo_mantenimiento and 'M2' in self.tipo_mantenimiento:
+        if self.pk is not None:  # solo realizamos la validación si el objeto ya está en la base de datos
+            mantenimientos_list = [tipo.tipo for tipo in self.tipos_mantenimiento.all()]
+            if 'M1' in mantenimientos_list and 'M2' in mantenimientos_list:
+                raise ValidationError('No puedes seleccionar los tipos de mantenimiento M1 y M2 a la vez.')
+
+    '''    
+    def clean(self):
+        super().clean()
+        if self.tipos_mantenimiento is not None:
+            if 'M1' in self.tipos_mantenimiento and 'M2' in self.tipos_mantenimiento:
                 raise ValidationError('No se puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" al mismo tiempo.')
-
-
+    '''
 class OrdenCombustible(OrdendeTrabajo): 
     sel_tcombustible= [
         ('Diesel','Combustible Diesel'),  

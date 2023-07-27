@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+  <h1>Actualizar Orden de Mantenimiento ID: {{ ordenmantenimiento.id }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Finalizar</button>
+  </form>
+  <a href="{% url 'admin:delete_ordenmantenimiento' ordenmantenimiento.id %}">Cancelar</a>
+{% endblock %}

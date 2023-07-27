@@ -1,0 +1,42 @@
+{% extends "admin/change_list.html" %}
+{% load i18n %}
+{% load i18n admin_urls %}
+
+{% block filters %}
+    <h3> Filters </h3>
+    <form method="GET">
+        <div>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" value="{{ request.GET.fecha }}">
+        </div>
+        <div>
+            <label for="tipos_mantenimiento">Tipo de Mantenimiento:</label>
+            <select id="tipos_mantenimiento" name="tipos_mantenimiento">
+                <option value="">---------</option>
+                {% for tipo in cl.model_admin.tipos_mantenimiento %}
+                <option value="{{ tipo.id }}" {% if request.GET.tipos_mantenimiento == tipo.id|stringformat:"s" %}selected{% endif %}>{{ tipo }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <input type="submit" value="Filter">
+    </form>
+{% endblock %}
+
+{% block result_list %}
+<div class="text-center">
+  <h1>{% trans 'Lista de Ordenes de Mantenimiento' %}</h1>
+  <p class="help">{% trans 'Haz clic en una orden de mantenimiento para editarla.' %}</p>
+</div>
+
+{% if cl.result_count %}
+
+  <p>{% trans "Total: " %}{{ cl.result_count }}</p>
+  {{ block.super }}
+
+  
+{% else %}
+  <p>{% trans "No se encontraron ordenes de mantenimiento." %}</p>
+{% endif %}
+{% endblock %}
+
+

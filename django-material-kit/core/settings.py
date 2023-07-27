@@ -289,7 +289,7 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": [],#["home.personalpolicial", "Home.tecnico"],
+    "hide_models": [],#["TipoMantenimiento", "OrdenMantenimiento"],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
     "order_with_respect_to": ["auth", "home.usuario", "home.personalpolicial", "Home.tecnico",

@@ -7,6 +7,7 @@ from django.core.validators import MinLengthValidator
 from .models import *
 from django.contrib.auth.models import Group
 from django.contrib.admin.widgets import AdminSplitDateTime
+from django.contrib import admin
 #crear parte policial
 '''
 class PartePolicialForm(forms.ModelForm):
@@ -54,29 +55,40 @@ class PartePolicialForm(forms.ModelForm):
         if flota_vehicular and kilometraje_actual and kilometraje_actual <= flota_vehicular.kilometraje:
             self.add_error(None, "El kilometraje actual debe ser mayor al kilometraje del vehículo.")
 
+'''
 class OrdenMantenimientoForm(forms.ModelForm):
-    TIPOS_MANTENIMIENTO = [
-        ('M1', 'Mantenimiento tipo 01'),
-        ('M2', 'Mantenimiento tipo 02'),
-        ('M3', 'Mantenimiento tipo 03')
-    ]
-    tipo_mantenimiento = forms.MultipleChoiceField(
-        choices=TIPOS_MANTENIMIENTO,
-        widget=forms.CheckboxSelectMultiple,
-    )
-
     class Meta:
         model = OrdenMantenimiento
-        exclude=['aprobador', 'fecha', 'creador']
+        exclude = ['tipos_mantenimiento']
+   
+class TipoMantenimientoInlineFormset(forms.BaseInlineFormSet):
+    def clean(self):
+        super().clean()
+        mantenimientos_list = []
+        for form in self.forms:
+            if not form.cleaned_data.get('DELETE'):  # Ignore forms that will be deleted
+                mantenimiento = form.cleaned_data.get('tipo_mantenimiento')
+                if mantenimiento:
+                    mantenimientos_list.append(mantenimiento.tipo)
+        
+        if 'M1' in mantenimientos_list and 'M2' in mantenimientos_list:
+            raise ValidationError("No puedes elegir Mantenimiento 1 y Mantenimiento 2 al mismo tiempo.")
 
-    def clean_tipo_mantenimiento(self):
-        tipo_mantenimiento = self.cleaned_data.get('tipo_mantenimiento')
+class TipoMantenimientoInline(admin.TabularInline):
+    model = OrdenMantenimiento.tipos_mantenimiento.through
+    extra = 1
+    formset = TipoMantenimientoInlineFormset
+'''
+class OrdenMantenimientoForm(forms.ModelForm):
+    class Meta:
+        model = OrdenMantenimiento
+        exclude = ['tipos_mantenimiento']
 
-        # Si se seleccionó "M1" y "M2"
-        if 'M1' in tipo_mantenimiento and 'M2' in tipo_mantenimiento:
-            raise forms.ValidationError('No se puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" al mismo tiempo.')
+class TipoMantenimientoForm(forms.ModelForm):
+    class Meta:
+        model = OrdenMantenimiento
+        fields = ['tipos_mantenimiento']
 
-        return tipo_mantenimiento
 '''    
     def clean_tipo_mantenimiento(self):
         tipo_mantenimiento = self.cleaned_data.get('tipo_mantenimiento')
