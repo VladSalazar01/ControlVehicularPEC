@@ -183,6 +183,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     search_fields = ['fecha', 'tipos_mantenimiento__nombre', 'creador__username', 'aprobador__username']
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
     list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador')
+    form = OrdenMantenimientoForm
 
     def get_tipo_mantenimiento(self, obj):
         return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])

@@ -214,13 +214,14 @@ class OrdenMantenimiento(OrdendeTrabajo):
     class Meta:
         db_table = 'Ordenes de Mantenimiento'
         verbose_name_plural='Ordenes de Mantenimiento'
-
+    '''
     def clean(self):
         super().clean()
-        if self.pk is not None:  # solo realizamos la validación si el objeto ya está en la base de datos
+        if self.pk is not None:  
             mantenimientos_list = [tipo.tipo for tipo in self.tipos_mantenimiento.all()]
             if 'M1' in mantenimientos_list and 'M2' in mantenimientos_list:
                 raise ValidationError('No puedes seleccionar los tipos de mantenimiento M1 y M2 a la vez.')
+    '''
 
     '''    
     def clean(self):
