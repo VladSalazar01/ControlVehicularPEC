@@ -183,7 +183,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
 
 
 class OrdendeTrabajo(models.Model):     
-    fecha = models.DateField(null=True)
+    fecha = models.DateTimeField(null =True, auto_now_add=True, editable=False)
     sel_estado = [
         ('Activa', 'Orden activa'),  
         ('Despachada','Orden despachada'),             

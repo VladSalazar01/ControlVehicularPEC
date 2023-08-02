@@ -14,7 +14,7 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from nested_admin import NestedModelAdmin, NestedStackedInline
 from django.utils import timezone
 from django.core.exceptions import ValidationError
-
+import datetime
 
 def check_internet_connection():
     try:
@@ -183,17 +183,26 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     search_fields = ['fecha', 'tipos_mantenimiento__nombre', 'creador__username', 'aprobador__username']
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
     list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador')
+    fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
+    readonly_fields = ('creador', 'aprobador', 'fecha',)
+
+    def save_model(self, request, obj, form, change):
+        if not change:
+            obj.creador = request.user
+            obj.fecha = datetime.date.today()
+        obj.aprobador = request.user
+        super().save_model(request, obj, form, change)
 
     def get_tipo_mantenimiento(self, obj):
         return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
     get_tipo_mantenimiento.short_description = 'Tipos de Mantenimiento'
-
+    '''
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
         form.base_fields['creador'].initial = request.user
         return form
-    
+    '''    
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [

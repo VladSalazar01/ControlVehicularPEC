@@ -84,6 +84,11 @@ class OrdenMantenimientoForm(forms.ModelForm):
         model = OrdenMantenimiento
         fields = '__all__'
 
+    def get_initial_for_field(self, field, field_name):
+        if field_name == 'fecha':
+            return timezone.now()
+        return super().get_initial_for_field(field, field_name)
+
     def clean(self):
         cleaned_data = super().clean()
         tipos_mantenimiento = cleaned_data.get('tipos_mantenimiento')
