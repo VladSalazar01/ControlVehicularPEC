@@ -184,6 +184,8 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateTimeField(null =True, auto_now_add=True, editable=False)
+    creador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_creadas')
+    aprobador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_aprobadas')
     sel_estado = [
         ('Activa', 'Orden activa'),  
         ('Despachada','Orden despachada'),             
@@ -207,8 +209,12 @@ class TipoMantenimiento(models.Model):
 
 class OrdenMantenimiento(OrdendeTrabajo):
     tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
+
+    '''
     creador = models.ForeignKey(User, related_name='ordenes_mantenimiento_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     aprobador = models.ForeignKey(User, related_name='ordenes_mantenimiento_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    '''
+
     def __str__(self):
         return f"{self.fecha}"
     class Meta:
@@ -239,8 +245,12 @@ class OrdenCombustible(OrdendeTrabajo):
     tipo_de_combustible = models.CharField(db_column='Tipo de combustible', blank=True, null=True, choices=sel_tcombustible, max_length=26)   
     cantidad_galones = models.CharField(max_length=45, null=True)
     cantidad_galones_detalle = models.CharField(max_length=45, null=True)
+
+    '''
     creador = models.ForeignKey(User, related_name='ordenes_combustible_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
     aprobador = models.ForeignKey(User, related_name='ordenes_combustible_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
+    '''
+
     def __str__(self):
             return f"{self.fecha} - {self.tipo_de_combustible} - {self.cantidad_galones_detalle}"
     class Meta:

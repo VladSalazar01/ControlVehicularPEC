@@ -89,90 +89,6 @@ class DistritoAdmin(NestedModelAdmin):
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
 
-#----deprecar antiguo gest dependencias
-'''
-class CircuitoAdmin(admin.ModelAdmin):
-    list_display = ('cod_Circuito','nombre_Circuito','numero_de_subcircuitos')    
-    def numero_de_subcircuitos(self, obj):
-        return obj.subcircuito.count()    
-    numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
-admin.site.register(Circuito, CircuitoAdmin)
-
-class SubcircuitoAdmin(admin.ModelAdmin):
-    list_display = ('cod_subcircuito','nombre_subcircuito')
-class SubcircuitoInline(admin.StackedInline):
-
-admin.site.register(Subcircuitos, SubcircuitoAdmin)
-'''
-
-'''
-class TipoMantenimientoInlineFormset(forms.BaseInlineFormSet):
-    def clean(self):
-        super().clean()
-        tipos_mantenimiento = [form.cleaned_data['tipo_mantenimiento'].tipo for form in self.forms if form.cleaned_data.get('tipo_mantenimiento')]
-        if 'M1' in tipos_mantenimiento and 'M2' in tipos_mantenimiento:
-            raise ValidationError("No puedes elegir Mantenimiento 1 y Mantenimiento 2 al mismo tiempo.")
-
-class TipoMantenimientoInline(admin.TabularInline):
-    model = OrdenMantenimiento.tipos_mantenimiento.through
-    extra = 1
-
-class OrdenMantenimientoAdmin(admin.ModelAdmin):
-    list_display = ['fecha', 'get_tipos_mantenimiento', 'creador', 'aprobador', 'enlace_a_tipos_mantenimiento']
-    search_fields = ['fecha', 'get_tipos_mantenimiento', 'creador__username', 'aprobador__username']
-    list_filter = ['fecha', 'tipos_mantenimiento']
-    readonly_fields = ['creador', 'aprobador']
-    form = OrdenMantenimientoForm
-    inlines = [TipoMantenimientoInline]
-
-    def enlace_a_tipos_mantenimiento(self, obj):
-        if not obj.tipos_mantenimiento.exists():
-            url = reverse('admin:home_ordenmantenimiento_change', args=[obj.id])
-            url = f"{url}?tab=tipos_mantenimiento"  # add GET parameter to the url
-            return format_html('<a href="{}">Seleccione tipo de mantenimiento</a>', url)
-        return '-'
-
-    def get_inline_instances(self, request, obj=None):
-        if obj is None:  # this is the case when the object is being created
-            return []  # return an empty list to not display any inline
-        return super().get_inline_instances(request, obj)
-
-    def response_add(self, request, obj, post_url_continue=None):
-        try:
-            if "_continue" in request.POST:
-                return super().response_change(request, obj)
-            else:
-                return super().response_add(request, obj, post_url_continue)
-        except ValidationError:
-            return render(request, 'admin/orden_trabajo/error.html')     
-
-    def get_tipos_mantenimiento(self, obj):
-        return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
-    get_tipos_mantenimiento.short_description = 'Tipos de Mantenimiento'
-    get_tipos_mantenimiento.admin_order_field = 'tipos_mantenimiento'
-    def save_model(self, request, obj, form, change):
-        if not obj.pk:  
-            obj.creador = request.user
-            obj.fecha = timezone.now()
-        if 'estado' in form.changed_data and obj.estado == 'Despachada':  
-            obj.aprobador = request.user
-        super().save_model(request, obj, form, change)
-
-    def creador_link(self, obj):
-        link = reverse("admin:auth_user_change", args=[obj.creador.id])
-        return format_html('<a href="{}">{}</a>', link, obj.creador.username)
-    creador_link.short_description = 'Creado por'
-    def aprobador_link(self, obj):
-        if obj.aprobador:
-            link = reverse("admin:auth_user_change", args=[obj.aprobador.id])
-            return format_html('<a href="{}">{}</a>', link, obj.aprobador.username)
-        return "-"
-    aprobador_link.short_description = 'Aprobado por'
-
-
-admin.site.register(TipoMantenimiento)
-admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
-'''
 
 
 
@@ -180,7 +96,9 @@ admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
     change_list_template = 'admin/orden_trabajo/ordenmantenimiento_change_list.html'
-    search_fields = ['fecha', 'tipos_mantenimiento__nombre', 'creador__username', 'aprobador__username']
+
+    search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
+
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
     list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador')
     fecha = models.DateField(auto_now_add=True)
@@ -197,12 +115,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     def get_tipo_mantenimiento(self, obj):
         return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
     get_tipo_mantenimiento.short_description = 'Tipos de Mantenimiento'
-    '''
-    def get_form(self, request, obj=None, **kwargs):
-        form = super().get_form(request, obj, **kwargs)
-        form.base_fields['creador'].initial = request.user
-        return form
-    '''    
+    
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
@@ -238,7 +151,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         if obj.estado == 'Despachada':
             obj.aprobador = request.user
         super().save_model(request, obj, form, change)
-
+    
     def changelist_view(self, request, extra_context=None):
         extra_context = extra_context or {}
         extra_context['tipos_mantenimiento'] = TipoMantenimiento.objects.all()
@@ -254,7 +167,7 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
         if not obj.pk:  # si la orden es nueva
             obj.creador = request.user
             obj.fecha = timezone.now()
-        if 'estado' in form.changed_data and obj.estado == 'Despachada':  # si el estado ha cambiado a "Despachada"
+        if 'estado' in form.changed_data and obj.estado == 'Despachada':  
             obj.aprobador = request.user
         super().save_model(request, obj, form, change)
 
@@ -309,7 +222,8 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     class Media:
             js = ('js/flotavehicular.js',) 
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre', 'subcircuito_display')    
-    # Método para mostrar el código del subcircuito 
+
+
     def subcircuito_display(self, obj):
         return obj.subcircuito.nombre_subcircuito
     subcircuito_display.short_description = 'Subcircuito'
@@ -320,14 +234,7 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
         return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
-''
 
-
-'''
-class PersonalPolicialInline(NestedTabularInline):
-    model = PersonalPolicial
-    extra = 0
-'''
 class UsuarioInline(NestedStackedInline):
     model = Usuario
     can_delete = False
