@@ -91,7 +91,7 @@ class Usuario(SoftDeletionModel, models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, db_column='usuario', blank=True, null=True)#foranea one to one de user CASCADE
 
     def __str__(self):
-            return f"F{self.user.first_name}-{self.user.last_name}"
+            return f"{self.user.first_name}-{self.user.last_name}"
     class Meta:
         db_table = 'Usuario datos'
         verbose_name_plural='Datos de usuario'
@@ -158,7 +158,7 @@ class Subcircuitos(models.Model):
     class Meta:
         db_table = 'Subcircuitos'
         verbose_name_plural='Subcircuitos'
-#fin de admin subcircuito---
+
 
 class PersonalPolicial(SoftDeletionModel, models.Model): 
     is_deleted = models.BooleanField(default=False)        
@@ -167,6 +167,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
     turno_inicio = models.TimeField(null=True, blank=True)
     turno_fin = models.TimeField(null=True, blank=True)
     is_deleted = models.BooleanField(default=False)
+    subcircuito = models.ForeignKey('Subcircuitos', on_delete=models.SET_NULL, null=True, blank=True, related_name='personal_policial') 
     def clean(self):
         super().clean()  
         if self.flota_vehicular:
@@ -179,7 +180,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
     class Meta:
         db_table = 'Personal Policial' 
         verbose_name_plural='Personal Policial'
-  
+ 
 
 
 class OrdendeTrabajo(models.Model):     

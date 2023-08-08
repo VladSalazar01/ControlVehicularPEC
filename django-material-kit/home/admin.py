@@ -15,6 +15,8 @@ from nested_admin import NestedModelAdmin, NestedStackedInline
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 import datetime
+from django.http import HttpResponseRedirect
+
 
 def check_internet_connection():
     try:
@@ -88,8 +90,6 @@ class DistritoAdmin(NestedModelAdmin):
     class Media:
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
-
-
 
 
 @admin.register(OrdenMantenimiento)
@@ -203,9 +203,29 @@ class TallerMecanicoAdmin(admin.ModelAdmin):
     tipo_taller.short_description = 'Tipo de Taller'
 admin.site.register(TallerMecanico, TallerMecanicoAdmin)
 
-
+class SubcircuitoForm(forms.Form):
+    subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all())
 class PersonalPolicialAdmin(admin.ModelAdmin):
-    list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin']
+    list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin','subcircuito',]
+    list_filter = ['usuario', 'flota_vehicular', 'subcircuito']
+    #list_editable = ('subcircuito',)
+    actions = ['asignar_subcircuito']
+   
+    def asignar_subcircuito(self, request, queryset):
+        print(request.POST)  # Agrega esta línea
+        form = SubcircuitoForm(request.POST or None)
+        
+        if form.is_valid():
+            subcircuito = form.cleaned_data['subcircuito']
+            selected = PersonalPolicial.objects.filter(id__in=request.POST.getlist('selected_action'))
+            count = selected.update(subcircuito=subcircuito)
+            self.message_user(request, f'Se han asignado {count} personal policial al subcircuito {subcircuito}.')
+            return HttpResponseRedirect(reverse('admin:home_personalpolicial_changelist'))
+        else:
+            print(form.errors)  # Agrega esta línea
+        return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'personal': queryset, 'form': form})
+    asignar_subcircuito.short_description= 'Asignar Subcircuito a Personal Policial seleccionado'
+
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "flota_vehicular":
             kwargs["queryset"] = FlotaVehicular.objects.all()
@@ -254,13 +274,6 @@ class TecnicoAdmin(admin.ModelAdmin):
 admin.site.register(Tecnico, TecnicoAdmin)
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
-
-'''
-    class Media:
-        js = ('js/admin_autocomplete.js',)
-'''
-
-
 
 admin.site.register(Mantenimientos)
 

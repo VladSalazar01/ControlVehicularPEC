@@ -105,6 +105,7 @@ class TipoMantenimientoForm(forms.ModelForm):
         model = OrdenMantenimiento
         fields = ['tipos_mantenimiento']
 
+
 '''    
     def clean_tipo_mantenimiento(self):
         tipo_mantenimiento = self.cleaned_data.get('tipo_mantenimiento')

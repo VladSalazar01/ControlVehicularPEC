@@ -1,0 +1,15 @@
+{# templates/admin/asignar_subcircuito.html #}
+
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="action" value="asignar_subcircuito">
+        {% for obj in personal %}
+            <input type="hidden" name="selected_action" value="{{ obj.pk }}">
+        {% endfor %}
+        <input type="submit" value="Aplicar">
+    </form>
+{% endblock %}
