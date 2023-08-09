@@ -18,6 +18,8 @@ import datetime
 from django.http import HttpResponseRedirect
 
 
+
+
 def check_internet_connection():
     try:
         response = requests.get('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/5UXWX7C5*BA?format=json', timeout=5)
@@ -43,9 +45,6 @@ admin.site.register(CustomPermission, CustomPermissionAdmin)
 #---personalizacion de admin panel para agregar usuarios---
 
 admin.site.register(Rango_ctlg)
-#admin.site.register(Subcircuitos)
-#--fin personalizacion agregar  usuarios--
-
 
 
 
@@ -64,7 +63,6 @@ class ProvinciaAdmin(NestedModelAdmin):
         return obj.distritos.count()
     numero_de_distritos.short_description = 'Número de Distritos'
 admin.site.register(Provincia, ProvinciaAdmin)
-
 
 class SubcircuitoInline(NestedStackedInline):
     model = Subcircuitos
@@ -242,6 +240,41 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     class Media:
             js = ('js/flotavehicular.js',) 
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre', 'subcircuito_display')    
+    actions = ['asignar_subcircuito']
+
+    def asignar_subcircuito(self, request, queryset):
+        selected = request.POST.getlist('_selected_action')
+        subcircuitos = Subcircuitos.objects.all()
+        return render(request, 'admin/asign_bulk_s/asignar_subcircuito_v.html', {'flotas': selected, 'subcircuitos': subcircuitos})
+
+    asignar_subcircuito.short_description = "Asignar subcircuito a flotas seleccionadas"
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path('asignar-subcircuito/', self.admin_site.admin_view(self.asignar_subcircuito_view), name='asignar-subcircuito'),
+        ]
+        return custom_urls + urls
+
+    def asignar_subcircuito_view(self, request):
+        if request.method == 'POST':
+            subcircuito_id = request.POST.get('subcircuito')
+            flotas_ids = request.POST.getlist('flotas')
+
+            print(f"Subcircuito ID: {subcircuito_id}")
+            print(f"Flotas IDs: {flotas_ids}")
+
+            subcircuito = Subcircuitos.objects.get(id=subcircuito_id)
+            flotas = FlotaVehicular.objects.filter(id__in=flotas_ids)
+            
+            for flota in flotas:
+                flota.subcircuito = subcircuito
+                flota.save()
+            
+            self.message_user(request, 'Subcircuito asignado con éxito')
+            return redirect('..')
+        subcircuitos = Subcircuitos.objects.all()
+        return render(request, 'admin/asignar_subcircuito_v.html', {'subcircuitos': subcircuitos})
 
 
     def subcircuito_display(self, obj):

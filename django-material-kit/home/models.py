@@ -320,14 +320,12 @@ class FlotaVehicular(models.Model):
     cilindraje = models.CharField(max_length=45, null=True)
     capacidad_de_carga = models.CharField(max_length=45, null=True)
     capacidad_de_pasajeros = models.IntegerField(null=True)
-    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING , related_name='flota_vehicular')
-
+    subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING , related_name='flota_vehicular',null=True, blank=True,)
+   # subcircuito = models.ForeignKey(  )
     def __str__(self):
         return f"{self.marca},{self.modelo},{self.placa}"
-    def clean(self):
-        # importar ValidationError al inicio del archivo
-        from django.core.exceptions import ValidationError
-        # Validar que solo hay de 1 a 4 PersonalPolicial relacionados
+    def clean(self):     
+        from django.core.exceptions import ValidationError      
         if self.pk is not None:  # Solo realizar esta validación si el objeto ya ha sido guardado
             personal_policial_count = self.personal_policial.count()
             if personal_policial_count < 1 or personal_policial_count > 4:

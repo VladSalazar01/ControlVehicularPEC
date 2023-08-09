@@ -1,0 +1,17 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+<form method="post" action="{% url 'admin:asignar-subcircuito' %}">
+    {% csrf_token %}
+    <label for="subcircuito">Subcircuito:</label>
+    <select name="subcircuito" id="subcircuito">
+        {% for subcircuito in subcircuitos %}
+            <option value="{{ subcircuito.id }}">{{ subcircuito.nombre_subcircuito }}</option>
+        {% endfor %}
+    </select>
+    {% for flota in flotas %}
+        <input type="hidden" name="flotas" value="{{ flota }}">
+    {% endfor %}
+    <input type="submit" value="Asignar">
+</form>
+{% endblock %}
