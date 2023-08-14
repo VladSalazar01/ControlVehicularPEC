@@ -3,13 +3,17 @@
 {% extends "admin/base_site.html" %}
 
 {% block content %}
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="hidden" name="action" value="asignar_subcircuito">
-        {% for obj in personal %}
-            <input type="hidden" name="selected_action" value="{{ obj.pk }}">
+<form method="post" action="{% url 'admin:asignar-subcircuito-per-pol' %}">
+    {% csrf_token %}
+    <label for="subcircuito">Subcircuito:</label>
+    <select name="subcircuito" id="subcircuito">
+        {% for subcircuito in subcircuitos %}
+            <option value="{{ subcircuito.id }}">{{ subcircuito.nombre_subcircuito }}</option>
         {% endfor %}
-        <input type="submit" value="Aplicar">
-    </form>
+    </select>
+    {% for personalpolicial in personalpoliciales %}
+        <input type="hidden" name="personalpoliciales" value="{{ personalpolicial }}">
+    {% endfor %}
+    <input type="submit" value="Asignar">
+</form>
 {% endblock %}

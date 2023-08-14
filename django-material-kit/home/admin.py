@@ -181,7 +181,6 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
         return "-"
     aprobador_link.short_description = 'Aprobado por'
 
-
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
 
 
@@ -206,9 +205,44 @@ class SubcircuitoForm(forms.Form):
 class PersonalPolicialAdmin(admin.ModelAdmin):
     list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin','subcircuito',]
     list_filter = ['usuario', 'flota_vehicular', 'subcircuito']
-    #list_editable = ('subcircuito',)
     actions = ['asignar_subcircuito']
+
+    def asignar_subcircuito(self, request, queryset):
+        selected = request.POST.getlist('_selected_action')
+        subcircuitos = Subcircuitos.objects.all()
+        return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'personalpoliciales': selected, 'subcircuitos': subcircuitos})
+
+    asignar_subcircuito.short_description = "Asignar personal policial a subcircuitos"
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path('asignar-subcircuito-perpol/', self.admin_site.admin_view(self.asignar_subcircuito_view_per_pol), name='asignar-subcircuito-per-pol'),
+        ]
+        return custom_urls + urls
+
+    def asignar_subcircuito_view_per_pol(self, request):
+        if request.method == 'POST':
+            subcircuito_id = request.POST.get('subcircuito')
+            personalpolicial_ids = request.POST.getlist('personalpoliciales')
+
+            print(f"Subcircuito ID: {subcircuito_id}")
+            print(f"Personalpolicial IDs: {personalpolicial_ids}")
+
+            subcircuito = Subcircuitos.objects.get(id=subcircuito_id)
+            personalpoliciales = PersonalPolicial.objects.filter(id__in=personalpolicial_ids)
+            
+            for personalpolicial in personalpoliciales:
+                personalpolicial.subcircuito = subcircuito
+                personalpolicial.save()
+            
+            self.message_user(request, 'Subcircuito asignado con éxito')
+            return redirect('..')
+        subcircuitos = Subcircuitos.objects.all()
+        return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'subcircuitos': subcircuitos})
    
+
+    '''
     def asignar_subcircuito(self, request, queryset):
         print(request.POST)  # Agrega esta línea
         form = SubcircuitoForm(request.POST or None)
@@ -223,6 +257,8 @@ class PersonalPolicialAdmin(admin.ModelAdmin):
             print(form.errors)  # Agrega esta línea
         return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'personal': queryset, 'form': form})
     asignar_subcircuito.short_description= 'Asignar Subcircuito a Personal Policial seleccionado'
+    '''
+
 
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "flota_vehicular":
@@ -274,8 +310,7 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
             self.message_user(request, 'Subcircuito asignado con éxito')
             return redirect('..')
         subcircuitos = Subcircuitos.objects.all()
-        return render(request, 'admin/asignar_subcircuito_v.html', {'subcircuitos': subcircuitos})
-
+        return render(request, 'admin/asign_bulk_s/asignar_subcircuito_v.html', {'subcircuitos': subcircuitos})
 
     def subcircuito_display(self, obj):
         return obj.subcircuito.nombre_subcircuito
