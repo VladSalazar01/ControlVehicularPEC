@@ -19,6 +19,9 @@ from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
 from django.utils import timezone
 
+from django.http import FileResponse
+from reportlab.lib.pagesizes import letter
+from reportlab.pdfgen import canvas
 
 
 # Create your views here.
@@ -123,6 +126,38 @@ class PartePolicialCreateView(CreateView):
         context['subcircuito'] = flota_vehicular.subcircuito if flota_vehicular and flota_vehicular.subcircuito else "-Sin datos, contacte a logística-"
         context['fecha'] = timezone.now()  # establece la fecha actual en el contexto
         return context
+    
+
+@login_required
+def parte_policial_pdf(request, parte_id):
+    parte = PartePolicial.objects.get(id=parte_id)
+    personal_policial = parte.personalPolicial.usuario.user.get_full_name()
+
+    response = FileResponse(content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="parte_policial_{parte_id}.pdf"'
+
+    p = canvas.Canvas(response, pagesize=letter)
+    width, height = letter
+
+    # Encabezado
+    p.drawString(100, height - 100, "Parte Policial")
+
+    # Detalles del Parte Policial
+    p.drawString(100, height - 120, f"Fecha: {parte.fecha}")
+    p.drawString(100, height - 140, f"Tipo de Parte: {parte.tipo_parte}")
+    p.drawString(100, height - 160, f"Observaciones: {parte.observaciones}")
+    p.drawString(100, height - 180, f"Estado: {parte.estado}")
+
+    # Firma de responsabilidad
+    p.drawString(100, height - 220, "Firma de responsabilidad:")
+    p.drawString(100, height - 240, f"Responsable: {personal_policial}")
+    p.drawString(100, height - 260, "Firma: ________________________")
+
+    p.showPage()
+    p.save()
+
+    return response
+
 #EVALUACION
 def queja_sugerencia(request):
     if request.method == 'POST':
@@ -148,7 +183,6 @@ def reporte_quejas_sugerencias(request):
         quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
     quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
     return render(request, 'admin/reportes_quejas/reporte_quejas_sugerencias.html', {'quejas_sugerencias': quejas_sugerencias})
-
 
 @staff_member_required
 def reporte_quejas_sugerencias_pdf(request):

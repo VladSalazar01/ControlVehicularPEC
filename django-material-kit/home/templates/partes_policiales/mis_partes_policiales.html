@@ -19,6 +19,7 @@
                 <td>{{ parte.tipo_parte }}</td>
                 <td>{{ parte.observaciones }}</td>
                 <td class="estado-{{ parte.estado|lower }}">{{ parte.estado }}</td>
+                <td><a href="{% url 'parte_policial_pdf' parte.id %}">Descargar PDF</a></td>
             </tr>
         {% endfor %}
     </tbody>
@@ -41,7 +42,6 @@
         {% endif %}
     </span>
 </div>
-
 
 <a href="{% url 'mantenimiento' %}" class="btn">Registrar nuevo parte policial</a><br>
 {% endblock %}

@@ -19,6 +19,8 @@ urlpatterns = [
     #nuevo partes poilicles
     #agregar
     path('mantenimiento/', PartePolicialCreateView.as_view(), name='mantenimiento'),
+    #pdf
+    path('parte_policial_pdf/<int:parte_id>/', parte_policial_pdf, name='parte_policial_pdf'),
 
 
     #evaluacion buzon de quejas
