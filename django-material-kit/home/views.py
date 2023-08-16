@@ -23,6 +23,8 @@ from django.http import FileResponse
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
+from io import BytesIO
+
 
 # Create your views here.
 
@@ -133,10 +135,8 @@ def parte_policial_pdf(request, parte_id):
     parte = PartePolicial.objects.get(id=parte_id)
     personal_policial = parte.personalPolicial.usuario.user.get_full_name()
 
-    response = FileResponse(content_type='application/pdf')
-    response['Content-Disposition'] = f'attachment; filename="parte_policial_{parte_id}.pdf"'
-
-    p = canvas.Canvas(response, pagesize=letter)
+    buffer = BytesIO()
+    p = canvas.Canvas(buffer, pagesize=letter)
     width, height = letter
 
     # Encabezado
@@ -156,7 +156,12 @@ def parte_policial_pdf(request, parte_id):
     p.showPage()
     p.save()
 
+    buffer.seek(0)
+    response = FileResponse(buffer, content_type='application/pdf')
+    response['Content-Disposition'] = f'attachment; filename="parte_policial_{parte_id}.pdf"'
+
     return response
+
 
 #EVALUACION
 def queja_sugerencia(request):
