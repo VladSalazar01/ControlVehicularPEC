@@ -44,6 +44,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 INSTALLED_APPS = [
     #'jazzmin',
+    'tinymce',
 
     'nested_admin',
 
@@ -60,6 +61,21 @@ INSTALLED_APPS = [
 ]
 #lenguajes
 LANGUAGE_CODE = 'es'
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 800,
+    'cleanup_on_startup': True,
+    'custom_undo_redo_levels': 20,
+    'selector': 'textarea',
+    'theme': 'modern',
+    'plugins': 'textcolor save link image media preview codesample contextmenu table code lists fullscreen  insertdatetime  nonbreaking contextmenu directionality searchreplace wordcount visualblocks visualchars code fullscreen autolink lists  charmap print  hr anchor pagebreak',
+    'toolbar1': 'fullscreen preview bold italic underline | fontselect,fontsizeselect | forecolor backcolor | alignleft alignright | aligncenter alignjustify | indent outdent | bullist numlist table | link image media | codesample ',
+    'toolbar2': '',
+    'toolbar3': '',
+    'menubar': False,
+    'statusbar': False,
+}
 
 MIDDLEWARE = [
     

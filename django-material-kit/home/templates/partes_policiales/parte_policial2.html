@@ -24,9 +24,7 @@
     {% csrf_token %}
     
     <p>{{ form.tipo_parte.label }}: {{ form.tipo_parte }}</p>
-    <p>{{ form.observaciones.label }}: <br> 
-        <textarea id="{{ form.observaciones.auto_id }}" name="{{ form.observaciones.html_name }}" style="width: 100%; height: 210px;">{{ form.observaciones.value|default_if_none:'' }}</textarea>
-        </p>
+    <p>{{ form.observaciones.label }}: <br> {{ form.observaciones }}</p>
     <p>{{ form.fecha_solicitud.label }}: {{ form.fecha_solicitud }}</p>
     <p>{{ form.kilometraje_actual.label }}: {{ form.kilometraje_actual }}</p>
     {{ form.estado }}  <!-- este campo está oculto -->
@@ -34,3 +32,8 @@
     <a href="{% url 'profile' %}" class="btn">Cancelar</a>  
   </form>
 {% endblock %}
+
+
+
+
+

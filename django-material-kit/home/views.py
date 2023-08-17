@@ -56,32 +56,7 @@ def profile(request):
     return render(request, 'inicio/profile.html')
 
 #crear partes policiales (DEPRECACIÓN)   
-@login_required
-def parte_policial(request):
-    if request.method == 'POST':
-        form = PartePolicialForm(request.POST)
-        if form.is_valid():
-            parte_policial = form.save(commit=False)
-            usuario = Usuario.objects.get(user=request.user)
-            parte_policial.personalPolicial = PersonalPolicial.objects.get(usuario=usuario)
-            # Establecer la fecha al día actual
-            parte_policial.fecha = date.today()
-            parte_policial.save()
 
-            if form.cleaned_data['tipo_parte'] in ['Mantenimiento Preventivo', 'Mantenimiento Correctivo'] and form.cleaned_data['tipo_mantenimiento']:
-                OrdenMantenimiento.objects.create(fecha=parte_policial.fecha, estado='Activa', tipo_mantenimiento=form.cleaned_data['tipo_mantenimiento'], creador=request.user, orden_policial=parte_policial)
-            elif form.cleaned_data['tipo_parte'] == 'Solicitud de Combustible' and form.cleaned_data['tipo_de_combustible']:
-                OrdenCombustible.objects.create(fecha=parte_policial.fecha, estado='Activa', tipo_de_combustible=form.cleaned_data['tipo_de_combustible'], creador=request.user, orden_policial=parte_policial)
-
-            return redirect('status', status='success')
-        else:
-            return redirect('status', status='error')
-    else:
-        form = PartePolicialForm()
-    return render(request, 'partes_policiales/parte_policial.html', {'form': form, 'fecha_actual': date.today()})
-@login_required
-def status(request, status):
-    return render(request, 'partes_policiales/status.html', {'status': status})
 #ver partes
 @login_required
 def mis_partes_policiales(request):
@@ -101,7 +76,7 @@ def mis_partes_policiales(request):
 
 #nuevo partes policiales
 #agregar
-@method_decorator(login_required, name='dispatch')
+#@method_decorator(login_required, name='dispatch') #repetida por accidente?
 @method_decorator(login_required, name='dispatch')
 class PartePolicialCreateView(CreateView):
     model = PartePolicial
@@ -209,10 +184,9 @@ def reporte_quejas_sugerencias_pdf(request):
     if pisa_status.err:
        return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
     return response
-
-
-
 #EVALUACION
+
+
 #--agregar usuario desde admin panel------
 '''def custom_add_view(self, request):
     if request.method == "POST":

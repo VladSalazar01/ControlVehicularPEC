@@ -8,6 +8,9 @@ from .models import *
 from django.contrib.auth.models import Group
 from django.contrib.admin.widgets import AdminSplitDateTime
 from django.contrib import admin
+from tinymce.widgets import TinyMCE
+
+
 #crear parte policial
 '''
 class PartePolicialForm(forms.ModelForm):
@@ -26,14 +29,13 @@ class PartePolicialForm(forms.ModelForm):
         required=True, 
         widget=forms.DateTimeInput(attrs={'type': 'datetime-local'})
     )
-    observaciones = forms.CharField(
-        widget=forms.Textarea(attrs={'rows':3, 'cols':15}),
-    )
+    #observaciones = forms.CharField(widget=forms.Textarea(attrs={'rows':3, 'cols':15}),)
+    observaciones = forms.CharField(widget=TinyMCE(attrs={'cols': 120, 'rows': 15}))
     estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
 
     class Meta:
         model = PartePolicial
-        fields = ['tipo_parte', 'observaciones', 'estado', 'fecha_solicitud', 'kilometraje_actual']  # eliminamos 'fecha'
+        fields = ['tipo_parte', 'observaciones', 'estado', 'fecha_solicitud', 'kilometraje_actual']  
 
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user')  # acceder al usuario
