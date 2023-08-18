@@ -29,7 +29,7 @@ class PartePolicialForm(forms.ModelForm):
         required=True, 
         widget=forms.DateTimeInput(attrs={'type': 'datetime-local'})
     )
-    #observaciones = forms.CharField(widget=forms.Textarea(attrs={'rows':3, 'cols':15}),)
+    
     observaciones = forms.CharField(widget=TinyMCE(attrs={'cols': 120, 'rows': 15}))
     estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
 
