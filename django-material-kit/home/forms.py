@@ -37,6 +37,7 @@ class PartePolicialForm(forms.ModelForm):
         model = PartePolicial
         fields = ['tipo_parte', 'observaciones', 'estado', 'fecha_solicitud', 'kilometraje_actual']  
 
+
     def __init__(self, *args, **kwargs):
         self.user = kwargs.pop('user')  # acceder al usuario
         super().__init__(*args, **kwargs)
@@ -45,6 +46,9 @@ class PartePolicialForm(forms.ModelForm):
         cleaned_data = super().clean()
         fecha_solicitud = cleaned_data.get("fecha_solicitud")
         kilometraje_actual = cleaned_data.get("kilometraje_actual")
+        tipo_parte = cleaned_data.get("tipo_parte")
+        
+        print("Valor de tipo_parte:", tipo_parte)
 
         personal_policial = PersonalPolicial.objects.get(usuario__user=self.user)
         flota_vehicular = personal_policial.flota_vehicular

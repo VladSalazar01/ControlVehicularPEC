@@ -17,7 +17,7 @@
             <tr>
                 <td>{{ parte.fecha }}</td>
                 <td>{{ parte.tipo_parte }}</td>
-                <td>{{ parte.observaciones }}</td>
+                <td>{{ parte.observaciones|safe }}</td>
                 <td class="estado-{{ parte.estado|lower }}">{{ parte.estado }}</td>
                 <td><a href="{% url 'parte_policial_pdf' parte.id %}">Descargar PDF</a></td>
             </tr>

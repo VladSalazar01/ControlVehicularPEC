@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>
+  tinymce.init({
+    selector: '#id_observaciones'  // Asegúrate de que este selector coincida con el ID de tu campo de texto
+  });
+</script>
   <h2>Registro de Parte Policial</h2>
   <h3>{{ form.non_field_errors }}</h3>
   <p>Fecha: {{ fecha }}</p> 
@@ -19,10 +25,11 @@
         {{ vehiculo }}
     {% endif %}
   </p>
-  <p>Subcircuito: {{ subcircuito }}</p>
+  <p>Subcircuito al que pertenece el vehículo: {{ subcircuito }}</p>
+  
+
   <form method="post">
-    {% csrf_token %}
-    
+    {% csrf_token %}   
     <p>{{ form.tipo_parte.label }}: {{ form.tipo_parte }}</p>
     <p>{{ form.observaciones.label }}: <br> {{ form.observaciones }}</p>
     <p>{{ form.fecha_solicitud.label }}: {{ form.fecha_solicitud }}</p>

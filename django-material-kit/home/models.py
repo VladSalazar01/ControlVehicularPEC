@@ -182,7 +182,6 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
         verbose_name_plural='Personal Policial'
  
 
-
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateTimeField(null =True, auto_now_add=True, editable=False)
     creador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_creadas')

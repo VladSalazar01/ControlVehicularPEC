@@ -25,7 +25,13 @@ from reportlab.pdfgen import canvas
 
 from io import BytesIO
 
+from bs4 import BeautifulSoup
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.platypus import Paragraph, SimpleDocTemplate
 
+from reportlab.lib.styles import getSampleStyleSheet
+
+import re
 # Create your views here.
 
 def index(request):
@@ -104,32 +110,36 @@ class PartePolicialCreateView(CreateView):
         context['fecha'] = timezone.now()  # establece la fecha actual en el contexto
         return context
     
-
+def remove_html_tags(text):
+    return re.sub('<[^>]*>', '', text)
 @login_required
 def parte_policial_pdf(request, parte_id):
     parte = PartePolicial.objects.get(id=parte_id)
     personal_policial = parte.personalPolicial.usuario.user.get_full_name()
 
+    # Elimina las etiquetas HTML de las observaciones (usando Beautiful Soup o la función remove_html_tags)
+    observaciones_plain_text = remove_html_tags(parte.observaciones)
+
     buffer = BytesIO()
-    p = canvas.Canvas(buffer, pagesize=letter)
-    width, height = letter
+    doc = SimpleDocTemplate(buffer, pagesize=letter)
+    styles = getSampleStyleSheet()
+    content = []
 
     # Encabezado
-    p.drawString(100, height - 100, "Parte Policial")
+    content.append(Paragraph("Parte Policial", styles['Heading1']))
 
     # Detalles del Parte Policial
-    p.drawString(100, height - 120, f"Fecha: {parte.fecha}")
-    p.drawString(100, height - 140, f"Tipo de Parte: {parte.tipo_parte}")
-    p.drawString(100, height - 160, f"Observaciones: {parte.observaciones}")
-    p.drawString(100, height - 180, f"Estado: {parte.estado}")
+    content.append(Paragraph(f"Fecha: {parte.fecha}", styles['Normal']))
+    content.append(Paragraph(f"Tipo de Parte: {parte.tipo_parte}", styles['Normal']))
+    content.append(Paragraph(f"Observaciones: {observaciones_plain_text}", styles['Normal']))
+    content.append(Paragraph(f"Estado: {parte.estado}", styles['Normal']))
 
     # Firma de responsabilidad
-    p.drawString(100, height - 220, "Firma de responsabilidad:")
-    p.drawString(100, height - 240, f"Responsable: {personal_policial}")
-    p.drawString(100, height - 260, "Firma: ________________________")
+    content.append(Paragraph("Firma de responsabilidad:", styles['Normal']))
+    content.append(Paragraph(f"Responsable: {personal_policial}", styles['Normal']))
+    content.append(Paragraph("Firma: ________________________", styles['Normal']))
 
-    p.showPage()
-    p.save()
+    doc.build(content)
 
     buffer.seek(0)
     response = FileResponse(buffer, content_type='application/pdf')
