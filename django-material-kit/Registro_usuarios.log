@@ -15997,3 +15997,306 @@ C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 2581
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 2581
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /parte_policial_pdf/22/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/path/to/your/image.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: '/path/to/your/image.png'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "/path/to/your/image.png"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 150, in parte_policial_pdf
+    doc.build(content)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\doctemplate.py", line 1317, in build
+    BaseDocTemplate.build(self,flowables, canvasmaker=canvasmaker)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\doctemplate.py", line 1082, in build
+    self.handle_flowable(flowables)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\doctemplate.py", line 931, in handle_flowable
+    if frame.add(f, canv, trySplit=self.allowSplitting):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\frames.py", line 169, in _add
+    w, h = flowable.wrap(aW, h)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 511, in wrap
+    return self.drawWidth, self.drawHeight
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 505, in __getattr__
+    self._setup_inner()
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 462, in _setup_inner
+    img = self._img
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 499, in __getattr__
+    self._img = ImageReader(self._file)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 655, in __init__
+    annotateException('\nfileName=%r identity=%s'%(fileName,self.identity()))
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 1176, in annotateException
+    rl_reraise(t,t(sep.join((_ for _ in (msg,str(v),postMsg) if _))),b)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 138, in rl_reraise
+    raise v.with_traceback(b)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 643, in __init__
+    fp = open_for_read(fileName,'b')
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: 
+fileName='/path/to/your/image.png' identity=[ImageReader@0x24c07e09840 filename='/path/to/your/image.png'] Cannot open resource "/path/to/your/image.png"
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /parte_policial_pdf/22/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'images/EscudonPNa.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'images/EscudonPNa.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 122, in parte_policial_pdf
+    logo = Image(image_path, width=50, height=50)  # Ajusta el tamaño según tus necesidades
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 424, in __init__
+    f = open_for_read(filename, 'b')
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 534, in open_for_read
+    return open_for_read(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "images/EscudonPNa.jpg"
+Internal Server Error: /parte_policial_pdf/22/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 523, in open_for_read
+    return open_for_read_by_name(name,mode)
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 463, in open_for_read_by_name
+    return open(name,mode)
+FileNotFoundError: [Errno 2] No such file or directory: 'images/EscudonPNa.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 530, in open_for_read
+    return BytesIO((datareader if name[:5].lower()=='data:' else rlUrlRead)(name))
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 476, in rlUrlRead
+    return urlopen(name).read()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 216, in urlopen
+    return opener.open(url, data, timeout)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 503, in open
+    req = Request(fullurl, data)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 322, in __init__
+    self.full_url = url
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 348, in full_url
+    self._parse()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\urllib\request.py", line 377, in _parse
+    raise ValueError("unknown url type: %r" % self.full_url)
+ValueError: unknown url type: 'images/EscudonPNa.jpg'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 122, in parte_policial_pdf
+    logo = Image(image_path, width=50, height=50)  # Ajusta el tamaño según tus necesidades
+  File "C:\CVPL2\env\lib\site-packages\reportlab\platypus\flowables.py", line 424, in __init__
+    f = open_for_read(filename, 'b')
+  File "C:\CVPL2\env\lib\site-packages\reportlab\lib\utils.py", line 532, in open_for_read
+    raise IOError('Cannot open resource "%s"' % name)
+OSError: Cannot open resource "images/EscudonPNa.jpg"
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 125, in parte_policial_pdf
+    image_path = finders.find(relative_path)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 298, in find
+    result = finder.find(path, all=all)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 124, in find
+    matched_path = self.find_location(root, path, prefix)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 141, in find_location
+    path = safe_join(root, path)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Bad Request: /parte_policial_pdf/22/
+The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 125, in parte_policial_pdf
+    image_path = finders.find(relative_path)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 298, in find
+    result = finder.find(path, all=all)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 124, in find
+    matched_path = self.find_location(root, path, prefix)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 141, in find_location
+    path = safe_join(root, path)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Bad Request: /parte_policial_pdf/22/
+The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 125, in parte_policial_pdf
+    image_path = finders.find(relative_path)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 298, in find
+    result = finder.find(path, all=all)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 124, in find
+    matched_path = self.find_location(root, path, prefix)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 141, in find_location
+    path = safe_join(root, path)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Bad Request: /parte_policial_pdf/22/
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /parte_policial_pdf/22/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 123, in parte_policial_pdf
+    image_path = finders.find(relative_path)
+UnboundLocalError: local variable 'relative_path' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 125, in parte_policial_pdf
+    image_path = finders.find(relative_path)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 298, in find
+    result = finder.find(path, all=all)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 124, in find
+    matched_path = self.find_location(root, path, prefix)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\staticfiles\finders.py", line 141, in find_location
+    path = safe_join(root, path)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\_os.py", line 31, in safe_join
+    raise SuspiciousFileOperation(
+django.core.exceptions.SuspiciousFileOperation: The joined path (C:\static\images\EscudonPNa.jpg) is located outside of the base path component (C:\CVPL2\django-material-kit\static)
+Bad Request: /parte_policial_pdf/22/
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

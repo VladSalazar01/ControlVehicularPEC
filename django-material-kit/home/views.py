@@ -27,7 +27,12 @@ from io import BytesIO
 
 from bs4 import BeautifulSoup
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.platypus import Paragraph, SimpleDocTemplate
+from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Image
+from django.templatetags.static import static
+from django.contrib.staticfiles import finders
+
+import os
+from django.conf import settings
 
 from reportlab.lib.styles import getSampleStyleSheet
 
@@ -116,8 +121,14 @@ def remove_html_tags(text):
 def parte_policial_pdf(request, parte_id):
     parte = PartePolicial.objects.get(id=parte_id)
     personal_policial = parte.personalPolicial.usuario.user.get_full_name()
+    # Define la ruta relativa de la imagen dentro del directorio estático
+    relative_path = 'images/EscudonPNa.jpg'
 
-    # Elimina las etiquetas HTML de las observaciones (usando Beautiful Soup o la función remove_html_tags)
+    # Concatena la ruta del directorio estático con la ruta relativa de la imagen
+    image_path = os.path.join(settings.STATICFILES_DIRS[0], relative_path)
+        
+    # Crear un objeto Image
+    logo = Image(image_path, width=50, height=50)  # Ajusta el tamaño según tus necesidades
     observaciones_plain_text = remove_html_tags(parte.observaciones)
 
     buffer = BytesIO()
@@ -126,17 +137,23 @@ def parte_policial_pdf(request, parte_id):
     content = []
 
     # Encabezado
+    # Agregar la imagen al contenido
+    content.append(logo)
     content.append(Paragraph("Parte Policial", styles['Heading1']))
-
+    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
     # Detalles del Parte Policial
     content.append(Paragraph(f"Fecha: {parte.fecha}", styles['Normal']))
+    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
     content.append(Paragraph(f"Tipo de Parte: {parte.tipo_parte}", styles['Normal']))
+    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
     content.append(Paragraph(f"Observaciones: {observaciones_plain_text}", styles['Normal']))
+    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
     content.append(Paragraph(f"Estado: {parte.estado}", styles['Normal']))
-
+    content.append(Spacer(1, 24))  # 12 puntos de espacio vertical
     # Firma de responsabilidad
     content.append(Paragraph("Firma de responsabilidad:", styles['Normal']))
     content.append(Paragraph(f"Responsable: {personal_policial}", styles['Normal']))
+    content.append(Spacer(1, 36))  # 12 puntos de espacio vertical
     content.append(Paragraph("Firma: ________________________", styles['Normal']))
 
     doc.build(content)
