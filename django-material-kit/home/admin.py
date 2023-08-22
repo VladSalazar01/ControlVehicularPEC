@@ -89,7 +89,6 @@ class DistritoAdmin(NestedModelAdmin):
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
 
-
 @admin.register(OrdenMantenimiento)
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
@@ -98,7 +97,8 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
-    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador')
+
+    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'pdf_link')
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
@@ -154,6 +154,11 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         extra_context = extra_context or {}
         extra_context['tipos_mantenimiento'] = TipoMantenimiento.objects.all()
         return super().changelist_view(request, extra_context=extra_context)
+    
+    def pdf_link(self, obj):
+        url = reverse('orden_mantenimiento_pdf', args=[obj.pk])
+        return format_html('<a href="{}">Descargar PDF</a>', url)
+    pdf_link.short_description = "PDF"
 
 class OrdenCombustibleAdmin(admin.ModelAdmin):
     list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')
@@ -182,7 +187,6 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
     aprobador_link.short_description = 'Aprobado por'
 
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
-
 
 
 class PartePolicialAdmin(admin.ModelAdmin):

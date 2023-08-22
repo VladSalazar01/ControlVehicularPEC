@@ -24,12 +24,17 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 from io import BytesIO
+from xhtml2pdf import pisa
+from PyPDF2 import PdfMerger
+from django.contrib.staticfiles import finders
+from django.http import HttpResponse
+
 
 from bs4 import BeautifulSoup
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Image
 from django.templatetags.static import static
-from django.contrib.staticfiles import finders
+
 
 import os
 from django.conf import settings
@@ -121,48 +126,69 @@ def remove_html_tags(text):
 def parte_policial_pdf(request, parte_id):
     parte = PartePolicial.objects.get(id=parte_id)
     personal_policial = parte.personalPolicial.usuario.user.get_full_name()
-    # Define la ruta relativa de la imagen dentro del directorio estático
-    relative_path = 'images/EscudonPNa.jpg'
 
-    # Concatena la ruta del directorio estático con la ruta relativa de la imagen
-    image_path = os.path.join(settings.STATICFILES_DIRS[0], relative_path)
-        
-    # Crear un objeto Image
-    logo = Image(image_path, width=50, height=50)  # Ajusta el tamaño según tus necesidades
-    observaciones_plain_text = remove_html_tags(parte.observaciones)
+    # Ruta absoluta a la imagen del encabezado
+    image_path = finders.find('images/EscudonPNa.jpg')
 
-    buffer = BytesIO()
-    doc = SimpleDocTemplate(buffer, pagesize=letter)
-    styles = getSampleStyleSheet()
-    content = []
+    # Crea un PDF temporal con la imagen utilizando reportlab
+    image_pdf = BytesIO()
+    doc = SimpleDocTemplate(image_pdf, pagesize=letter)
+    logo = Image(image_path, width=100, height=50) # Ajusta el tamaño según tus necesidades
+    doc.build([logo])
 
-    # Encabezado
-    # Agregar la imagen al contenido
-    content.append(logo)
-    content.append(Paragraph("Parte Policial", styles['Heading1']))
-    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
-    # Detalles del Parte Policial
-    content.append(Paragraph(f"Fecha: {parte.fecha}", styles['Normal']))
-    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
-    content.append(Paragraph(f"Tipo de Parte: {parte.tipo_parte}", styles['Normal']))
-    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
-    content.append(Paragraph(f"Observaciones: {observaciones_plain_text}", styles['Normal']))
-    content.append(Spacer(1, 12))  # 12 puntos de espacio vertical
-    content.append(Paragraph(f"Estado: {parte.estado}", styles['Normal']))
-    content.append(Spacer(1, 24))  # 12 puntos de espacio vertical
-    # Firma de responsabilidad
-    content.append(Paragraph("Firma de responsabilidad:", styles['Normal']))
-    content.append(Paragraph(f"Responsable: {personal_policial}", styles['Normal']))
-    content.append(Spacer(1, 36))  # 12 puntos de espacio vertical
-    content.append(Paragraph("Firma: ________________________", styles['Normal']))
+    # HTML para el contenido del PDF, incluyendo la imagen
+    html_content = f"""
+        <img src="{image_path}" alt="Encabezado" width="50" /> POLICIA NACIONAL DEL ECUADOR<br>
+        <h1>Parte Policial</h1>
+        <p>Fecha: {parte.fecha}</p>
+        <p>Tipo de Parte: {parte.tipo_parte}</p>
+        <div>Observaciones: {parte.observaciones}</div>
+        <p>Estado: {parte.estado}</p>
+        <p>Firma de responsabilidad:</p>
+        <p>Responsable: {personal_policial}</p>
+        <p>Firma: ________________________</p>
+    """
 
-    doc.build(content)
+    # Crear un objeto PDF usando xhtml2pdf
+    pdf = BytesIO()
+    pisa_status = pisa.CreatePDF(html_content, dest=pdf)
 
-    buffer.seek(0)
-    response = FileResponse(buffer, content_type='application/pdf')
+    # Verifica si se produjo algún error
+    if pisa_status.err:
+        return HttpResponse('Ocurrió un error al generar el PDF')
+
+    # Devuelve el PDF como una respuesta
+    pdf.seek(0)
+    response = FileResponse(pdf, content_type='application/pdf')
     response['Content-Disposition'] = f'attachment; filename="parte_policial_{parte_id}.pdf"'
 
     return response
+
+def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
+    # Obtener la orden de mantenimiento
+    orden_mantenimiento = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
+
+    # Renderizar la plantilla con la orden de mantenimiento
+    template_path = 'Admin/orden_trabajo/orden_mantenimiento_pdf.html'
+    context = {'orden_mantenimiento': orden_mantenimiento}
+    template = get_template(template_path)
+    html = template.render(context)
+
+    # Crear un objeto de archivo en memoria
+    pdf_file = BytesIO()
+
+    # Generar el PDF
+    pisa_status = pisa.CreatePDF(
+       html, dest=pdf_file)
+
+    # Si el PDF se generó correctamente, enviarlo como respuesta HTTP
+    if pisa_status.err:
+        return HttpResponse('Ocurrió un error al generar el PDF')
+    else:
+        pdf_file.seek(0)
+        response = HttpResponse(pdf_file, content_type='application/pdf')
+        response['Content-Disposition'] = f'attachment; filename="orden_mantenimiento_{orden_mantenimiento_id}.pdf"'
+        return response
 
 
 #EVALUACION

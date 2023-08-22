@@ -1,0 +1,18 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <h1>Orden de Mantenimiento</h1>
+    <h2>Fecha: {{ orden_mantenimiento.fecha }}</h2>
+    
+    <h3>Tipos de Mantenimiento:</h3>
+    <ul>
+        {% for tipo in orden_mantenimiento.tipos_mantenimiento.all %}
+            <li>{{ tipo.tipo }} - {{ tipo.descripcion }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Creador: {{ orden_mantenimiento.creador.username }}</h3>
+    <h3>Aprobador: {{ orden_mantenimiento.aprobador.username }}</h3>
+
+    <h4>Estado: {{ orden_mantenimiento.estado }}</h4>
+{% endblock %}
