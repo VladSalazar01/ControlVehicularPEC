@@ -94,7 +94,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
     change_list_template = 'admin/orden_trabajo/ordenmantenimiento_change_list.html'
 
-    search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
+    #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
 

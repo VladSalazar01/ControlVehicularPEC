@@ -170,7 +170,7 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
 
     # Renderizar la plantilla con la orden de mantenimiento
     template_path = 'Admin/orden_trabajo/orden_mantenimiento_pdf.html'
-    context = {'orden_mantenimiento': orden_mantenimiento}
+    context = {'orden_mantenimiento': orden_mantenimiento, 'request': request}
     template = get_template(template_path)
     html = template.render(context)
 
@@ -185,7 +185,7 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
     if pisa_status.err:
         return HttpResponse('Ocurrió un error al generar el PDF')
     else:
-        pdf_file.seek(0)
+        pdf_file.seek(0, os.SEEK_SET)
         response = HttpResponse(pdf_file, content_type='application/pdf')
         response['Content-Disposition'] = f'attachment; filename="orden_mantenimiento_{orden_mantenimiento_id}.pdf"'
         return response
