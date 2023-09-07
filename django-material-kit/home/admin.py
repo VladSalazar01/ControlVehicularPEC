@@ -20,6 +20,7 @@ from django.http import HttpResponseRedirect
 
 
 
+
 def check_internet_connection():
     try:
         response = requests.get('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/5UXWX7C5*BA?format=json', timeout=5)
@@ -98,7 +99,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
 
-    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'pdf_link')
+    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link')
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
@@ -119,8 +120,20 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         custom_urls = [
             path('create/', self.create_ordenmantenimiento, name='create_ordenmantenimiento'),
             path('<int:ordenmantenimiento_id>/update/', self.update_ordenmantenimiento, name='update_ordenmantenimiento'),
+            path('<int:orden_mantenimiento_id>/ver_parte/', self.ver_parte, name='ver_parte'),
         ]
         return custom_urls + urls
+    
+    def ver_parte(self, request, orden_mantenimiento_id):
+        orden = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
+        parte = orden.parte_asociado
+        # Lógica para visualizar el archivo (puede variar según tus necesidades)
+        return HttpResponseRedirect(parte.url)
+    
+    def ver_parte_asociado(self, obj):
+        return format_html('<a href="{}" target="_blank">Ver parte asociado</a>', reverse('admin:ver_parte', args=[obj.id]))
+    
+    ver_parte_asociado.short_description = 'Ver parte asociado'
 
     def create_ordenmantenimiento(self, request):
         if request.method == 'POST':

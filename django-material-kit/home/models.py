@@ -9,6 +9,8 @@ from django.core.exceptions import ValidationError
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 from django.contrib.postgres.fields import ArrayField
+from django.core.validators import FileExtensionValidator
+
 
 #clase abstracta para el borrado suave
 class SoftDeletionModel(models.Model):
@@ -209,33 +211,14 @@ class TipoMantenimiento(models.Model):
 
 class OrdenMantenimiento(OrdendeTrabajo):
     tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
-
-    '''
-    creador = models.ForeignKey(User, related_name='ordenes_mantenimiento_creadas', on_delete=models.DO_NOTHING, null=True, blank=True)
-    aprobador = models.ForeignKey(User, related_name='ordenes_mantenimiento_aprobadas', on_delete=models.DO_NOTHING, null=True, blank=True)
-    '''
-
+    parte_asociado = models.FileField(upload_to='partes_asociados/', null=True, blank=False, validators=[FileExtensionValidator(allowed_extensions=['pdf', 'jpeg', 'png'])]) 
+      
     def __str__(self):
         return f"{self.fecha}"
     class Meta:
         db_table = 'Ordenes de Mantenimiento'
         verbose_name_plural='Ordenes de Mantenimiento'
-    '''
-    def clean(self):
-        super().clean()
-        if self.pk is not None:  
-            mantenimientos_list = [tipo.tipo for tipo in self.tipos_mantenimiento.all()]
-            if 'M1' in mantenimientos_list and 'M2' in mantenimientos_list:
-                raise ValidationError('No puedes seleccionar los tipos de mantenimiento M1 y M2 a la vez.')
-    '''
-
-    '''    
-    def clean(self):
-        super().clean()
-        if self.tipos_mantenimiento is not None:
-            if 'M1' in self.tipos_mantenimiento and 'M2' in self.tipos_mantenimiento:
-                raise ValidationError('No se puede seleccionar "Mantenimiento 1" y "Mantenimiento 2" al mismo tiempo.')
-    '''
+   
 class OrdenCombustible(OrdendeTrabajo): 
     sel_tcombustible= [
         ('Diesel','Combustible Diesel'),  
