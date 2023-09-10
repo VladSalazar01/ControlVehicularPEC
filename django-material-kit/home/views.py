@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
@@ -27,8 +27,6 @@ from io import BytesIO
 from xhtml2pdf import pisa
 from PyPDF2 import PdfMerger
 from django.contrib.staticfiles import finders
-from django.http import HttpResponse
-
 
 from bs4 import BeautifulSoup
 from reportlab.lib.styles import ParagraphStyle
@@ -165,12 +163,35 @@ def parte_policial_pdf(request, parte_id):
     return response
 
 def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
+
+    orden_mantenimiento = get_object_or_404(OrdenMantenimiento, id=orden_mantenimiento_id)
+    parte_policial = orden_mantenimiento.parte_policial  # Obtener el PartePolicial asociado
+    personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
+    flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
+
+    # Preparar el contexto
+    context = {
+        'orden_mantenimiento': orden_mantenimiento,
+        'kilometraje_actual': parte_policial.kilometraje_actual,
+        'tipo_vehiculo': flota_vehicular.tipo_vehiculo,
+        'numero_placa': flota_vehicular.placa,
+        'marca': flota_vehicular.marca,
+        'modelo': flota_vehicular.modelo,
+
+        'id_responsable': personal_policial.id,  # Asumiendo que hay un campo 'id' en el modelo Usuario
+        'nombre_responsable': personal_policial.usuario.genero,  # Asumiendo que hay un campo 'username' en el modelo Usuario
+        'asunto': orden_mantenimiento.asunto,
+        'detalle': orden_mantenimiento.detalle,
+
+
+        'request': request
+    }
+
     # Obtener la orden de mantenimiento
     orden_mantenimiento = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
-
     # Renderizar la plantilla con la orden de mantenimiento
     template_path = 'Admin/orden_trabajo/orden_mantenimiento_pdf.html'
-    context = {'orden_mantenimiento': orden_mantenimiento, 'request': request}
+   # context = {'orden_mantenimiento': orden_mantenimiento, 'request': request}
     template = get_template(template_path)
     html = template.render(context)
 

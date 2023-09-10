@@ -208,16 +208,6 @@ class TipoMantenimiento(models.Model):
     costo = models.DecimalField(max_digits=5, decimal_places=2)
     def __str__(self):
         return self.get_tipo_display()
-
-class OrdenMantenimiento(OrdendeTrabajo):
-    tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
-    parte_asociado = models.FileField(upload_to='partes_asociados/', null=True, blank=False, validators=[FileExtensionValidator(allowed_extensions=['pdf', 'jpeg', 'png'])]) 
-      
-    def __str__(self):
-        return f"{self.fecha}"
-    class Meta:
-        db_table = 'Ordenes de Mantenimiento'
-        verbose_name_plural='Ordenes de Mantenimiento'
    
 class OrdenCombustible(OrdendeTrabajo): 
     sel_tcombustible= [
@@ -239,8 +229,6 @@ class OrdenCombustible(OrdendeTrabajo):
     class Meta:
         db_table = 'Ordenes de Combustible'
         verbose_name_plural='Ordenes de Combustible'
-
-
 #4trio 
 class PartePolicial(models.Model):    
     fecha = models.DateTimeField(max_length=45, blank=True, null=True)
@@ -267,6 +255,19 @@ class PartePolicial(models.Model):
     class Meta:
         db_table = 'Parte Policial'
         verbose_name_plural='Partes Policiales'
+
+class OrdenMantenimiento(OrdendeTrabajo):
+    tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
+    parte_asociado = models.FileField(upload_to='partes_asociados/', null=True, blank=False, validators=[FileExtensionValidator(allowed_extensions=['pdf', 'jpeg', 'png'])])
+    asunto = models.CharField(max_length=255, null=True, blank=True)
+    detalle = models.TextField(null=True, blank=True)   
+    parte_policial = models.ForeignKey(PartePolicial, on_delete=models.SET_NULL, null=True, blank=True, related_name='ordenes_mantenimiento')
+       
+    def __str__(self):
+        return f"{self.fecha}"
+    class Meta:
+        db_table = 'Ordenes de Mantenimiento'
+        verbose_name_plural='Ordenes de Mantenimiento'
 
 #5trio ultimo
 class TallerMecanico(models.Model):    

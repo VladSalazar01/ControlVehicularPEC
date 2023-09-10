@@ -10,9 +10,28 @@
             <li>{{ tipo.tipo }} - {{ tipo.descripcion }}</li>
         {% endfor %}
     </ul>
-
     <h3>Creador: {{ orden_mantenimiento.creador.username }}</h3>
     <h3>Aprobador: {{ orden_mantenimiento.aprobador.username }}</h3>
+ 
+    <h3>Información del Vehículo</h3>
+    <ul>
+        <li>Kilometraje Actual: {{ kilometraje_actual }}</li>
+        <li>Tipo de Vehículo: {{ tipo_vehiculo }}</li>
+        <li>Número de Placa: {{ numero_placa }}</li>
+        <li>Marca: {{ marca }}</li>
+        <li>Modelo: {{ modelo }}</li>
+    </ul>
+    <h3>Información del Responsable</h3>
+    <ul>
+        <li>ID del Responsable: {{ id_responsable }}</li>
+        <li>Nombre del Responsable: {{ nombre_responsable }}</li>
+    </ul>
+
+    <h3>Detalles del Mantenimiento</h3>
+    <ul>
+        <li>Asunto: {{ asunto }}</li>
+        <li>Detalle: {{ detalle }}</li>
+    </ul>
 
     <h4>Estado: {{ orden_mantenimiento.estado }}</h4>
 {% endblock %}
