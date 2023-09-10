@@ -17843,3 +17843,61 @@ pisaDocument options:
   link_callback = None
   xhtml = False
   context_meta = None
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 2581
+Watching for file changes with StatReloader
+Internal Server Error: /orden_mantenimiento_pdf/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 169, in orden_mantenimiento_pdf
+    flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
+UnboundLocalError: local variable 'personal_policial' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /orden_mantenimiento_pdf/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 174, in orden_mantenimiento_pdf
+    personal_policial = orden_mantenimiento.personalPolicial  # Asumiendo que este es el campo que relaciona a OrdenMantenimiento con PersonalPolicial
+AttributeError: 'OrdenMantenimiento' object has no attribute 'personalPolicial'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 2581
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001C3A7B48F90>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+Internal Server Error: /orden_mantenimiento_pdf/60/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 171, in orden_mantenimiento_pdf
+    personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
+AttributeError: 'NoneType' object has no attribute 'personalPolicial'
+books not found when generating links

@@ -166,8 +166,17 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
 
     orden_mantenimiento = get_object_or_404(OrdenMantenimiento, id=orden_mantenimiento_id)
     parte_policial = orden_mantenimiento.parte_policial  # Obtener el PartePolicial asociado
+    
+
     personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
     flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
+
+    # Supongamos que orden_mantenimiento es un objeto de OrdenMantenimiento
+    #personal_policial = orden_mantenimiento.personalPolicial  # Asumiendo que este es el campo que relaciona a OrdenMantenimiento con PersonalPolicial
+    usuario = personal_policial.usuario  # Este debería ser un objeto de Usuario
+    user = usuario.user  # Este debería ser un objeto de User
+
+    nombre_completo = f"{user.first_name} {user.last_name}"
 
     # Preparar el contexto
     context = {
@@ -179,7 +188,7 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
         'modelo': flota_vehicular.modelo,
 
         'id_responsable': personal_policial.id,  # Asumiendo que hay un campo 'id' en el modelo Usuario
-        'nombre_responsable': personal_policial.usuario.genero,  # Asumiendo que hay un campo 'username' en el modelo Usuario
+        'nombre_completo': nombre_completo,
         'asunto': orden_mantenimiento.asunto,
         'detalle': orden_mantenimiento.detalle,
 
