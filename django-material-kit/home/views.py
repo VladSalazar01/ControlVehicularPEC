@@ -166,13 +166,12 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
 
     orden_mantenimiento = get_object_or_404(OrdenMantenimiento, id=orden_mantenimiento_id)
     parte_policial = orden_mantenimiento.parte_policial  # Obtener el PartePolicial asociado
-    
+        # Encontrar la ruta de la imagen
+    image_path = finders.find('images/EscudonPNa.jpg')
 
     personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
     flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
 
-    # Supongamos que orden_mantenimiento es un objeto de OrdenMantenimiento
-    #personal_policial = orden_mantenimiento.personalPolicial  # Asumiendo que este es el campo que relaciona a OrdenMantenimiento con PersonalPolicial
     usuario = personal_policial.usuario  # Este debería ser un objeto de Usuario
     user = usuario.user  # Este debería ser un objeto de User
 
@@ -180,6 +179,8 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
 
     # Preparar el contexto
     context = {
+        'image_path': image_path,
+
         'orden_mantenimiento': orden_mantenimiento,
         'kilometraje_actual': parte_policial.kilometraje_actual,
         'tipo_vehiculo': flota_vehicular.tipo_vehiculo,

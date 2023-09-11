@@ -17901,3 +17901,8 @@ Traceback (most recent call last):
     personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
 AttributeError: 'NoneType' object has no attribute 'personalPolicial'
 books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

@@ -1,6 +1,9 @@
 {% extends "pdf_templates/base_ordendetrabajo_pdf.html" %}
 
 {% block content %}
+    {% if image_path %}
+    <img src="{{ image_path }}" alt="Logo" width="100">
+    {% endif %}
     <h1>Orden de Mantenimiento</h1>
     <h2>Fecha: {{ orden_mantenimiento.fecha }}</h2>
     
