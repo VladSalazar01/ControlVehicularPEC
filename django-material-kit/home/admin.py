@@ -2,8 +2,9 @@ from django.contrib import admin
 from django.contrib.auth.models import User, Group
 from django.urls import path
 from .models import *
-from django.shortcuts import render, redirect
+from . import views
 from .forms import *
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
 import logging
@@ -16,6 +17,8 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 import datetime
 from django.http import HttpResponseRedirect
+
+
 
 
 
@@ -90,13 +93,12 @@ class DistritoAdmin(NestedModelAdmin):
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
 
-@admin.register(OrdenMantenimiento)
+
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
     change_list_template = 'admin/orden_trabajo/ordenmantenimiento_change_list.html'
 
     #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
-
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
     list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link')
@@ -125,8 +127,16 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
             path('create/', self.create_ordenmantenimiento, name='create_ordenmantenimiento'),
             path('<int:ordenmantenimiento_id>/update/', self.update_ordenmantenimiento, name='update_ordenmantenimiento'),
             path('<int:orden_mantenimiento_id>/ver_parte/', self.ver_parte, name='ver_parte'),
+            path('<int:orden_mantenimiento_id>/finalizar/', self.admin_site.admin_view(views.finalizar_orden_mantenimiento), name='finalizar-orden'),
+            
         ]
         return custom_urls + urls
+    
+    def finalizar_orden_mantenimiento(self, request, queryset):
+    # Este método se llamará cuando el usuario seleccione la acción "Finalizar orden de trabajo" en la interfaz de administración.
+    # Podrías abrir aquí una ventana emergente para las observaciones
+        pass
+    finalizar_orden_mantenimiento.short_description = "Finalizar orden de mantenimiento"
     
     def ver_parte(self, request, orden_mantenimiento_id):
         orden = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
@@ -176,6 +186,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         url = reverse('orden_mantenimiento_pdf', args=[obj.pk])
         return format_html('<a href="{}">Descargar PDF</a>', url)
     pdf_link.short_description = "PDF"
+admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
 
 class OrdenCombustibleAdmin(admin.ModelAdmin):
     list_display = ('id', 'creador_link', 'aprobador_link', 'fecha')

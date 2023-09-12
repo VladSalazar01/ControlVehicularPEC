@@ -179,7 +179,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateTimeField(null =True, auto_now_add=True, editable=False)
-    #fecha_aprobacion= models.DateTimeField(null =True, auto_now_add=True, editable=False)#not yet!
+    fecha_de_entrega = models.DateTimeField(null=True, blank=True, editable=False)
     creador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_creadas')
     aprobador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_aprobadas')
     sel_estado = [
@@ -254,7 +254,10 @@ class OrdenMantenimiento(OrdendeTrabajo):
     tipos_mantenimiento = models.ManyToManyField(TipoMantenimiento, blank=True)
     parte_asociado = models.FileField(upload_to='partes_asociados/', null=True, blank=False, validators=[FileExtensionValidator(allowed_extensions=['pdf', 'jpeg', 'png'])])
     asunto = models.CharField(max_length=255, null=True, blank=True)
-    detalle = models.TextField(null=True, blank=True)   
+    detalle = models.TextField(null=True, blank=True) 
+
+    kilometraje_actual = models.IntegerField(null=True, blank=True)
+    observaciones = models.TextField(null=True, blank=True)  
     parte_policial = models.ForeignKey(PartePolicial, on_delete=models.SET_NULL, null=True, blank=True, related_name='ordenes_mantenimiento')
        
     def __str__(self):

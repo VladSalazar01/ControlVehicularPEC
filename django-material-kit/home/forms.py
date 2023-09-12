@@ -12,16 +12,6 @@ from tinymce.widgets import TinyMCE
 
 
 #crear parte policial
-'''
-class PartePolicialForm(forms.ModelForm):
-    tipo_parte = forms.ChoiceField(choices=PartePolicial.sel_tparte, widget=forms.Select(attrs={'id': 'tipo_parte'}))
-    fecha_solicitud = forms.DateTimeField(label="Fecha de Mantenimiento:", required=True)
-    estado = forms.CharField(initial='En Proceso', widget=forms.HiddenInput())  # campo oculto con valor predeterminado 'En Proceso'
-
-    class Meta:
-        model = PartePolicial
-        exclude = ['fecha']  # excluimos la fecha del formulario
-'''
 
 class PartePolicialForm(forms.ModelForm):
     fecha_solicitud = forms.DateTimeField(
@@ -61,30 +51,9 @@ class PartePolicialForm(forms.ModelForm):
         if flota_vehicular and kilometraje_actual and kilometraje_actual <= flota_vehicular.kilometraje:
             self.add_error(None, "El kilometraje actual debe ser mayor al kilometraje del vehículo.")
 
-'''
-class OrdenMantenimientoForm(forms.ModelForm):
-    class Meta:
-        model = OrdenMantenimiento
-        exclude = ['tipos_mantenimiento']
-   
-class TipoMantenimientoInlineFormset(forms.BaseInlineFormSet):
-    def clean(self):
-        super().clean()
-        mantenimientos_list = []
-        for form in self.forms:
-            if not form.cleaned_data.get('DELETE'):  # Ignore forms that will be deleted
-                mantenimiento = form.cleaned_data.get('tipo_mantenimiento')
-                if mantenimiento:
-                    mantenimientos_list.append(mantenimiento.tipo)
-        
-        if 'M1' in mantenimientos_list and 'M2' in mantenimientos_list:
-            raise ValidationError("No puedes elegir Mantenimiento 1 y Mantenimiento 2 al mismo tiempo.")
+class FinalizarOrdenForm(forms.Form):
+    observaciones = forms.CharField(widget=forms.Textarea, required=False)
 
-class TipoMantenimientoInline(admin.TabularInline):
-    model = OrdenMantenimiento.tipos_mantenimiento.through
-    extra = 1
-    formset = TipoMantenimientoInlineFormset
-'''
 class OrdenMantenimientoForm(forms.ModelForm):
     class Meta:
         model = OrdenMantenimiento
@@ -227,31 +196,7 @@ class CombinedForm(forms.ModelForm):
             self._update_errors(e)
 '''
 
-#----ordenes de trabajo formclass OrdenTrabajoForm(forms.ModelForm):---DEPRECAR
 
-'''
-class OrdenTrabajoForm(forms.ModelForm):
-    tipo_mantenimiento = forms.ChoiceField(choices=OrdenMantenimiento.sel_tmantenimiento, required=False)
-    tipo_de_combustible = forms.ChoiceField(choices=OrdenCombustible.sel_tcombustible, required=False)
-    cantidad_galones = forms.CharField(max_length=45, required=False)
-    cantidad_galones_detalle = forms.CharField(max_length=45, required=False)
-    tecnico = forms.ModelChoiceField(queryset=User.objects.all(), widget=forms.HiddenInput(), required=False)
-    fecha = forms.DateField(initial=timezone.now().date(), widget=forms.HiddenInput())
-
-    class Meta:
-        model = OrdendeTrabajo
-        fields = '__all__'
-        
-    def save(self, commit=True):
-        orden_trabajo = super().save(commit=False)
-        if commit:
-            orden_trabajo.save()
-            if self.cleaned_data['tipo_orden'] == 'Mantenimiento':
-                OrdenMantenimiento.objects.create(ordende_trabajo=orden_trabajo, tipo_mantenimiento=self.cleaned_data['tipo_mantenimiento'])
-            else:
-                OrdenCombustible.objects.create(ordende_trabajo=orden_trabajo, tipo_de_combustible=self.cleaned_data['tipo_de_combustible'], cantidad_galones=self.cleaned_data['cantidad_galones'], cantidad_galones_detalle=self.cleaned_data['cantidad_galones_detalle'])
-        return orden_trabajo
-'''
 #buzon de quejas form
 class QuejaSugerenciaForm(forms.ModelForm):
     class Meta:
