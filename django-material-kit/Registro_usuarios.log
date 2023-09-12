@@ -17906,3 +17906,253 @@ https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=j
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000029348BBF290>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000029348F62DE0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000029348F80160>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000029348F80160>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001C52F9E3FB0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001C52F994F10>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001C52F994F10>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /finalizar_orden_mantenimiento/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 227, in finalizar_orden_mantenimiento
+    template = get_template(template_path)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tu_directorio_de_plantillas/orden_mantenimiento_finalizada_pdf.html
+books not found when generating links
+Internal Server Error: /finalizar_orden_mantenimiento/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 227, in finalizar_orden_mantenimiento
+    template = get_template(template_path)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: tu_directorio_de_plantillas/orden_mantenimiento_finalizada_pdf.html
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /finalizar_orden_mantenimiento/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 227, in finalizar_orden_mantenimiento
+    template = get_template(template_path)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orden_trabajo/orden_mantenimiento_finalizada_pdf.html
+books not found when generating links
+books not found when generating links
+Internal Server Error: /finalizar_orden_mantenimiento/61/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 227, in finalizar_orden_mantenimiento
+    template = get_template(template_path)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: orden_trabajo/orden_mantenimiento_finalizada_pdf.html
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: </h2>\n    <h2>Fecha de Registro: 9 de septiembre de 2023 a las 00:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: </h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 5000</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002060DC53CE0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000244D3B16CA0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x00000244D3BA8D60>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x00000244D3BA8D60>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: </h2>\n    <h2>Fecha de Registro: </h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: </h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 5000</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000018F0119E890>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: </h2>\n    <h2>Fecha de Registro: </h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: </h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 5000</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000271BDC620C0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000213AF9BB600>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x00000213AFD93070>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x00000213AFD93070>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 9 de septiembre de 2023 a las 00:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: </h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 5000</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002A1AAFBE2F0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 9 de septiembre de 2023 a las 00:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: </h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 5000</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F171337790>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 9 de septiembre de 2023 a las 00:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: desconocido</li>\n        <li>Detalle: detallado en el parte</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F1713B8F40>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001F171225660>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001F171225660>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 9 de septiembre de 2023 a las 00:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo:  </h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F17132ACF0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 9 de septiembre de 2023 a las 00:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo:  </h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F171145300>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

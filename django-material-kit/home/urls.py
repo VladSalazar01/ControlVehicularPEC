@@ -20,6 +20,7 @@ urlpatterns = [
     #orden de trabajo
     #pdf
     path('orden_mantenimiento_pdf/<int:orden_mantenimiento_id>/', orden_mantenimiento_pdf, name='orden_mantenimiento_pdf'),
+    path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden'),
 
     #evaluacion buzon de quejas
     path('queja_sugerencia/', views.queja_sugerencia, name='queja_sugerencia'),

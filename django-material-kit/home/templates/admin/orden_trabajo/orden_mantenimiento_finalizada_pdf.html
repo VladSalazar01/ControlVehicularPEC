@@ -1,0 +1,26 @@
+{% extends "pdf_templates/base_ordendetrabajo_pdf.html" %}
+
+{% block content %}
+    <h1>Orden de Trabajo Finalizada</h1>
+    
+    <h2>Fecha de Solicitud: {{ parte_policial.fecha_solicitud }}</h2>
+    <h2>Fecha de Registro: {{ orden_mantenimiento.fecha }}</h2>
+    <h2>Fecha de Entrega: {{ orden_mantenimiento.fecha_aprobacion }}</h2>
+
+    <h3>Personal Policial que entregó el vehículo: {{ nombre_completo }}</h3>
+    <h3>Personal Policial que retira el vehículo: {{ nombre_completo }}</h3>
+
+    <h3>Kilometraje Actual: {{ kilometraje_actual }}</h3>
+    <h3>Kilometraje de Próximo Mantenimiento: {{ kilometraje_actual|add:"5000" }}</h3>
+
+    <h3>Tipos de Mantenimiento Realizado:</h3>
+    <ul>
+        {% for tipo in orden_mantenimiento.tipos_mantenimiento.all %}
+            <li>{{ tipo.tipo }} - {{ tipo.descripcion }}</li>
+        {% endfor %}
+    </ul>
+
+    <h4>Observaciones: {{ parte_policial.observaciones }}</h4>
+{% endblock %}
+
+

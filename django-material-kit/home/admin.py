@@ -97,12 +97,16 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
 
     #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
 
-    list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
 
-    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link')
+    list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
+    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link')
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
+
+    def finalizar_orden_link(self, obj):
+        return format_html('<a class="button" href="{}">Finalizar orden de trabajo</a>', reverse('finalizar_orden', args=[obj.pk]))
+    finalizar_orden_link.short_description = 'Finalizar orden de trabajo'
 
     def save_model(self, request, obj, form, change):
         if not change:

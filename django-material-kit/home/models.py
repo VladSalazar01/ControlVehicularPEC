@@ -36,13 +36,6 @@ class Rango_ctlg(models.Model):
         db_table = 'Rango' 
         verbose_name_plural='Rangos'  
     
-'''class Marca_ctlg(models.Model):
-    name = models.CharField(max_length=200)
-
-class Modelo_car_ctlg(models.Model):
-    name = models.CharField(max_length=200)
-    brand = models.ForeignKey(Marca_ctlg, on_delete=models.CASCADE)'''
-
 ##fin catalogos----
 
 
@@ -186,6 +179,7 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
 
 class OrdendeTrabajo(models.Model):     
     fecha = models.DateTimeField(null =True, auto_now_add=True, editable=False)
+    #fecha_aprobacion= models.DateTimeField(null =True, auto_now_add=True, editable=False)#not yet!
     creador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_creadas')
     aprobador = models.ForeignKey(User, on_delete=models.DO_NOTHING, null=True, blank=True, related_name='%(class)s_aprobadas')
     sel_estado = [
