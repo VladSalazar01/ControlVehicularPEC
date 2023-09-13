@@ -63,18 +63,16 @@ class OrdenMantenimientoForm(forms.ModelForm):
         if field_name == 'fecha':
             return timezone.now()
         return super().get_initial_for_field(field, field_name)
-
+    
     def clean(self):
         cleaned_data = super().clean()
         tipos_mantenimiento = cleaned_data.get('tipos_mantenimiento')
-
         if tipos_mantenimiento is not None:
             tipos_mantenimiento = [tipo.tipo for tipo in tipos_mantenimiento]
-
             if 'M1' in tipos_mantenimiento and 'M2' in tipos_mantenimiento:
                 raise ValidationError("No se puede seleccionar 'Mantenimiento 1' y 'Mantenimiento 2' al mismo tiempo.")
-
         return cleaned_data
+    
 class TipoMantenimientoForm(forms.ModelForm):
     class Meta:
         model = OrdenMantenimiento

@@ -20,7 +20,12 @@ urlpatterns = [
     #orden de trabajo
     #pdf
     path('orden_mantenimiento_pdf/<int:orden_mantenimiento_id>/', orden_mantenimiento_pdf, name='orden_mantenimiento_pdf'),
-    path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden'),
+    #path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden'),
+
+    path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden_mantenimiento'),
+    path('descargar_pdf_orden_finalizada/<int:orden_mantenimiento_id>/', views.descargar_pdf_orden_finalizada, name='descargar_pdf_orden_finalizada'),
+
+    
 
     #evaluacion buzon de quejas
     path('queja_sugerencia/', views.queja_sugerencia, name='queja_sugerencia'),

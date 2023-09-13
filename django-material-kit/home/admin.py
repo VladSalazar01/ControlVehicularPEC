@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User, Group
 from django.urls import path
 from .models import *
-from . import views
+from .views import *
 from .forms import *
 from django.shortcuts import render, redirect
 from django.contrib import messages
@@ -101,15 +101,12 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
-    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link')
+    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link', 'descargar_pdf_link',)
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
 
-    def finalizar_orden_link(self, obj):
-        return format_html('<a class="button" href="{}">Finalizar orden de trabajo</a>', reverse('finalizar_orden', args=[obj.pk]))
-    finalizar_orden_link.short_description = 'Finalizar orden de trabajo'
-
+    
     def save_model(self, request, obj, form, change):
         if not change:
             obj.creador = request.user
@@ -121,22 +118,25 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
     get_tipo_mantenimiento.short_description = 'Tipos de Mantenimiento'
     
-    def get_urls(self):
-        urls = super().get_urls()
-        custom_urls = [
-            path('create/', self.create_ordenmantenimiento, name='create_ordenmantenimiento'),
-            path('<int:ordenmantenimiento_id>/update/', self.update_ordenmantenimiento, name='update_ordenmantenimiento'),
-            path('<int:orden_mantenimiento_id>/ver_parte/', self.ver_parte, name='ver_parte'),
-            path('<int:orden_mantenimiento_id>/finalizar/', self.admin_site.admin_view(views.finalizar_orden_mantenimiento), name='finalizar-orden'),
-            
-        ]
-        return custom_urls + urls
     
-    def finalizar_orden_mantenimiento(self, request, queryset):
-    # Este método se llamará cuando el usuario seleccione la acción "Finalizar orden de trabajo" en la interfaz de administración.
-    # Podrías abrir aquí una ventana emergente para las observaciones
-        pass
-    finalizar_orden_mantenimiento.short_description = "Finalizar orden de mantenimiento"
+    
+    def finalizar_orden_link(self, obj):
+        if obj.estado == "Activa":
+            return format_html('<a class="button" href="{}">Finalizar orden de trabajo</a>',
+    reverse('finalizar_orden_mantenimiento', args=[obj.pk]))
+        else:
+            return "No disponible"
+    finalizar_orden_link.short_description = "Finalizar Orden"
+
+    def descargar_pdf_link(self, obj):
+        if obj.estado == "Despachada":
+            return format_html('<a class="button" href="{}">Descargar PDF Orden Finalizada</a>',
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+        else:
+            return "No disponible"
+    descargar_pdf_link.short_description = "Descargar PDF"
+
+      
     
     def ver_parte(self, request, orden_mantenimiento_id):
         orden = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
@@ -146,7 +146,6 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     
     def ver_parte_asociado(self, obj):
         return format_html('<a href="{}" target="_blank">Ver parte asociado</a>', reverse('admin:ver_parte', args=[obj.id]))
-    
     ver_parte_asociado.short_description = 'Ver parte asociado'
 
     def create_ordenmantenimiento(self, request):
@@ -184,8 +183,19 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     
     def pdf_link(self, obj):
         url = reverse('orden_mantenimiento_pdf', args=[obj.pk])
-        return format_html('<a href="{}">Descargar PDF</a>', url)
-    pdf_link.short_description = "PDF"
+        return format_html('<a href="{}">Emitir orden de Mantenimiento</a>', url)
+    pdf_link.short_description = "Orden de Mantenimiento PDF"
+
+    def get_urls(self):
+        urls = super().get_urls()
+        custom_urls = [
+            path('create/', self.create_ordenmantenimiento, name='create_ordenmantenimiento'),
+            path('<int:ordenmantenimiento_id>/update/', self.update_ordenmantenimiento, name='update_ordenmantenimiento'),
+            path('<int:orden_mantenimiento_id>/ver_parte/', self.ver_parte, name='ver_parte'),
+            path('<int:orden_mantenimiento_id>/finalizar/', self.admin_site.admin_view(finalizar_orden_mantenimiento), name='finalizar_orden_mantenimiento'),
+            path('<int:orden_mantenimiento_id>/descargar/', self.admin_site.admin_view(descargar_pdf_orden_finalizada), name='descargar_pdf_orden_finalizada'),
+        ]
+        return custom_urls + urls
 admin.site.register(OrdenMantenimiento, OrdenMantenimientoAdmin)
 
 class OrdenCombustibleAdmin(admin.ModelAdmin):

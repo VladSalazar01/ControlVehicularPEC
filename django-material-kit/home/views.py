@@ -219,79 +219,81 @@ def orden_mantenimiento_pdf(request, orden_mantenimiento_id):
 
 def finalizar_orden_mantenimiento(request, orden_mantenimiento_id):
     orden_mantenimiento = get_object_or_404(OrdenMantenimiento, id=orden_mantenimiento_id)
-
+    
     if request.method == 'POST':
         form = FinalizarOrdenForm(request.POST)
         if form.is_valid():
             observaciones = form.cleaned_data['observaciones']
-
-            # Cambiar el estado y la fecha de entrega
-            orden_mantenimiento.estado = 'Orden despachada'
+            orden_mantenimiento.estado = 'Despachada'
             orden_mantenimiento.fecha_de_entrega = timezone.now()
-            orden_mantenimiento.observaciones = observaciones 
-           
-            parte_policial = orden_mantenimiento.parte_policial  # Obtener el PartePolicial asociado
-                # Encontrar la ruta de la imagen
-            image_path = finders.find('images/EscudonPNa.jpg')
-            personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
-            #flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
-            usuario = personal_policial.usuario  # Este debería ser un objeto de Usuario
-            user = usuario.user  # Este debería ser un objeto de User
-            nombre_completo = f"{user.first_name} {user.last_name}"
-    
-            orden_mantenimiento.aprobador = request.user  # Suponiendo que el usuario que finaliza la orden es el aprobador
-            
+            orden_mantenimiento.observaciones = observaciones
             orden_mantenimiento.save()
-
-       
-
-            # Aquí, añade el código para generar el PDF como lo hiciste anteriormente.
-            template_path = 'admin/orden_trabajo/orden_mantenimiento_finalizada_pdf.html'
-            context = {
-                'image_path': image_path,
-                'parte_policial': parte_policial,  # Añadido al contexto
-                'orden_mantenimiento': orden_mantenimiento,
-
-                'fecha_solicitud': parte_policial.fecha_solicitud,  # Añadido al contexto        
-                'fecha': orden_mantenimiento.fecha,
-                'fecha_aprobacion': orden_mantenimiento.fecha, #corregir(no hay atributo en el modelo "orden trabajo")
-
-                'nombre_completo': nombre_completo, #personal que entrega el vehiculo (autor del parte)
-                #'nombre_completo': nombre_completo, #personal que entrega el vehiculo (posiblemente no el mismo autor de parte)
-                'kilometraje_actual': parte_policial.kilometraje_actual, # refiere al de la revision (NC)
-                #kilometraje de proximo mantenimiento (definido solo como +5k NC)
-                    
-                #tipo de mantenimiento relizado esta definido en plantilla pero sin discriminante de tipo de vehiculo
-                
-                'request': request
-            }
-            template = get_template(template_path)
-            html = template.render(context)
-
-            # Crear un objeto de archivo en memoria
-            pdf_file = BytesIO()
-
-            # Generar el PDF
-            pisa_status = pisa.CreatePDF(
-            html, dest=pdf_file)
-
-            # Generar el PDF
-            if pisa_status.err:
-                return HttpResponse('Ocurrió un error al generar el PDF')
-            else:
-                pdf_file.seek(0)
-                with open(f"media/temporales/orden_mantenimiento_finalizada_{orden_mantenimiento_id}.pdf", "wb") as f:
-                    f.write(pdf_file.read())
-            # Añadir un mensaje de éxito
+            
             messages.success(request, 'Orden de mantenimiento finalizada con éxito')
-            # Redirigir de nuevo a la vista de lista de ordenes de mantenimiento
             return redirect(reverse('admin:home_ordenmantenimiento_changelist'))
         else:
-            # Manejar el caso cuando el formulario no es válido
             return render(request, 'admin/orden_trabajo/finalizar_orden.html', {'form': form, 'orden': orden_mantenimiento})
     else:
         form = FinalizarOrdenForm()
         return render(request, 'admin/orden_trabajo/finalizar_orden.html', {'form': form, 'orden': orden_mantenimiento})
+      
+
+def descargar_pdf_orden_finalizada(request, orden_mantenimiento_id):
+    orden_mantenimiento = get_object_or_404(OrdenMantenimiento, id=orden_mantenimiento_id)
+  
+            
+    
+    parte_policial = orden_mantenimiento.parte_policial  # Obtener el PartePolicial asociado
+        # Encontrar la ruta de la imagen
+    image_path = finders.find('images/EscudonPNa.jpg')
+    personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
+    #flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
+    usuario = personal_policial.usuario  # Este debería ser un objeto de Usuario
+    user = usuario.user  # Este debería ser un objeto de User
+    nombre_completo = f"{user.first_name} {user.last_name}"
+
+    orden_mantenimiento.aprobador = request.user  # Suponiendo que el usuario que finaliza la orden es el aprobador
+    
+    orden_mantenimiento.save()       
+
+    # Aquí, añade el código para generar el PDF como lo hiciste anteriormente.
+    template_path = 'admin/orden_trabajo/orden_mantenimiento_finalizada_pdf.html'
+    context = {
+        'image_path': image_path,
+        'parte_policial': parte_policial,  # Añadido al contexto
+        'orden_mantenimiento': orden_mantenimiento,
+
+        'fecha_solicitud': parte_policial.fecha_solicitud,  # Añadido al contexto        
+        'fecha': orden_mantenimiento.fecha,
+        'fecha_aprobacion': orden_mantenimiento.fecha, #corregir(no hay atributo en el modelo "orden trabajo")
+
+        'nombre_completo': nombre_completo, #personal que entrega el vehiculo (autor del parte)
+        #'nombre_completo': nombre_completo, #personal que entrega el vehiculo (posiblemente no el mismo autor de parte)
+        'kilometraje_actual': parte_policial.kilometraje_actual, # refiere al de la revision (NC)
+        #kilometraje de proximo mantenimiento (definido solo como +5k NC)
+            
+        #tipo de mantenimiento relizado esta definido en plantilla pero sin discriminante de tipo de vehiculo
+        
+        'request': request
+    }
+    template = get_template(template_path)
+    html = template.render(context)
+
+    # Crear un objeto de archivo en memoria
+    pdf_file = BytesIO()
+
+    # Generar el PDF
+    pisa_status = pisa.CreatePDF(
+    html, dest=pdf_file)
+
+    # Generar el PDF
+    if pisa_status.err:
+        return HttpResponse('Ocurrió un error al generar el PDF')
+    else:
+        pdf_file.seek(0)
+        with open(f"media/temporales/orden_mantenimiento_finalizada_{orden_mantenimiento_id}.pdf", "wb") as f:
+            f.write(pdf_file.read())
+
 
 
 

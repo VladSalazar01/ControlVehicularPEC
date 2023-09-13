@@ -19305,3 +19305,2021 @@ C:\CVPL2\django-material-kit\home\views.py changed, reloading.
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 11 de septiembre de 2023 a las 22:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000018D50BC75B0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 11 de septiembre de 2023 a las 22:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: gagagagaga</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000025129AD3C90>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 11 de septiembre de 2023 a las 22:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: adadsadsa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000251297EAB60>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 11 de septiembre de 2023 a las 22:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: asunto pendiente</li>\n        <li>Detalle: detallado en el parte plicial</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002512988C310>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000025129D9A830>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000025129D9A830>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 11 de septiembre de 2023 a las 22:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: ftmd yjt</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000025129D9E020>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 11 de septiembre de 2023 a las 22:32</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000025129D369D0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 11 de septiembre de 2023 a las 22:32</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: asunto pendiente</li>\n        <li>Detalle: detallado en el parte plicial</li>\n    </ul>\n\n    <h4>Estado: Orden despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000025129945760>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x00000251299811B0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x00000251299811B0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 146, in descargar_pdf_button
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 146, in descargar_pdf_button
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 146, in descargar_pdf_button
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_button'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 146, in descargar_pdf_button
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 12 de septiembre de 2023 a las 10:45</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M3 - Corresponde a cambio de batería y ajustes en el sistema eléctrico</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: no disponible</li>\n        <li>Detalle: procendente descronocido</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000016C5B6C4D10>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000016C5BB00A30>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000016C5BB00A30>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'finalizar_orden_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'finalizar_orden_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+TypeError: OrdenMantenimientoAdmin.finalizar_orden_link() takes 1 positional argument but 2 were given
+Not Found: /favicon.ico
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 12 de septiembre de 2023 a las 10:45</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M3 - Corresponde a cambio de batería y ajustes en el sistema eléctrico</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: no disponible</li>\n        <li>Detalle: procendente descronocido</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000021511601B70>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000021511DDE890>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000021511DDE890>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/ordenmantenimiento/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: OrdenMantenimiento has no field named 'descargar_pdf_link'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\defaulttags.py", line 321, in render
+    return nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1064, in render
+    output = self.filter_expression.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 715, in resolve
+    obj = self.var.resolve(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 847, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 914, in _resolve_lookup
+    current = current()
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 79, in super
+    return mark_safe(self.render(self.context))
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 134, in descargar_pdf_link
+    reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'descargar_pdf_orden_finalizada' not found. 'descargar_pdf_orden_finalizada' is not a valid view function or pattern name.
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000210DC0559E0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Internal Server Error: /finalizar_orden_mantenimiento/64/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view home.views.finalizar_orden_mantenimiento didn't return an HttpResponse object. It returned None instead.
+books not found when generating links
+C:\CVPL2\django-material-kit\home\forms.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
