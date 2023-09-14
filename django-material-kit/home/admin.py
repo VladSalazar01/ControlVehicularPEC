@@ -101,7 +101,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
 
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
-    list_display = ('fecha', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link', 'descargar_pdf_link',)
+    list_display = ('fecha','fecha_de_entrega', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link', 'descargar_pdf_link',)
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
@@ -118,7 +118,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         return ', '.join([tipo.tipo for tipo in obj.tipos_mantenimiento.all()])
     get_tipo_mantenimiento.short_description = 'Tipos de Mantenimiento'
     
-    
+
     
     def finalizar_orden_link(self, obj):
         if obj.estado == "Activa":
@@ -134,9 +134,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     reverse('descargar_pdf_orden_finalizada', args=[obj.pk]))
         else:
             return "No disponible"
-    descargar_pdf_link.short_description = "Descargar PDF"
-
-      
+    descargar_pdf_link.short_description = "Descargar PDF"      
     
     def ver_parte(self, request, orden_mantenimiento_id):
         orden = OrdenMantenimiento.objects.get(id=orden_mantenimiento_id)
@@ -186,6 +184,12 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
         return format_html('<a href="{}">Emitir orden de Mantenimiento</a>', url)
     pdf_link.short_description = "Orden de Mantenimiento PDF"
 
+    def get_form(self, request, obj=None, **kwargs):
+        form = super(OrdenMantenimientoAdmin, self).get_form(request, obj, **kwargs)
+        if obj is None or obj.estado != 'Despachada':  # Puede ajustar la condición según su caso de uso
+            form.base_fields['observaciones'].widget = forms.HiddenInput()
+        return form
+
     def get_urls(self):
         urls = super().get_urls()
         custom_urls = [
@@ -228,11 +232,36 @@ admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
 
 
 class PartePolicialAdmin(admin.ModelAdmin):
-    list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial')
+    list_filter = ['fecha', 'tipo_parte',  'estado', 'personalPolicial__usuario__user__username']
+    list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial', 'rechazar_parte')
     readonly_fields = ['personalPolicial', 'fecha']
+
     def nombre_personal_policial(self, obj):
         return obj.personalPolicial.usuario.user.username 
     nombre_personal_policial.short_description = 'Personal Policial'
+
+    def rechazar_parte(self, obj):
+        if obj.estado == 'En Proceso':
+            return format_html(
+                '<a class="button" href="{}">Rechazar Parte</a>',
+                reverse('admin:set_rechazado', args=[obj.pk])
+            )
+        else:
+            return "No se puede rechazar"
+    rechazar_parte.short_description = 'Rechazar Parte'
+    
+    def get_urls(self):
+        urls = super().get_urls()
+        my_urls = [
+            path('set_rechazado/<int:parte_id>/', self.admin_site.admin_view(self.set_rechazado), name='set_rechazado'),
+        ]
+        return my_urls + urls
+
+    def set_rechazado(self, request, parte_id):
+        obj = PartePolicial.objects.get(pk=parte_id)
+        obj.estado = 'Rechazado'
+        obj.save()
+        return HttpResponseRedirect("../../")
 admin.site.register(PartePolicial, PartePolicialAdmin)
 
 class TallerMecanicoAdmin(admin.ModelAdmin):
@@ -313,10 +342,11 @@ class PersonalPolicialInline(admin.TabularInline):
 admin.site.register(PersonalPolicial, PersonalPolicialAdmin)  
 
 class FlotaVehicularAdmin(admin.ModelAdmin):
-    inlines = [PersonalPolicialInline]
-                 
+    inlines = [PersonalPolicialInline]                 
     class Media:
             js = ('js/flotavehicular.js',) 
+
+    list_filter = ['marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito__cod_subcircuito', 'subcircuito__nombre_subcircuito']        
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre', 'subcircuito_display')    
     actions = ['asignar_subcircuito']
 
@@ -357,9 +387,11 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     def subcircuito_display(self, obj):
         return obj.subcircuito.nombre_subcircuito
     subcircuito_display.short_description = 'Subcircuito'
+
     def subcircuito_cod(self, obj):
         return obj.subcircuito.cod_subcircuito
-    subcircuito_cod.short_description = 'Código Subcircuito'   
+    subcircuito_cod.short_description = 'Código Subcircuito' 
+
     def subcircuito_nombre(self, obj):
         return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'

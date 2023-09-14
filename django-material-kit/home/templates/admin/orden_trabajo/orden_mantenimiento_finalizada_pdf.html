@@ -1,17 +1,20 @@
 {% extends "pdf_templates/base_ordendetrabajo_pdf.html" %}
 
 {% block content %}
+{% if image_path %}
+<img src="{{ image_path }}" alt="Logo" width="100">
+{% endif %}
     <h1>Orden de Trabajo Finalizada</h1>
     
-    <h2>Fecha de Solicitud: {{ parte_policial.fecha_solicitud }}</h2>
-    <h2>Fecha de Registro: {{ orden_mantenimiento.fecha }}</h2>
-    <h2>Fecha de Entrega: {{ orden_mantenimiento.fecha_aprobacion }}</h2>
+    <h3>Fecha de Solicitud:</h3> {{ parte_policial.fecha_solicitud }}
+    <h3>Fecha de Registro:</h3> {{ orden_mantenimiento.fecha }}
+    <h3>Fecha de Entrega: </h3>{{ orden_mantenimiento.fecha_de_entrega }}
 
-    <h3>Personal Policial que entregó el vehículo: {{ nombre_completo }}</h3>
-    <h3>Personal Policial que retira el vehículo: {{ nombre_completo }}</h3>
+    <h3>Personal Policial que entregó el vehículo:</h3> {{ nombre_completo }}
+    <h3>Personal Policial que retira el vehículo: </h3>{{ nombre_completo }}
 
-    <h3>Kilometraje Actual: {{ kilometraje_actual }}</h3>
-    <h3>Kilometraje de Próximo Mantenimiento: {{ kilometraje_actual|add:"5000" }}</h3>
+    <h3>Kilometraje Actual: {{ kilometraje_actual }}Km</h3>
+    <h3>Kilometraje de Próximo Mantenimiento: {{ kilometraje_proxima_revision }}Km</h3>
 
     <h3>Tipos de Mantenimiento Realizado:</h3>
     <ul>
@@ -20,7 +23,8 @@
         {% endfor %}
     </ul>
 
-    <h4>Observaciones: {{ parte_policial.observaciones }}</h4>
+    <h4>Observaciones: </h4>{{ orden_mantenimiento.observaciones }}<br>
+    <h4>Firma de Responsabilidad: ________________________</h4>
 {% endblock %}
 
 

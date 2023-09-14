@@ -21323,3 +21323,1048 @@ books not found when generating links
 books not found when generating links
 books not found when generating links
 books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000015E0CA06ED0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+Internal Server Error: /descargar_pdf_orden_finalizada/64/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view home.views.descargar_pdf_orden_finalizada didn't return an HttpResponse object. It returned None instead.
+Not Found: /favicon.ico
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: &lt;p&gt;amet nisl purus in&lt;strong&gt;&lt;em&gt;. Malesuada pellentesque elit eget gravida cum. Mattis aliquam faucibus purus in massa tempor nec feugiat nisl. Lacinia quis vel eros donec ac odio tempor orci. Cursus vitae congue mauris rhoncus aenean. Enim sit amet venenatis urna cursus eget.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002454ECCC5E0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000245518A79C0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024551D6BF10>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x00000245517F8E20>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x00000245517F8E20>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: </h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x00000247D17BB420>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x00000247D1EC0C40>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x00000247D1EC0C40>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: 12 de septiembre de 2023 a las 18:03</h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002BE1AABC900>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000002BE1AAE9210>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000002BE1AAE9210>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: 12 de septiembre de 2023 a las 18:03</h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000002BE1AA056C0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000002BE1AB91BD0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000002BE1AB91BD0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h2>Fecha de Solicitud: 22 de agosto de 2023 a las 04:04</h2>\n    <h2>Fecha de Registro: 12 de septiembre de 2023 a las 15:19</h2>\n    <h2>Fecha de Entrega: 12 de septiembre de 2023 a las 18:03</h2>\n\n    <h3>Personal Policial que entregó el vehículo: Personal002 Policial002</h3>\n    <h3>Personal Policial que retira el vehículo: Personal002 Policial002</h3>\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024E62A36570>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000024E62DC6AA0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000024E62DC6AA0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: mantenimiento</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017EC0D3EDE0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017EC14C8370>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017EC14C8370>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>mantenimiento\n    <h4>Firma de Responsabilidad: _____________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017EC1235620>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017EC14C8BB0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017EC14C8BB0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017EC14590D0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017EC147F880>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017EC147F880>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M2 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. El costo total por mantenimiento 1 es $43.59 incluye la mano de obra.\r\ncorresponde a un mantenimiento 1 \r\nmás cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017E854BE7A0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017E85880F10>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017E85880F10>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '\n        <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Encabezado" width="50" /> POLICIA NACIONAL DEL ECUADOR<br>\n        <h1>Parte Policial</h1>\n        <p>Fecha: 2023-09-13 06:17:28.746631+00:00</p>\n        <p>Tipo de Parte: Mantenimiento Preventivo</p>\n        <div>Observaciones: <div class="tox-notification__body">\r\n<p>This domain is not <em><strong>registered </strong></em>with Tiny Cloud. Please see the <a href="https://www.tiny.cloud/docs/quick-start/" target="_blank" rel="noopener">quick start guide</a> or <a href="https://www.tiny.cloud/auth/signup/" target="_blank" rel="noopener">create an account</a>.</p>\r\n</div>\r\n<p>&nbsp;</p></div>\n        <p>Estado: En Proceso</p>\n        <p>Firma de responsabilidad:</p>\n        <p>Responsable: Personal003 Policial003</p>\n        <p>Firma: ________________________</p>\n    '
+  dest = <_io.BytesIO object at 0x0000017E8587C400>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017E858FB7C0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017E858FB7C0>, 'width': 50.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 13 de septiembre de 2023 a las 01:27</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8001</li>\n        <li>Tipo de Vehículo: Moto</li>\n        <li>Número de Placa: noSSD-0555</li>\n        <li>Marca: KYMCO</li>\n        <li>Modelo: KYMCO</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 3</li>\n        <h3>Nombre del Responsable: Personal003 Policial003</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: Defecto menor sistema electrico</li>\n        <li>Detalle: Podría deberse a fallas del sistema eléctrico la moto no enciende</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017E85D15BC0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017E85D37070>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017E85D37070>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:27\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 01:28\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>el mantenimiento se ha ejecutado con exito<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000017E85D763E0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000017E85D41FF0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000017E85D41FF0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 13 de septiembre de 2023 a las 01:36</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: </h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8001</li>\n        <li>Tipo de Vehículo: Moto</li>\n        <li>Número de Placa: noSSD-0555</li>\n        <li>Marca: KYMCO</li>\n        <li>Modelo: KYMCO</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 3</li>\n        <h3>Nombre del Responsable: Personal003 Policial003</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: Defecto menor sistema electrico2</li>\n        <li>Detalle: detaaaaaaaa</li>\n    </ul>\n\n    <h4>Estado: Activa</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000020E4A1451C0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000020E4A1D3760>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000020E4A1D3760>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:36\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 01:37\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>deberían ser<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000020E4A4C3C40>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000020E4A7E0490>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000020E4A7E0490>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/custompermission/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: CustomPermission has no field named '__str__'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 285, in lookup_field
+    value = attr()
+  File "C:\CVPL2\django-material-kit\home\models.py", line 52, in __str__
+    name = name.replace('Can add group', _('Puede agregar rol'))
+TypeError: replace() argument 2 must be str, not __proxy__
+Not Found: /favicon.ico
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/home/partepolicial/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: PartePolicial has no field named 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 241, in accion_rechazar
+    reverse('admin:rechazar_parte', args=[obj.pk])
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'rechazar_parte' not found. 'rechazar_parte' is not a valid view function or pattern name.
+books not found when generating links
+Internal Server Error: /admin/home/partepolicial/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: PartePolicial has no field named 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 241, in accion_rechazar
+    reverse('admin:rechazar_parte', args=[obj.pk])
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'rechazar_parte' not found. 'rechazar_parte' is not a valid view function or pattern name.
+books not found when generating links
+Internal Server Error: /admin/home/partepolicial/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: PartePolicial has no field named 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 241, in accion_rechazar
+    reverse('admin:rechazar_parte', args=[obj.pk])
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'rechazar_parte' not found. 'rechazar_parte' is not a valid view function or pattern name.
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/partepolicial/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: PartePolicial has no field named 'accion_rechazar'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 241, in accion_rechazar
+    reverse('admin:rechazar_parte', args=[obj.pk])
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'rechazar_parte' not found. 'rechazar_parte' is not a valid view function or pattern name.
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/partepolicial/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 681, in get_field
+    return self.fields_map[field_name]
+KeyError: 'rechazar_parte'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 272, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 303, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\options.py", line 683, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: PartePolicial has no field named 'rechazar_parte'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\CVPL2\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 258, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\utils.py", line 281, in lookup_field
+    value = attr(obj)
+  File "C:\CVPL2\django-material-kit\home\admin.py", line 241, in rechazar_parte
+    reverse('admin:rechazar_parte', args=[obj.pk])
+  File "C:\CVPL2\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'rechazar_parte' not found. 'rechazar_parte' is not a valid view function or pattern name.
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links

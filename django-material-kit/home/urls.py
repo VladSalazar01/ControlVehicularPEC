@@ -16,12 +16,12 @@ urlpatterns = [
     path('mantenimiento/', PartePolicialCreateView.as_view(), name='mantenimiento'),    
     #pdf
     path('parte_policial_pdf/<int:parte_id>/', parte_policial_pdf, name='parte_policial_pdf'),
+    #rechazar parte
+    #path('admin/rechazar_parte/<int:parte_id>/', views.rechazar_parte, name='rechazar_parte'),
 
     #orden de trabajo
     #pdf
     path('orden_mantenimiento_pdf/<int:orden_mantenimiento_id>/', orden_mantenimiento_pdf, name='orden_mantenimiento_pdf'),
-    #path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden'),
-
     path('finalizar_orden_mantenimiento/<int:orden_mantenimiento_id>/', views.finalizar_orden_mantenimiento, name='finalizar_orden_mantenimiento'),
     path('descargar_pdf_orden_finalizada/<int:orden_mantenimiento_id>/', views.descargar_pdf_orden_finalizada, name='descargar_pdf_orden_finalizada'),
 
