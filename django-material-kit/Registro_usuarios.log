@@ -22902,3 +22902,22 @@ C:\CVPL2\django-material-kit\home\views.py changed, reloading.
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n    <li>Tipo de Vehículo: Moto</li>\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>45,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,40</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td>50,40</td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000021A6A740900>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000021A6A79E7A0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000021A6A79E7A0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col widths: [None, None]
