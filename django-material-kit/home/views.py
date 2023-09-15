@@ -14,6 +14,7 @@ from xhtml2pdf import pisa
 from django.template.loader import get_template
 from django.template import Context
 from django.contrib import messages
+from decimal import Decimal, ROUND_HALF_UP
 
 
 from django.utils.decorators import method_decorator
@@ -82,6 +83,25 @@ def mis_partes_policiales(request):
     usuario = Usuario.objects.get(user=request.user)
     personal_policial = PersonalPolicial.objects.get(usuario=usuario)
     partes_policiales_list = PartePolicial.objects.filter(personalPolicial=personal_policial)
+
+    # Inicialización de los filtros
+    fecha_filter = request.GET.get('fecha')
+    tipo_parte_filter = request.GET.get('tipo_parte')
+    estado_filter = request.GET.get('estado')
+    
+    # Filtrado de los objetos
+    partes_policiales_list = PartePolicial.objects.filter(personalPolicial=personal_policial)
+    
+    if fecha_filter:
+        partes_policiales_list = partes_policiales_list.filter(fecha=fecha_filter)
+    
+    if tipo_parte_filter:
+        partes_policiales_list = partes_policiales_list.filter(tipo_parte=tipo_parte_filter)
+        
+    if estado_filter:
+        partes_policiales_list = partes_policiales_list.filter(estado=estado_filter)
+
+
     # Paginación
     paginator = Paginator(partes_policiales_list, 6) # Muestra 5 partes por página
     page = request.GET.get('page')
@@ -274,7 +294,7 @@ def descargar_pdf_orden_finalizada(request, orden_mantenimiento_id):
         # Encontrar la ruta de la imagen
     image_path = finders.find('images/EscudonPNa.jpg')
     personal_policial = parte_policial.personalPolicial  # Obtener el PersonalPolicial asociado
-    #flota_vehicular = personal_policial.flota_vehicular  # Obtener el FlotaVehicular asociado
+   
     usuario = personal_policial.usuario  # Este debería ser un objeto de Usuario
     user = usuario.user  # Este debería ser un objeto de User
     nombre_completo = f"{user.first_name} {user.last_name}"
@@ -288,9 +308,39 @@ def descargar_pdf_orden_finalizada(request, orden_mantenimiento_id):
         kilometraje_proxima_revision = parte_policial.kilometraje_actual + 5000
     else:
         kilometraje_proxima_revision = "N/A"  # En caso de que tipo_vehiculo no esté definido o tenga un valor inesperado
-
     orden_mantenimiento.aprobador = request.user  # Suponiendo que el usuario que finaliza la orden es el aprobador
     
+
+    # Obtén los tipos de mantenimiento seleccionados para esta orden
+    tipos_seleccionados = orden_mantenimiento.tipos_mantenimiento.all()
+    # Obtén el objeto PersonalPolicial relacionado con el PartePolicial
+    personal_policial = parte_policial.personalPolicial
+    # Obtén el objeto FlotaVehicular relacionado con el PersonalPolicial
+    #flota_vehicular = personal_policial.flota_vehicular
+    # Ahora puedes acceder al tipo de vehículo
+    #tipo_vehiculo = flota_vehicular.tipo_vehiculo
+    # Inicializa variables para mantener el subtotal y las descripciones
+    subtotal_general = 0
+    descripcion_general = []
+    # Itera sobre cada tipo de mantenimiento seleccionado
+    for tipo in tipos_seleccionados:
+        # Aquí asumimos que el modelo TipoMantenimiento tiene campos 'descripcion' y 'costo'
+        descripcion = tipo.descripcion.splitlines()  # Supongamos que guardas cada item en una nueva línea
+        costo = tipo.costo
+        # Si se selecciona M2, ajusta la descripción y el costo según el tipo de vehículo
+        if tipo.tipo == 'M2':
+            if tipo_vehiculo in ['Auto', 'Camioneta']:
+                descripcion = tipo.descripcion.splitlines()
+                costo = tipo.costo
+            elif tipo_vehiculo == 'Moto':
+                descripcion = tipo.descripcion.splitlines()
+                costo = tipo.costo-15  # Asume que este costo es diferente para 'Moto'
+        subtotal_general += costo
+        descripcion_general.extend(descripcion)
+    # Calcula el IVA y el total
+    iva = (subtotal_general * Decimal(0.12)).quantize(Decimal('0.00'), rounding=ROUND_HALF_UP)
+    total = (subtotal_general + iva).quantize(Decimal('0.00'), rounding=ROUND_HALF_UP)
+    subtotal_general = subtotal_general.quantize(Decimal('0.00'), rounding=ROUND_HALF_UP)
 
     orden_mantenimiento.save()       
 
@@ -312,6 +362,13 @@ def descargar_pdf_orden_finalizada(request, orden_mantenimiento_id):
             
         #tipo de mantenimiento relizado esta definido en plantilla pero sin discriminante de tipo de vehiculo
         'kilometraje_proxima_revision': kilometraje_proxima_revision,  # Añadimos el nuevo valor al contexto
+
+        'descripcion_general': descripcion_general,
+        'tipo_vehiculo': flota_vehicular.tipo_vehiculo,
+        'subtotal_general': subtotal_general,
+        'iva': iva,
+        'total': total,
+        
         'request': request
     }
     template = get_template(template_path)

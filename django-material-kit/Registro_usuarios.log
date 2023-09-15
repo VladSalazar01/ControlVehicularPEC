@@ -22368,3 +22368,537 @@ books not found when generating links
 books not found when generating links
 books not found when generating links
 books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /descargar_pdf_orden_finalizada/66/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 316, in descargar_pdf_orden_finalizada
+    tipo_vehiculo = parte_policial.flota_vehicular.tipo_vehiculo
+AttributeError: 'PartePolicial' object has no attribute 'flota_vehicular'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /descargar_pdf_orden_finalizada/66/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 340, in descargar_pdf_orden_finalizada
+    iva = subtotal_general * 0.12
+TypeError: unsupported operand type(s) for *: 'decimal.Decimal' and 'float'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:36\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 13:34\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>M1 - Corresponde a cambio de aceite, revisión y cambio de pastillas, líquido de frenos y filtro de combustible. incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h4>Observaciones: </h4>Actualización?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024AFF1B31F0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF399EA0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF399EA0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:36\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 13:34\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <table>\n        \n    </table>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>43,59</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,230799999999999806421513426</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>Actualización?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024AFF15E160>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF1E88E0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF1E88E0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+Col widths: []
+<table> is empty
+'<table> </table>'
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:27\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 16:20\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <table>\n        \n    </table>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>43,59</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,230799999999999806421513426</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>none<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024AFF501DA0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF3FE5C0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF3FE5C0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+Col widths: []
+<table> is empty
+'<table> </table>'
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <table>\n        \n    </table>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000024AFEEFB100>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF2852A0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000024AFF2852A0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+Col widths: []
+<table> is empty
+'<table> </table>'
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:36\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 13:34\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de aceite</li>\n        \n            <li>Revisión y cambio de pastillas</li>\n        \n            <li>Revisión y cambio de líquido de frenos </li>\n        \n            <li>Revisión y cambio de filtro de combustible</li>\n        \n            <li>Incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>43,59</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,230799999999999806421513426</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>Actualización?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69627FB0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E697B80A0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E697B80A0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Corresponde a un mantenimiento 1 </li>\n        \n            <li>más cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E68BB8770>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69637370>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69637370>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 1 de agosto de 2023 a las 18:18\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 18:53\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 18:54\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 999999Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 1004999Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Corresponde a cambio de batería y ajustes en el sistema eléctrico</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>180,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>21,59999999999999920063942227</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>[observado]<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E6964EFC0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69754B80>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69754B80>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Corresponde a un mantenimiento 1 </li>\n        \n            <li>más cambio de filtro de aire cuando son vehículos, cambio del líquido refrigerante y cambio de luces delanteras y posteriores. El costo total por mantenimiento 2 es $60. Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E694A5F30>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69708580>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69708580>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 1 de agosto de 2023 a las 18:18\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 18:53\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 18:54\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 999999Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 1004999Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de batería </li>\n        \n            <li>Revisión y ajustes en el sistema eléctrico</li>\n        \n            <li>Incluye mano de obra</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>180,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>21,59999999999999920063942227</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>[observado]<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69626C00>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B56CB0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B56CB0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 13 de septiembre de 2023 a las 01:36\n    <h3>Fecha de Entrega: </h3>13 de septiembre de 2023 a las 13:34\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de aceite</li>\n        \n            <li>Revisión y cambio de pastillas</li>\n        \n            <li>Revisión y cambio de líquido de frenos </li>\n        \n            <li>Revisión y cambio de filtro de combustible</li>\n        \n            <li>Incluye la mano de obra.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>43,59</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,230799999999999806421513426</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>Actualización?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69AD1BC0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B563E0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B563E0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 22 de agosto de 2023 a las 04:04\n    <h3>Fecha de Registro:</h3> 12 de septiembre de 2023 a las 15:19\n    <h3>Fecha de Entrega: </h3>12 de septiembre de 2023 a las 18:03\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal002 Policial002\n    <h3>Personal Policial que retira el vehículo: </h3>Personal002 Policial002\n\n    <h3>Kilometraje Actual: 8989Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 13989Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>mantenimiento<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69703C90>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B5D690>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B5D690>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69B17290>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B6B7F0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E69B6B7F0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 14 de septiembre de 2023 a las 20:01</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - Cambio de filtro de aire \r\nCambio del líquido refrigerante\r\nCambio de luces delanteras y posteriores\r\nMano de obra\r\n-El costo total por mantenimiento es $60\r\n-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8001</li>\n        <li>Tipo de Vehículo: Moto</li>\n        <li>Número de Placa: noSSD-0555</li>\n        <li>Marca: KYMCO</li>\n        <li>Modelo: KYMCO</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 3</li>\n        <h3>Nombre del Responsable: Personal003 Policial003</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: REparacion de moto</li>\n        <li>Detalle: mantenimiento preventivo</li>\n    </ul>\n\n    <h4>Estado: Despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x0000022E69B58CC0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x0000022E6972DAB0>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x0000022E6972DAB0>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001A5E6A28D10>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001A5E6A9A530>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001A5E6A9A530>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n    \n    <img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n    \n    <h1>Orden de Mantenimiento</h1>\n    <h2>Fecha: 12 de septiembre de 2023 a las 15:19</h2>\n    \n    <h3>Tipos de Mantenimiento:</h3>\n    <ul>\n        \n            <li>M2 - Cambio de filtro de aire \r\nCambio del líquido refrigerante\r\nCambio de luces delanteras y posteriores\r\nMano de obra\r\n-El costo total por mantenimiento es $60\r\n-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n    <h3>Creador: AdminVlad</h3>\n    <h3>Aprobador: AdminVlad</h3>\n \n    <h3>Información del Vehículo</h3>\n    <ul>\n        <li>Kilometraje Actual: 8989</li>\n        <li>Tipo de Vehículo: Auto</li>\n        <li>Número de Placa: noSSC-0222</li>\n        <li>Marca: BENTLEY</li>\n        <li>Modelo: Continental</li>\n    </ul>\n    <h3>Información del Responsable</h3>\n    <ul>\n        <li>ID del Responsable: 2</li>\n        <h3>Nombre del Responsable: Personal002 Policial002</h3>\n    </ul>\n\n    <h3>Detalles del Mantenimiento</h3>\n    <ul>\n        <li>Asunto: adsadsad</li>\n        <li>Detalle: vvvvvvvvvvvvvv</li>\n    </ul>\n\n    <h4>Estado: Despachada</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001A5E6B604A0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001A5E6866080>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001A5E6866080>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F8A9526160>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001F8A95A9E70>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001F8A95A9E70>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n    <li>Tipo de Vehículo: Moto</li>\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>60,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>7,199999999999999733546474090</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001F8A95A6CA0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001F8A9357550>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001F8A9357550>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n    <li>Tipo de Vehículo: Moto</li>\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>45,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,399999999999999800159855567</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td></td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001AC6E348D60>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001AC6E39F010>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001AC6E39F010>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col 1 has width 0
+Col widths: [None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n<img src="C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg" alt="Logo" width="100">\n\n    <h1>Orden de Trabajo Finalizada</h1>\n    \n    <h3>Fecha de Solicitud:</h3> 14 de septiembre de 2023 a las 13:13\n    <h3>Fecha de Registro:</h3> 14 de septiembre de 2023 a las 20:01\n    <h3>Fecha de Entrega: </h3>14 de septiembre de 2023 a las 20:02\n\n    <h3>Personal Policial que entregó el vehículo:</h3> Personal003 Policial003\n    <h3>Personal Policial que retira el vehículo: </h3>Personal003 Policial003\n\n    <h3>Kilometraje Actual: 8001Km</h3>\n    <h3>Kilometraje de Próximo Mantenimiento: 11001Km</h3>\n    <li>Tipo de Vehículo: Moto</li>\n    <h3>Tipos de Mantenimiento Realizado:</h3>\n    <ul>\n        \n            <li>Cambio de filtro de aire </li>\n        \n            <li>Cambio del líquido refrigerante</li>\n        \n            <li>Cambio de luces delanteras y posteriores</li>\n        \n            <li>Mano de obra</li>\n        \n            <li>-El costo total por mantenimiento es $60</li>\n        \n            <li>-Cuando son motocicletas se excluye el filtro de aire y su costo se resta $15.</li>\n        \n    </ul>\n\n    <h3>Resumen de Costos:</h3>\n    <table>\n        <tr>\n            <td>SUBTOTAL</td>\n            <td>45,00</td>\n        </tr>\n        <tr>\n            <td>IVA (12%)</td>\n            <td>5,399999999999999800159855567</td>\n        </tr>\n        <tr>\n            <td>TOTAL</td>\n            <td>50,39999999999999980015985557</td>\n        </tr>\n    </table>\n\n    <h4>Observaciones: </h4>moto?<br>\n    <h4>Firma de Responsabilidad: ________________________</h4>\n\n</body>\n</html>\n'
+  dest = <_io.BytesIO object at 0x000001AC6E34ADE0>
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject 'C:\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\static\\images\\EscudonPNa.jpg', params='', query='', fragment=''), 'c')
+Parsing img tag, src: <xhtml2pdf.files.pisaFileObject object at 0x000001AC6E1E4E80>
+Attrs: {'src': <xhtml2pdf.files.pisaFileObject object at 0x000001AC6E1E4E80>, 'width': 100.0, 'height': None, 'align': None, 'id': None}
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+Col widths: [None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

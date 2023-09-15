@@ -15,13 +15,29 @@
 
     <h3>Kilometraje Actual: {{ kilometraje_actual }}Km</h3>
     <h3>Kilometraje de Próximo Mantenimiento: {{ kilometraje_proxima_revision }}Km</h3>
-
+    <li>Tipo de Vehículo: {{ tipo_vehiculo }}</li>
     <h3>Tipos de Mantenimiento Realizado:</h3>
     <ul>
-        {% for tipo in orden_mantenimiento.tipos_mantenimiento.all %}
-            <li>{{ tipo.tipo }} - {{ tipo.descripcion }}</li>
+        {% for item in descripcion_general %}
+            <li>{{ item }}</li>
         {% endfor %}
     </ul>
+
+    <h3>Resumen de Costos:</h3>
+    <table>
+        <tr>
+            <td>SUBTOTAL</td>
+            <td>{{ subtotal_general }}</td>
+        </tr>
+        <tr>
+            <td>IVA (12%)</td>
+            <td>{{ iva }}</td>
+        </tr>
+        <tr>
+            <td>TOTAL</td>
+            <td>{{ total }}</td>
+        </tr>
+    </table>
 
     <h4>Observaciones: </h4>{{ orden_mantenimiento.observaciones }}<br>
     <h4>Firma de Responsabilidad: ________________________</h4>

@@ -3,6 +3,26 @@
 
 {% block content %}
 <h1>Mis Partes Policiales</h1>
+<!-- Filtro de búsqueda -->
+<form method="get" action="">
+    Fecha: <input type="date" name="fecha" />
+    Tipo de Parte: 
+    <select name="tipo_parte">
+        <option value="">--Selecciona--</option>
+        <option value="Mantenimiento Preventivo">Mantenimiento Preventivo</option>
+        <option value="Mantenimiento Correctivo">Mantenimiento Correctivo</option>
+        <!-- ... -->
+    </select>
+    Estado:
+    <select name="estado">
+        <option value="">--Selecciona--</option>
+        <option value="En Proceso">En Proceso</option>
+        <option value="Completado">Completado</option>
+        <option value="Rechazado">Rechazado</option>
+    </select>
+    <input type="submit" value="Filtrar" />
+</form>
+<!-- Fin del Filtro de búsqueda -->
 <table>
     <thead>
         <tr>

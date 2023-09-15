@@ -301,7 +301,6 @@ class FlotaVehicular(models.Model):
     capacidad_de_carga = models.CharField(max_length=45, null=True)
     capacidad_de_pasajeros = models.IntegerField(null=True)
     subcircuito = models.ForeignKey(Subcircuitos, on_delete=models.DO_NOTHING , related_name='flota_vehicular',null=True, blank=True,)
-   # subcircuito = models.ForeignKey(  )
     def __str__(self):
         return f"{self.marca},{self.modelo},{self.placa}"
     def clean(self):     

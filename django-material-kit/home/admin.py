@@ -419,6 +419,12 @@ admin.site.register(User, UserAdmin)
 
 admin.site.register(Mantenimientos)
 
+
+
+class TipoMantenimientoAdmin(admin.ModelAdmin):
+    list_display = ('tipo','descripcion', 'costo')
+admin.site.register(TipoMantenimiento, TipoMantenimientoAdmin)
+
 #EVALUACIÓN buzon de quejas
 class QuejaSugerenciaAdmin(admin.ModelAdmin):   
     list_display = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito') 
