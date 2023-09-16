@@ -168,8 +168,9 @@ class PersonalPolicial(SoftDeletionModel, models.Model):
         if self.flota_vehicular:
             personal_policial_mismo_vehiculo = PersonalPolicial.objects.filter(flota_vehicular=self.flota_vehicular).exclude(id=self.id)
             for otro_personal in personal_policial_mismo_vehiculo:
-                if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
-                    raise ValidationError(f"El turno se superpone con el de {otro_personal}.")
+                if otro_personal.turno_inicio is not None and otro_personal.turno_fin is not None and self.turno_inicio is not None and self.turno_fin is not None:
+                    if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
+                        raise ValidationError(f"El turno se superpone con el de {otro_personal}.")
     def __str__(self):
         return f"{self.usuario.user.first_name} ; {self.usuario.user.last_name}"
     class Meta:

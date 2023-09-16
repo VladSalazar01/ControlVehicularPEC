@@ -1,0 +1,39 @@
+{% extends "admin/base_site.html" %}
+{% block content %}
+  <h1>Asignar Personal Policial a {{ flota }}</h1>
+  <form method="post">
+    {% csrf_token %}
+    <table>
+      <thead>
+        <tr>
+          <th>Seleccionar</th>
+          <th>Personal</th>
+          <th>Turno Inicio</th>
+          <th>Turno Fin</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for personal in personal_disponible %}
+          <tr>
+            <td>
+              <input type="checkbox" name="personal_policial" value="{{ personal.id }}" 
+                     {% if personal.id in personal_asignado_ids %}checked{% endif %}>
+            </td>
+            <td>{{ personal }}</td>
+            <td>
+              <input type="time" name="turno_inicio_{{ personal.id }}" 
+                     value="{% if personal.id in personal_asignado_ids %}{{ personal.turno_inicio|time:"H:i" }}{% endif %}">
+            </td>
+            <td>
+              <input type="time" name="turno_fin_{{ personal.id }}" 
+                     value="{% if personal.id in personal_asignado_ids %}{{ personal.turno_fin|time:"H:i" }}{% endif %}">
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <input type="submit" value="Asignar">
+    <a href="{% url 'admin:home_flotavehicular_changelist' %}" class="button">Cancelar</a>
+  
+  </form>
+{% endblock %}

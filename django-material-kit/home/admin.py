@@ -45,12 +45,8 @@ logger = logging.getLogger(__name__)
 class CustomPermissionAdmin(admin.ModelAdmin):
     pass
 admin.site.register(CustomPermission, CustomPermissionAdmin)
-
 #---personalizacion de admin panel para agregar usuarios---
-
 admin.site.register(Rango_ctlg)
-
-
 
 class ParroquiaInline(NestedStackedInline):
     list_display = ('nombre','numero_de_subcircuitos')
@@ -92,7 +88,6 @@ class DistritoAdmin(NestedModelAdmin):
     class Media:
         js = ('js/admin_dependencias.js',)  
 admin.site.register(Distrito, DistritoAdmin)
-
 
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
@@ -230,7 +225,6 @@ class OrdenCombustibleAdmin(admin.ModelAdmin):
 
 admin.site.register(OrdenCombustible, OrdenCombustibleAdmin)
 
-
 class PartePolicialAdmin(admin.ModelAdmin):
     list_filter = ['fecha', 'tipo_parte',  'estado', 'personalPolicial__usuario__user__username']
     list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial', 'rechazar_parte')
@@ -274,8 +268,8 @@ admin.site.register(TallerMecanico, TallerMecanicoAdmin)
 class SubcircuitoForm(forms.Form):
     subcircuito = forms.ModelChoiceField(queryset=Subcircuitos.objects.all())
 class PersonalPolicialAdmin(admin.ModelAdmin):
-    list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin','subcircuito',]
     list_filter = ['usuario', 'flota_vehicular', 'subcircuito']
+    list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin','subcircuito',]    
     actions = ['asignar_subcircuito']
 
     def asignar_subcircuito(self, request, queryset):
@@ -312,43 +306,35 @@ class PersonalPolicialAdmin(admin.ModelAdmin):
         subcircuitos = Subcircuitos.objects.all()
         return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'subcircuitos': subcircuitos})
    
-
-    '''
-    def asignar_subcircuito(self, request, queryset):
-        print(request.POST)  # Agrega esta línea
-        form = SubcircuitoForm(request.POST or None)
-        
-        if form.is_valid():
-            subcircuito = form.cleaned_data['subcircuito']
-            selected = PersonalPolicial.objects.filter(id__in=request.POST.getlist('selected_action'))
-            count = selected.update(subcircuito=subcircuito)
-            self.message_user(request, f'Se han asignado {count} personal policial al subcircuito {subcircuito}.')
-            return HttpResponseRedirect(reverse('admin:home_personalpolicial_changelist'))
-        else:
-            print(form.errors)  # Agrega esta línea
-        return render(request, 'admin/asign_bulk_s/asignar_subcircuito.html', {'personal': queryset, 'form': form})
-    asignar_subcircuito.short_description= 'Asignar Subcircuito a Personal Policial seleccionado'
-    '''
-
-
     def formfield_for_foreignkey(self, db_field, request, **kwargs):
         if db_field.name == "flota_vehicular":
             kwargs["queryset"] = FlotaVehicular.objects.all()
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
-class PersonalPolicialInline(admin.TabularInline):
+'''
+class PersonalPolicialInline(admin.TabularInline):    
     model = PersonalPolicial
-    extra = 0
-admin.site.register(PersonalPolicial, PersonalPolicialAdmin)  
+    readonly_fields = ['usuario']
+    extra = 0   
+admin.site.register(PersonalPolicial, PersonalPolicialAdmin) 
+''' 
 
 class FlotaVehicularAdmin(admin.ModelAdmin):
-    inlines = [PersonalPolicialInline]                 
+    #inlines = [PersonalPolicialInline]                 
     class Media:
             js = ('js/flotavehicular.js',) 
-
+    change_form_template = 'admin/flota_vehicular/change_form.html'
     list_filter = ['marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito__cod_subcircuito', 'subcircuito__nombre_subcircuito']        
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre', 'subcircuito_display')    
+    
     actions = ['asignar_subcircuito']
+
+    def change_view(self, request, object_id, form_url='', extra_context=None):
+        extra_context = extra_context or {}
+        extra_context['asignar_url'] = reverse('asignar_personal_policial', args=[object_id])
+        return super().change_view(
+            request, object_id, form_url, extra_context=extra_context,
+    )
 
     def asignar_subcircuito(self, request, queryset):
         selected = request.POST.getlist('_selected_action')
@@ -412,16 +398,15 @@ class TecnicoAdmin(admin.ModelAdmin):
     def apellidos(self, obj):
         return obj.usuario.user.last_name
     apellidos.short_description = 'Apellidos' 
-#admin.site.register(PersonalPolicial, CombinedAdmin)
+admin.site.register(PersonalPolicial, PersonalPolicialAdmin)
 admin.site.register(Tecnico, TecnicoAdmin)
 admin.site.unregister(User)
 admin.site.register(User, UserAdmin)
 
 admin.site.register(Mantenimientos)
 
-
-
 class TipoMantenimientoAdmin(admin.ModelAdmin):
+    list_filter = ('tipo','descripcion', 'costo')
     list_display = ('tipo','descripcion', 'costo')
 admin.site.register(TipoMantenimiento, TipoMantenimientoAdmin)
 

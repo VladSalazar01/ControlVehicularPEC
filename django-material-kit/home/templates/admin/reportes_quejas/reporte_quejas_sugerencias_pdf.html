@@ -1,0 +1,46 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+
+    <title>Reporte de Quejas y Sugerencias</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+
+
+
+<h2>Reporte de Quejas y Sugerencias</h2>
+<p>Reporte solicitado por: {{ usuario }}</p>
+<p>Fecha de inicio: {{ fecha_inicio }}</p>
+<p>Fecha final: {{ fecha_fin }}</p>
+
+<table>
+    <tr>
+        <th>Tipo</th>
+        <th>Circuito</th>
+        <th>Subcircuito</th>
+        <th>Número de reportes</th>
+    </tr>
+    {% for queja_sugerencia in quejas_sugerencias %}
+        <tr>
+            <td>{{ queja_sugerencia.tipo }}</td>
+            <td>{{ queja_sugerencia.circuito__nombre_Circuito }}</td>
+            <td>{{ queja_sugerencia.subcircuito__nombre_subcircuito }}</td>
+            <td>{{ queja_sugerencia.total }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+
+{% endblock %}

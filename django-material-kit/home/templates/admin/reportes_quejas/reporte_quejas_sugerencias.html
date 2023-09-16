@@ -1,5 +1,4 @@
 <!-- admin/templates/admin/reporte_quejas_sugerencias.html -->
-
 {% extends "admin/base_site.html" %}
 {% block content %}
 <style>
@@ -11,8 +10,14 @@
   .row .half {
       flex: 0.5;
   }
-  .filters form div {
-      margin-bottom: 10px;
+  table {
+      border-collapse: collapse;
+      width: 100%;
+  }
+  th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
   }
 </style>
 
@@ -20,27 +25,26 @@
 
 <div class="row">
   <div class="half filters">
-      <form method="get">
-          <div>
-              Fecha inicio: <input type="date" name="fecha_inicio" value="{{ request.GET.fecha_inicio }}">
-          </div>
-          <div>
-              Fecha fin: <input type="date" name="fecha_fin" value="{{ request.GET.fecha_fin }}">
-          </div>
-          <div>
-              <input type="submit" value="Filtrar">
-          </div>
-          <div>
-              <button onclick="history.back()">Atrás</button>
-          </div>
-      </form>
+      {% if es_pdf %}
+          Fecha inicio: {{ fecha_inicio }}<br>
+          Fecha fin: {{ fecha_fin }}<br>
+      {% else %}
+          <form method="get">
+              Fecha inicio: <input type="date" name="fecha_inicio" value="{{ fecha_inicio }}"><br>
+              Fecha fin: <input type="date" name="fecha_fin" value="{{ fecha_fin }}"><br>
+              <input type="submit" value="Filtrar"><br>
+              <button onclick="history.back()">Atrás</button><br>
+          </form>
+      {% endif %}
   </div>
 
   <div class="half">
-      <p>Reporte solicitado por: {{ request.user }}</p>
-      <p>Fecha de inicio: {{ request.GET.fecha_inicio }}</p>
-      <p>Fecha final: {{ request.GET.fecha_fin }}</p>
-      <a href="{% url 'reporte_quejas_sugerencias_pdf' %}?fecha_inicio={{ request.GET.fecha_inicio }}&fecha_fin={{ request.GET.fecha_fin }}">Exportar a PDF</a>
+      <p>Reporte solicitado por: {{ usuario }}</p>
+      <p>Fecha de inicio: {{ fecha_inicio }}</p>
+      <p>Fecha final: {{ fecha_fin }}</p>
+      {% if not es_pdf %}
+          <a href="{% url 'reporte_quejas_sugerencias_pdf' %}?fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar a PDF</a>
+      {% endif %}
   </div>
 </div>
 
@@ -60,4 +64,5 @@
       </tr>
   {% endfor %}
 </table>
+
 {% endblock %}

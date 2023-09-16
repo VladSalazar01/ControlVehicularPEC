@@ -16,8 +16,9 @@ urlpatterns = [
     path('mantenimiento/', PartePolicialCreateView.as_view(), name='mantenimiento'),    
     #pdf
     path('parte_policial_pdf/<int:parte_id>/', parte_policial_pdf, name='parte_policial_pdf'),
-    #rechazar parte
-    #path('admin/rechazar_parte/<int:parte_id>/', views.rechazar_parte, name='rechazar_parte'),
+
+    #asignar per pols a flotaadmin
+    path('admin/asignar_personal_policial/<int:flota_id>/', asignar_personal_policial, name='asignar_personal_policial'),
 
     #orden de trabajo
     #pdf

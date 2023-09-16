@@ -22921,3 +22921,807 @@ None
 None
 None
 Col widths: [None, None]
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/flotavehicular/2/change/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "C:\CVPL2\env\lib\site-packages\monkeybiz\__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\nested_admin\__init__.py", line 155, in all_valid
+    if not original_all_valid(formsets):
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 579, in all_valid
+    return all([formset.is_valid() for formset in formsets])
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 579, in <listcomp>
+    return all([formset.is_valid() for formset in formsets])
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 384, in is_valid
+    self.errors
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 366, in errors
+    self.full_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 429, in full_clean
+    form_errors = form.errors
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\CVPL2\django-material-kit\home\models.py", line 171, in clean
+    if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
+TypeError: '<=' not supported between instances of 'NoneType' and 'NoneType'
+books not found when generating links
+Internal Server Error: /admin/home/flotavehicular/2/change/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    if all_valid(formsets) and form_validated:
+  File "C:\CVPL2\env\lib\site-packages\monkeybiz\__init__.py", line 89, in wrapper
+    return func(original_callable, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\nested_admin\__init__.py", line 155, in all_valid
+    if not original_all_valid(formsets):
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 579, in all_valid
+    return all([formset.is_valid() for formset in formsets])
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 579, in <listcomp>
+    return all([formset.is_valid() for formset in formsets])
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 384, in is_valid
+    self.errors
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 366, in errors
+    self.full_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\formsets.py", line 429, in full_clean
+    form_errors = form.errors
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\CVPL2\django-material-kit\home\models.py", line 171, in clean
+    if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
+TypeError: '<=' not supported between instances of 'NoneType' and 'datetime.time'
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/home/personalpolicial/4/change/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\utils\decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\admin\options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 196, in errors
+    self.full_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\forms.py", line 435, in full_clean
+    self._post_clean()
+  File "C:\CVPL2\env\lib\site-packages\django\forms\models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "C:\CVPL2\env\lib\site-packages\django\db\models\base.py", line 1477, in full_clean
+    self.clean()
+  File "C:\CVPL2\django-material-kit\home\models.py", line 171, in clean
+    if (otro_personal.turno_inicio <= self.turno_fin and otro_personal.turno_fin >= self.turno_inicio):
+TypeError: '<=' not supported between instances of 'NoneType' and 'NoneType'
+C:\CVPL2\django-material-kit\home\models.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 458, in reporte_quejas_sugerencias_pdf
+    html = template.render(Context({'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user}))
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+  File "C:\CVPL2\env\lib\site-packages\django\template\context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than Context.
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 458, in reporte_quejas_sugerencias_pdf
+    html = template.render(Context({'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user}))
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 57, in render
+    context = make_context(
+  File "C:\CVPL2\env\lib\site-packages\django\template\context.py", line 278, in make_context
+    raise TypeError(
+TypeError: context must be a dict rather than Context.
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 459, in reporte_quejas_sugerencias_pdf
+    html = template.render(context)  # Usar un diccionario en lugar de Context
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\jazzmin\templatetags\jazzmin.py", line 405, in sidebar_status
+    if request.COOKIES.get("jazzy_menu", "") == "closed":
+AttributeError: 'str' object has no attribute 'COOKIES'
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!-- admin/templates/admin/reporte_quejas_sugerencias.html -->\n<!DOCTYPE html>\n\n<html lang="es" dir="ltr">\n<head>\n<title> | Sitio de administración de Django</title>\n<link rel="stylesheet" href="/static/admin/css/base.css">\n\n  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">\n  <script src="/static/admin/js/theme.js" defer></script>\n\n\n\n\n\n\n    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">\n    <link rel="stylesheet" href="/static/admin/css/responsive.css">\n    \n\n<meta name="robots" content="NONE,NOARCHIVE">\n</head>\n\n<body class=""\n  data-admin-utc-offset="-18000">\n<a href="#content-start" class="skip-to-content-link">Saltar al contenido principal</a>\n<!-- Container -->\n<div id="container">\n\n    \n    <!-- Header -->\n    \n    <div id="header">\n        <div id="branding">\n        \n<h1 id="site-name"><a href="/admin/">Administración de Django</a></h1>\n\n\n        </div>\n        \n        \n        \n        \n    </div>\n    \n    <!-- END Header -->\n    \n      <nav aria-label="Migas de pan">\n        \n          <div class="breadcrumbs">\n            <a href="/admin/">Inicio</a>\n            \n          </div>\n        \n      </nav>\n    \n    \n\n    <div class="main" id="main">\n      \n      <div id="content-start" class="content" tabindex="-1">\n        \n          \n        \n        <!-- Content -->\n        <div id="content" class="colM">\n          \n          \n          \n          \n<style>\n  .row {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n  }\n  .row .half {\n      flex: 0.5;\n  }\n  .filters form div {\n      margin-bottom: 10px;\n  }\n  /* Estilos para la tabla */\n  table {\n      width: 100%;\n      border-collapse: collapse;\n  }\n  th, td {\n      border: 1px solid black;\n      text-align: left;\n      padding: 8px;\n  }\n  th {\n      background-color: #f2f2f2;\n  }\n</style>\n\n<h2>Reporte de Quejas y Sugerencias</h2><br>\n\n<div class="row">\n  <div class="half filters">\n      <form method="get">\n          <div>\n              Fecha inicio: <input type="date" name="fecha_inicio" value="">\n          </div>\n          <div>\n              Fecha fin: <input type="date" name="fecha_fin" value="">\n          </div>\n          <div>\n              <input type="submit" value="Filtrar">\n          </div>\n          <div>\n              <button onclick="history.back()">Atrás</button>\n          </div>\n      </form>\n  </div>\n\n  <div class="half">\n      <p>Reporte solicitado por: </p>\n      <p>Fecha de inicio: </p>\n      <p>Fecha final: </p>\n      <a href="/admin/reporte_quejas_sugerencias_pdf/?fecha_inicio=&fecha_fin=">Exportar a PDF</a>\n  </div>\n</div>\n\n<table>\n  <tr>\n      <th>Tipo</th>\n      <th>Circuito</th>\n      <th>Subcircuito</th>\n      <th>Número de reportes</th>\n  </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 2</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 2</td>\n          <td>2</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>VILCABAMBA</td>\n          <td>VILCABAMBA 1</td>\n          <td>1</td>\n      </tr>\n  \n</table>\n\n          \n          <br class="clear">\n        </div>\n        <!-- END Content -->\n        <div id="footer"></div>\n      </div>\n    </div>\n</div>\n<!-- END Container -->\n\n<!-- SVGs -->\n<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>\n</svg>\n<!-- END SVGs -->\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject '/static/admin/css/base.css', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\__dummy__', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/dark_mode.css', Basepath: '/static/admin/css/base.css'
+URLParts: (ParseResult(scheme='', netloc='', path='/static/admin/css/base.css', params='', query='', fragment=''), '')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/responsive.css', Basepath: 'C:\\static\\admin\\css'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\static\\admin\\css', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> Fecha inicio: <input type="date" name="fecha_inicio" value=""/> </div>'
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> Fecha fin: <input type="date" name="fecha_fin" value=""/> </div>'
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> <input type="submit" value="Filtrar"/> </div>'
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!-- admin/templates/admin/reporte_quejas_sugerencias.html -->\n<!DOCTYPE html>\n\n<html lang="es" dir="ltr">\n<head>\n<title> | Sitio de administración de Django</title>\n<link rel="stylesheet" href="/static/admin/css/base.css">\n\n  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">\n  <script src="/static/admin/js/theme.js" defer></script>\n\n\n\n\n\n\n    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">\n    <link rel="stylesheet" href="/static/admin/css/responsive.css">\n    \n\n<meta name="robots" content="NONE,NOARCHIVE">\n</head>\n\n<body class=""\n  data-admin-utc-offset="-18000">\n<a href="#content-start" class="skip-to-content-link">Saltar al contenido principal</a>\n<!-- Container -->\n<div id="container">\n\n    \n    <!-- Header -->\n    \n    <div id="header">\n        <div id="branding">\n        \n<h1 id="site-name"><a href="/admin/">Administración de Django</a></h1>\n\n\n        </div>\n        \n        \n        \n        \n    </div>\n    \n    <!-- END Header -->\n    \n      <nav aria-label="Migas de pan">\n        \n          <div class="breadcrumbs">\n            <a href="/admin/">Inicio</a>\n            \n          </div>\n        \n      </nav>\n    \n    \n\n    <div class="main" id="main">\n      \n      <div id="content-start" class="content" tabindex="-1">\n        \n          \n        \n        <!-- Content -->\n        <div id="content" class="colM">\n          \n          \n          \n          \n<style>\n  .row {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n  }\n  .row .half {\n      flex: 0.5;\n  }\n  .filters form div {\n      margin-bottom: 10px;\n  }\n  /* Estilos para la tabla */\n  table {\n      width: 100%;\n      border-collapse: collapse;\n  }\n  th, td {\n      border: 1px solid black;\n      text-align: left;\n      padding: 8px;\n  }\n  th {\n      background-color: #f2f2f2;\n  }\n</style>\n\n<h2>Reporte de Quejas y Sugerencias</h2><br>\n\n<div class="row">\n  <div class="half filters">\n      <form method="get">\n          <div>\n              Fecha inicio: <input type="date" name="fecha_inicio" value="">\n          </div>\n          <div>\n              Fecha fin: <input type="date" name="fecha_fin" value="">\n          </div>\n          <div>\n              <input type="submit" value="Filtrar">\n          </div>\n          <div>\n              <button onclick="history.back()">Atrás</button>\n          </div>\n      </form>\n  </div>\n\n  <div class="half">\n      <p>Reporte solicitado por: </p>\n      <p>Fecha de inicio: </p>\n      <p>Fecha final: </p>\n      <a href="/admin/reporte_quejas_sugerencias_pdf/?fecha_inicio=&fecha_fin=">Exportar a PDF</a>\n  </div>\n</div>\n\n<table>\n  <tr>\n      <th>Tipo</th>\n      <th>Circuito</th>\n      <th>Subcircuito</th>\n      <th>Número de reportes</th>\n  </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 2</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 2</td>\n          <td>2</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>VILCABAMBA</td>\n          <td>VILCABAMBA 1</td>\n          <td>1</td>\n      </tr>\n  \n</table>\n\n          \n          <br class="clear">\n        </div>\n        <!-- END Content -->\n        <div id="footer"></div>\n      </div>\n    </div>\n</div>\n<!-- END Container -->\n\n<!-- SVGs -->\n<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>\n</svg>\n<!-- END SVGs -->\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject '/static/admin/css/base.css', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\__dummy__', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/dark_mode.css', Basepath: '/static/admin/css/base.css'
+URLParts: (ParseResult(scheme='', netloc='', path='/static/admin/css/base.css', params='', query='', fragment=''), '')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/responsive.css', Basepath: 'C:\\static\\admin\\css'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\static\\admin\\css', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> Fecha inicio: <input type="date" name="fecha_inicio" value=""/> </div>'
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> Fecha fin: <input type="date" name="fecha_fin" value=""/> </div>'
+Attribute 'type' of wrong value, allowed is one of: ['text', 'hidden', 'checkbox']
+'<div> <input type="submit" value="Filtrar"/> </div>'
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 469, in reporte_quejas_sugerencias_pdf
+    html = template.render(pdf_context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\jazzmin\templatetags\jazzmin.py", line 405, in sidebar_status
+    if request.COOKIES.get("jazzy_menu", "") == "closed":
+AttributeError: 'str' object has no attribute 'COOKIES'
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!-- admin/templates/admin/reporte_quejas_sugerencias.html -->\n<!DOCTYPE html>\n\n<html lang="es" dir="ltr">\n<head>\n<title> | Sitio de administración de Django</title>\n<link rel="stylesheet" href="/static/admin/css/base.css">\n\n  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">\n  <script src="/static/admin/js/theme.js" defer></script>\n\n\n\n\n\n\n    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">\n    <link rel="stylesheet" href="/static/admin/css/responsive.css">\n    \n\n<meta name="robots" content="NONE,NOARCHIVE">\n</head>\n\n<body class=""\n  data-admin-utc-offset="-18000">\n<a href="#content-start" class="skip-to-content-link">Saltar al contenido principal</a>\n<!-- Container -->\n<div id="container">\n\n    \n    <!-- Header -->\n    \n    <div id="header">\n        <div id="branding">\n        \n<h1 id="site-name"><a href="/admin/">Administración de Django</a></h1>\n\n\n        </div>\n        \n        \n        \n        \n    </div>\n    \n    <!-- END Header -->\n    \n      <nav aria-label="Migas de pan">\n        \n          <div class="breadcrumbs">\n            <a href="/admin/">Inicio</a>\n            \n          </div>\n        \n      </nav>\n    \n    \n\n    <div class="main" id="main">\n      \n      <div id="content-start" class="content" tabindex="-1">\n        \n          \n        \n        <!-- Content -->\n        <div id="content" class="colM">\n          \n          \n          \n          \n<style>\n  .row {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n  }\n  .row .half {\n      flex: 0.5;\n  }\n  table {\n      border-collapse: collapse;\n      width: 100%;\n  }\n  th, td {\n      border: 1px solid black;\n      padding: 8px;\n      text-align: left;\n  }\n</style>\n\n<h2>Reporte de Quejas y Sugerencias</h2><br>\n\n<div class="row">\n  <div class="half filters">\n      \n          Fecha inicio: <br>\n          Fecha fin: <br>\n      \n  </div>\n\n  <div class="half">\n      <p>Reporte solicitado por: AdminVlad</p>\n      <p>Fecha de inicio: </p>\n      <p>Fecha final: </p>\n      \n  </div>\n</div>\n\n<table>\n  <tr>\n      <th>Tipo</th>\n      <th>Circuito</th>\n      <th>Subcircuito</th>\n      <th>Número de reportes</th>\n  </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 2</td>\n          <td>2</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>VILCABAMBA</td>\n          <td>VILCABAMBA 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 2</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 1</td>\n          <td>1</td>\n      </tr>\n  \n</table>\n\n\n          \n          <br class="clear">\n        </div>\n        <!-- END Content -->\n        <div id="footer"></div>\n      </div>\n    </div>\n</div>\n<!-- END Container -->\n\n<!-- SVGs -->\n<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>\n</svg>\n<!-- END SVGs -->\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject '/static/admin/css/base.css', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\__dummy__', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/dark_mode.css', Basepath: '/static/admin/css/base.css'
+URLParts: (ParseResult(scheme='', netloc='', path='/static/admin/css/base.css', params='', query='', fragment=''), '')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/responsive.css', Basepath: 'C:\\static\\admin\\css'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\static\\admin\\css', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!-- admin/templates/admin/reporte_quejas_sugerencias.html -->\n<!DOCTYPE html>\n\n<html lang="es" dir="ltr">\n<head>\n<title> | Sitio de administración de Django</title>\n<link rel="stylesheet" href="/static/admin/css/base.css">\n\n  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">\n  <script src="/static/admin/js/theme.js" defer></script>\n\n\n\n\n\n\n    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">\n    <link rel="stylesheet" href="/static/admin/css/responsive.css">\n    \n\n<meta name="robots" content="NONE,NOARCHIVE">\n</head>\n\n<body class=""\n  data-admin-utc-offset="-18000">\n<a href="#content-start" class="skip-to-content-link">Saltar al contenido principal</a>\n<!-- Container -->\n<div id="container">\n\n    \n    <!-- Header -->\n    \n    <div id="header">\n        <div id="branding">\n        \n<h1 id="site-name"><a href="/admin/">Administración de Django</a></h1>\n\n\n        </div>\n        \n        \n        \n        \n    </div>\n    \n    <!-- END Header -->\n    \n      <nav aria-label="Migas de pan">\n        \n          <div class="breadcrumbs">\n            <a href="/admin/">Inicio</a>\n            \n          </div>\n        \n      </nav>\n    \n    \n\n    <div class="main" id="main">\n      \n      <div id="content-start" class="content" tabindex="-1">\n        \n          \n        \n        <!-- Content -->\n        <div id="content" class="colM">\n          \n          \n          \n          \n<style>\n  .row {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n  }\n  .row .half {\n      flex: 0.5;\n  }\n  table {\n      border-collapse: collapse;\n      width: 100%;\n  }\n  th, td {\n      border: 1px solid black;\n      padding: 8px;\n      text-align: left;\n  }\n</style>\n\n<h2>Reporte de Quejas y Sugerencias</h2><br>\n\n<div class="row">\n  <div class="half filters">\n      \n          Fecha inicio: <br>\n          Fecha fin: <br>\n      \n  </div>\n\n  <div class="half">\n      <p>Reporte solicitado por: AdminVlad</p>\n      <p>Fecha de inicio: </p>\n      <p>Fecha final: </p>\n      \n  </div>\n</div>\n\n<table>\n  <tr>\n      <th>Tipo</th>\n      <th>Circuito</th>\n      <th>Subcircuito</th>\n      <th>Número de reportes</th>\n  </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 2</td>\n          <td>2</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>VILCABAMBA</td>\n          <td>VILCABAMBA 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 2</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 1</td>\n          <td>1</td>\n      </tr>\n  \n</table>\n\n\n          \n          <br class="clear">\n        </div>\n        <!-- END Content -->\n        <div id="footer"></div>\n      </div>\n    </div>\n</div>\n<!-- END Container -->\n\n<!-- SVGs -->\n<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>\n</svg>\n<!-- END SVGs -->\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject '/static/admin/css/base.css', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\__dummy__', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/dark_mode.css', Basepath: '/static/admin/css/base.css'
+URLParts: (ParseResult(scheme='', netloc='', path='/static/admin/css/base.css', params='', query='', fragment=''), '')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/responsive.css', Basepath: 'C:\\static\\admin\\css'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\static\\admin\\css', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!-- admin/templates/admin/reporte_quejas_sugerencias.html -->\n<!DOCTYPE html>\n\n<html lang="es" dir="ltr">\n<head>\n<title> | Sitio de administración de Django</title>\n<link rel="stylesheet" href="/static/admin/css/base.css">\n\n  <link rel="stylesheet" href="/static/admin/css/dark_mode.css">\n  <script src="/static/admin/js/theme.js" defer></script>\n\n\n\n\n\n\n    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">\n    <link rel="stylesheet" href="/static/admin/css/responsive.css">\n    \n\n<meta name="robots" content="NONE,NOARCHIVE">\n</head>\n\n<body class=""\n  data-admin-utc-offset="-18000">\n<a href="#content-start" class="skip-to-content-link">Saltar al contenido principal</a>\n<!-- Container -->\n<div id="container">\n\n    \n    <!-- Header -->\n    \n    <div id="header">\n        <div id="branding">\n        \n<h1 id="site-name"><a href="/admin/">Administración de Django</a></h1>\n\n\n        </div>\n        \n        \n        \n        \n    </div>\n    \n    <!-- END Header -->\n    \n      <nav aria-label="Migas de pan">\n        \n          <div class="breadcrumbs">\n            <a href="/admin/">Inicio</a>\n            \n          </div>\n        \n      </nav>\n    \n    \n\n    <div class="main" id="main">\n      \n      <div id="content-start" class="content" tabindex="-1">\n        \n          \n        \n        <!-- Content -->\n        <div id="content" class="colM">\n          \n          \n          \n          \n<style>\n  .row {\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n  }\n  .row .half {\n      flex: 0.5;\n  }\n  table {\n      border-collapse: collapse;\n      width: 100%;\n  }\n  th, td {\n      border: 1px solid black;\n      padding: 8px;\n      text-align: left;\n  }\n</style>\n\n<h2>Reporte de Quejas y Sugerencias</h2><br>\n\n<div class="row">\n  <div class="half filters">\n      \n          Fecha inicio: <br>\n          Fecha fin: <br>\n      \n  </div>\n\n  <div class="half">\n      <p>Reporte solicitado por: AdminVlad</p>\n      <p>Fecha de inicio: </p>\n      <p>Fecha final: </p>\n      \n  </div>\n</div>\n\n<table>\n  <tr>\n      <th>Tipo</th>\n      <th>Circuito</th>\n      <th>Subcircuito</th>\n      <th>Número de reportes</th>\n  </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 2</td>\n          <td>2</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>VILCABAMBA</td>\n          <td>VILCABAMBA 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>TAQUIL</td>\n          <td>TAQUIL 1</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Reclamo</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 2</td>\n          <td>1</td>\n      </tr>\n  \n      <tr>\n          <td>Sugerencia</td>\n          <td>ESTEBAN GODOY</td>\n          <td>ESTEBAN GODOY 1</td>\n          <td>1</td>\n      </tr>\n  \n</table>\n\n\n          \n          <br class="clear">\n        </div>\n        <!-- END Content -->\n        <div id="footer"></div>\n      </div>\n    </div>\n</div>\n<!-- END Container -->\n\n<!-- SVGs -->\n<svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>\n  <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>\n</svg>\n<!-- END SVGs -->\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+FileObject '/static/admin/css/base.css', Basepath: 'C:\\CVPL2\\django-material-kit\\__dummy__'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\CVPL2\\django-material-kit\\__dummy__', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/dark_mode.css', Basepath: '/static/admin/css/base.css'
+URLParts: (ParseResult(scheme='', netloc='', path='/static/admin/css/base.css', params='', query='', fragment=''), '')
+Unrecognized scheme, assuming local file path
+FileObject '/static/admin/css/responsive.css', Basepath: 'C:\\static\\admin\\css'
+URLParts: (ParseResult(scheme='c', netloc='', path='\\static\\admin\\css', params='', query='', fragment=''), 'c')
+Unrecognized scheme, assuming local file path
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\core\settings.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 469, in reporte_quejas_sugerencias_pdf
+    html = template.render(pdf_context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\jazzmin\templatetags\jazzmin.py", line 405, in sidebar_status
+    if request.COOKIES.get("jazzy_menu", "") == "closed":
+AttributeError: 'str' object has no attribute 'COOKIES'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 457, in reporte_quejas_sugerencias_pdf
+    template = get_template('reporte_quejas_sugerencias_pdf.html')
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: reporte_quejas_sugerencias_pdf.html
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

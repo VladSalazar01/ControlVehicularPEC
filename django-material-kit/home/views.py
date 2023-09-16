@@ -390,6 +390,32 @@ def descargar_pdf_orden_finalizada(request, orden_mantenimiento_id):
         response['Content-Disposition'] = f'attachment; filename="orden_mantenimiento_finalizada_{orden_mantenimiento_id}.pdf"'
         return response
 
+#rebuild de asignación de personal a flota vehicular -admin
+def asignar_personal_policial(request, flota_id):
+    flota = FlotaVehicular.objects.get(id=flota_id)
+    if request.method == "POST":
+        personal_ids = request.POST.getlist('personal_policial')
+        personal_asignado = PersonalPolicial.objects.filter(id__in=personal_ids)
+        for personal in personal_asignado:
+            turno_inicio = request.POST.get(f'turno_inicio_{personal.id}')
+            turno_fin = request.POST.get(f'turno_fin_{personal.id}')
+            if turno_inicio and turno_fin:
+                personal.turno_inicio = turno_inicio
+                personal.turno_fin = turno_fin
+            personal.flota_vehicular = flota
+            personal.save()
+        return redirect(reverse('admin:home_flotavehicular_change', args=[flota.id]))
+    
+    personal_disponible = PersonalPolicial.objects.all()
+    personal_asignado = PersonalPolicial.objects.filter(flota_vehicular=flota)
+    personal_asignado_ids = personal_asignado.values_list('id', flat=True)  # Obtener los IDs como una lista
+    
+    return render(request, 'admin/flota_vehicular/asignar_personal_policial.html', {
+        'flota': flota,
+        'personal_disponible': personal_disponible,
+        'personal_asignado_ids': personal_asignado_ids,
+        'personal_asignado': personal_asignado,
+    })
 
 
 
@@ -428,8 +454,14 @@ def reporte_quejas_sugerencias_pdf(request):
         quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
     quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
 
-    template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias.html')
-    html = template.render(Context({'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user}))
+    template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias_pdf.html')
+    context = {
+        'quejas_sugerencias': quejas_sugerencias,
+        'fecha_inicio': inicio,
+        'fecha_fin': fin,
+        'usuario': request.user,
+    }
+    html = template.render(context)
 
     response = HttpResponse(content_type='application/pdf')
     response['Content-Disposition'] = 'attachment; filename="reporte.pdf"'
@@ -437,7 +469,7 @@ def reporte_quejas_sugerencias_pdf(request):
     pisa_status = pisa.CreatePDF(html, dest=response)
 
     if pisa_status.err:
-       return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
+        return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
     return response
 #EVALUACION
 
