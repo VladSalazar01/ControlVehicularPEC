@@ -1,12 +1,12 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse
+from django.http import HttpResponse,JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .forms import *
 from .models import *
-from datetime import date
-from django.http import JsonResponse
+from datetime import date, datetime
+
 from django.db.models import F, Value, CharField, Count
 from django.db.models.functions import Concat
 from django.contrib.admin.views.decorators import staff_member_required
@@ -15,12 +15,22 @@ from django.template.loader import get_template
 from django.template import Context
 from django.contrib import messages
 from decimal import Decimal, ROUND_HALF_UP
+from django.utils import timezone
+from django.utils.dateparse import parse_datetime
+
+from dateutil.parser import parse
+
+import pandas as pd
+import csv
+from PIL import Image
+from io import BytesIO
+import matplotlib.pyplot as plt
 
 
 from django.utils.decorators import method_decorator
 from django.views.generic.edit import CreateView
 from django.urls import reverse_lazy
-from django.utils import timezone
+
 
 from django.http import FileResponse, HttpResponseRedirect
 from reportlab.lib.pagesizes import letter
@@ -439,74 +449,113 @@ def get_subcircuitos(request, circuito_id):
 def reporte_quejas_sugerencias(request):
     inicio = request.GET.get('fecha_inicio')
     fin = request.GET.get('fecha_fin')
+
+    # Convertir las fechas a datetime aware
+    if inicio:
+        inicio = timezone.make_aware(datetime.strptime(inicio, '%Y-%m-%d'))
+    if fin:
+        fin = timezone.make_aware(datetime.strptime(fin, '%Y-%m-%d'))
+
     quejas_sugerencias = QuejaSugerencia.objects.all()
+
     if inicio and fin:
         quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
+
     quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
-    return render(request, 'admin/reportes_quejas/reporte_quejas_sugerencias.html', {'quejas_sugerencias': quejas_sugerencias})
+
+    return render(request, 'admin/reportes_quejas/reporte_quejas_sugerencias.html', {'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user})
+
+
+def parse_custom_date(date_str):
+    match = re.search(r'(\d+) de (\w+) de (\d+) a las (\d+):(\d+)', date_str)
+    if not match:
+        return None
+    
+    day, month_str, year, hour, minute = match.groups()
+    month_str = month_str.lower()
+    month_dict = {'enero': 1, 'febrero': 2, 'marzo': 3, 'abril': 4, 'mayo': 5, 
+                  'junio': 6, 'julio': 7, 'agosto': 8, 'septiembre': 9, 
+                  'octubre': 10, 'noviembre': 11, 'diciembre': 12}
+    
+    month = month_dict.get(month_str)
+    if month is None:
+        return None
+    
+    try:
+        date_obj = datetime(year=int(year), month=month, day=int(day), 
+                            hour=int(hour), minute=int(minute))
+        return timezone.make_aware(date_obj)
+    except ValueError:
+        return None
+
 
 @staff_member_required
-def reporte_quejas_sugerencias_pdf(request):
-    inicio = request.GET.get('fecha_inicio')
-    fin = request.GET.get('fecha_fin')
+def reporte_quejas_sugerencias_export(request):
+    print(f"Initial request.GET: {request.GET}")  # Debugging
+    formato = request.GET.get('formato', 'pdf')
+    inicio_str = request.GET.get('fecha_inicio')
+    fin_str = request.GET.get('fecha_fin')
+    inicio=None
+    fin=None
+    print(f"Initial dates: {inicio_str}, {fin_str}")  # Debugging
+
+    if inicio_str:
+        inicio = parse_custom_date(inicio_str)
+    
+    if fin_str:
+        fin = parse_custom_date(fin_str)
+
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+    # Convertir las fechas a datetime aware, exactamente como en reporte_quejas_sugerencias
+ 
     quejas_sugerencias = QuejaSugerencia.objects.all()
+
     if inicio and fin:
         quejas_sugerencias = quejas_sugerencias.filter(fecha_creacion__range=[inicio, fin])
+
     quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
 
-    template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias_pdf.html')
-    context = {
-        'quejas_sugerencias': quejas_sugerencias,
-        'fecha_inicio': inicio,
-        'fecha_fin': fin,
-        'usuario': request.user,
-    }
-    html = template.render(context)
+    df = pd.DataFrame.from_records(quejas_sugerencias)
 
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="reporte.pdf"'
+    if formato == 'pdf':
+        template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias_export.html')
+        context = {
+            'quejas_sugerencias': quejas_sugerencias,
+            'fecha_inicio': inicio,
+            'fecha_fin': fin,
+            'usuario': request.user,
+        }
+        html = template.render(context)
+        response = HttpResponse(content_type='application/pdf')
+        response['Content-Disposition'] = 'attachment; filename="reporte.pdf"'
+        pisa_status = pisa.CreatePDF(html, dest=response)
+        if pisa_status.err:
+            return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
+    
+    elif formato == 'xls':
+        response = HttpResponse(content_type='application/ms-excel')
+        response['Content-Disposition'] = 'attachment; filename="reporte.xls"'
+        df.to_excel(response, index=False)
 
-    pisa_status = pisa.CreatePDF(html, dest=response)
+    elif formato == 'xml':
+        response = HttpResponse(df.to_xml(), content_type='application/xml')
+        response['Content-Disposition'] = 'attachment; filename="reporte.xml"'
 
-    if pisa_status.err:
-        return HttpResponse('Hubo un error al generar el reporte PDF <pre>' + html + '</pre>')
+    elif formato == 'csv':
+        response = HttpResponse(df.to_csv(index=False), content_type='text/csv')
+        response['Content-Disposition'] = 'attachment; filename="reporte.csv"'
+
+    elif formato in ['jpeg', 'png']:
+        plt.figure(figsize=(10, 4))
+        df.plot(kind='bar')
+        img_io = BytesIO()
+        plt.savefig(img_io, format=formato)
+        img_io.seek(0)
+        response = HttpResponse(img_io.read(), content_type=f'image/{formato}')
+        response['Content-Disposition'] = f'attachment; filename=reporte.{formato}'
+        img_io.close()
+
     return response
 #EVALUACION
 
 
-#--agregar usuario desde admin panel------
-'''def custom_add_view(self, request):
-    if request.method == "POST":
-        combined_form = CombinedForm(request.POST)
-
-        if combined_form.is_valid():
-            user = User.objects.create_user(
-                username=combined_form.cleaned_data.get('username'),
-                password=combined_form.cleaned_data.get('password'),
-                first_name=combined_form.cleaned_data.get('first_name'),
-                last_name=combined_form.cleaned_data.get('last_name')
-            )
-            usuario = combined_form.save(commit=False)
-            usuario.user = user
-            usuario.save()
-
-            role = combined_form.cleaned_data.get('role')
-            if role == 'personal_policial':
-                PersonalPolicial.objects.create(
-                    usuario=usuario,
-                    subcircuito=combined_form.cleaned_data.get('subcircuito')
-                )
-            elif role == 'tecnico':
-                Tecnico.objects.create(
-                    usuario=usuario,
-                    titular=combined_form.cleaned_data.get('titular')
-                )
-
-            return redirect('admin:index')
-
-    else:
-        combined_form = CombinedForm()
-
-    return render(request, 'admin/custom_add_form.html', {
-        'combined_form': combined_form
-    })'''

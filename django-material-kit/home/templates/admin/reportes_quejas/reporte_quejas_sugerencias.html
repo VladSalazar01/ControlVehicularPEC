@@ -19,6 +19,53 @@
       padding: 8px;
       text-align: left;
   }
+
+  /* Estilo del botón */
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  padding: 01px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Contenedor del menú desplegable */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Contenido del menú desplegable (oculto por defecto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links dentro del menú desplegable */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Cambiar el color de los links al pasar el ratón */
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Mostrar el menú desplegable al pasar el ratón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Cambiar el fondo del botón al pasar el ratón */
+.dropdown:hover .dropbtn {
+  background-color: #2980B9;
+}
 </style>
 
 <h2>Reporte de Quejas y Sugerencias</h2><br>
@@ -43,7 +90,18 @@
       <p>Fecha de inicio: {{ fecha_inicio }}</p>
       <p>Fecha final: {{ fecha_fin }}</p>
       {% if not es_pdf %}
-          <a href="{% url 'reporte_quejas_sugerencias_pdf' %}?fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar a PDF</a>
+      <div class="dropdown">
+        <button class="dropbtn">Exportar...</button>
+        <div class="dropdown-content">
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=pdf&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como PDF</a>
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=xls&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como XLS</a>
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=xml&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como XML</a>
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=csv&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como CSV</a>
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=jpeg&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como JPEG</a>
+          <a href="{% url 'reporte_quejas_sugerencias_export' %}?formato=png&fecha_inicio={{ fecha_inicio }}&fecha_fin={{ fecha_fin }}">Exportar como PNG</a>
+        </div>
+      </div>
+
       {% endif %}
   </div>
 </div>
@@ -64,5 +122,7 @@
       </tr>
   {% endfor %}
 </table>
+
+
 
 {% endblock %}

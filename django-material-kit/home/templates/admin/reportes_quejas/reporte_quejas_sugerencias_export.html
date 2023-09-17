@@ -1,4 +1,4 @@
-{% extends "admin/base_site.html" %}
+{% extends "pdf_templates/base_ordendetrabajo_pdf.html" %}
 
 {% block content %}
 
@@ -17,8 +17,6 @@
             background-color: #f2f2f2;
         }
     </style>
-
-
 
 <h2>Reporte de Quejas y Sugerencias</h2>
 <p>Reporte solicitado por: {{ usuario }}</p>
@@ -41,6 +39,5 @@
         </tr>
     {% endfor %}
 </table>
-
 
 {% endblock %}

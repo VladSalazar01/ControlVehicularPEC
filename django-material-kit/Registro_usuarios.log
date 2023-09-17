@@ -23725,3 +23725,1381 @@ C:\CVPL2\django-material-kit\home\views.py changed, reloading.
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 464, in reporte_quejas_sugerencias_pdf
+    html = template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "C:\CVPL2\env\lib\site-packages\django\template\library.py", line 237, in render
+    output = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\jazzmin\templatetags\jazzmin.py", line 405, in sidebar_status
+    if request.COOKIES.get("jazzy_menu", "") == "closed":
+AttributeError: 'str' object has no attribute 'COOKIES'
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: </p>\n<p>Fecha final: </p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: </p>\n<p>Fecha final: </p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: </p>\n<p>Fecha final: </p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: </p>\n<p>Fecha final: </p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 470, in reporte_quejas_sugerencias_pdf
+    inicio = timezone.make_aware(datetime.strptime(inicio, '%Y-%m-%d'))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '9 de mayo de 2023 a las 00:00' does not match format '%Y-%m-%d'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\django-material-kit\home\views.py", line 471, in reporte_quejas_sugerencias_pdf
+    inicio = timezone.make_aware(datetime.strptime(inicio_str, '%Y-%m-%d'))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '9 de mayo de 2023 a las 00:00' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 474, in reporte_quejas_sugerencias_pdf
+    inicio = parse_datetime(inicio_str)
+NameError: name 'parse_datetime' is not defined
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_pdf/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 492, in reporte_quejas_sugerencias_pdf
+    quejas_sugerencias = quejas_sugerencias.values('circuito__nombre_Circuito', 'subcircuito__nombre_subcircuito', 'tipo').annotate(total=Count('id'))
+UnboundLocalError: local variable 'quejas_sugerencias' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: 9 de mayo de 2023 a las 00:00</p>\n<p>Fecha final: 13 de septiembre de 2023 a las 00:00</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+font search path [WindowsPath('C:/CVPL2/env/lib/site-packages/matplotlib/mpl-data/fonts/ttf'), WindowsPath('C:/CVPL2/env/lib/site-packages/matplotlib/mpl-data/fonts/afm'), WindowsPath('C:/CVPL2/env/lib/site-packages/matplotlib/mpl-data/fonts/pdfcorefonts')]
+generated new fontManager
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\urls.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 498, in reporte_quejas_sugerencias_export
+    template = get_template('admin/reportes_quejas/reporte_quejas_sugerencias_export.html')
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: admin/reportes_quejas/reporte_quejas_sugerencias_export.html
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 504, in reporte_quejas_sugerencias_export
+    html = template.render(context)
+UnboundLocalError: local variable 'template' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: 15 de septiembre de 2023 a las 00:00</p>\n<p>Fecha final: 17 de septiembre de 2023 a las 00:00</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: 15 de septiembre de 2023 a las 00:00</p>\n<p>Fecha final: 17 de septiembre de 2023 a las 00:00</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 473, in reporte_quejas_sugerencias_export
+    inicio = timezone.make_aware(datetime.strptime(inicio, '%Y-%m-%d'))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '15 de septiembre de 2023 a las 00:00' does not match format '%Y-%m-%d'
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 473, in reporte_quejas_sugerencias_export
+    inicio = timezone.make_aware(datetime.strptime(inicio, '%Y-%m-%d'))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '15 de septiembre de 2023 a las 00:00' does not match format '%Y-%m-%d'
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\django-material-kit\home\views.py", line 479, in reporte_quejas_sugerencias_export
+    inicio = timezone.make_aware(datetime.strptime(inicio_str, '%Y-%m-%d'))
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '15 de septiembre de 2023 a las 00:00' does not match format '%Y-%m-%d'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 481, in reporte_quejas_sugerencias_export
+    inicio = parse(inicio_str)
+  File "C:\CVPL2\env\lib\site-packages\dateutil\parser\_parser.py", line 1368, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\CVPL2\env\lib\site-packages\dateutil\parser\_parser.py", line 643, in parse
+    raise ParserError("Unknown string format: %s", timestr)
+dateutil.parser._parser.ParserError: Unknown string format: 15 de septiembre de 2023 a las 00:00
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: 15 de septiembre de 2023 a las 00:00</p>\n<p>Fecha final: 17 de septiembre de 2023 a las 00:00</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+Internal Server Error: /admin/reporte_quejas_sugerencias/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'extra'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 466, in reporte_quejas_sugerencias
+    return render(request, 'admin/reportes_quejas/reporte_quejas_sugerencias.html', {'quejas_sugerencias': quejas_sugerencias, 'fecha_inicio': inicio, 'fecha_fin': fin, 'usuario': request.user})
+  File "C:\CVPL2\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "C:\CVPL2\env\lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\CVPL2\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\CVPL2\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 513, in parse
+    raise self.error(token, e)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\CVPL2\env\lib\site-packages\django\template\loader_tags.py", line 293, in do_extends
+    nodelist = parser.parse()
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "C:\CVPL2\env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 80: 'extra'. Did you forget to register or load this tag?
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 507, in reporte_quejas_sugerencias_export
+    print(f"Parsed dates: {inicio}, {fin}")  # Debugging
+UnboundLocalError: local variable 'inicio' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+Internal Server Error: /admin/reporte_quejas_sugerencias_export/
+Traceback (most recent call last):
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\CVPL2\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\CVPL2\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapper_view
+    return view_func(request, *args, **kwargs)
+  File "C:\CVPL2\django-material-kit\home\views.py", line 512, in reporte_quejas_sugerencias_export
+    if inicio and fin:
+UnboundLocalError: local variable 'inicio' referenced before assignment
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+C:\CVPL2\django-material-kit\home\views.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader

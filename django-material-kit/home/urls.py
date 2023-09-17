@@ -32,6 +32,6 @@ urlpatterns = [
     path('queja_sugerencia/', views.queja_sugerencia, name='queja_sugerencia'),
     path('get_subcircuitos/<int:circuito_id>/', views.get_subcircuitos, name='get_subcircuitos'),
     path('admin/reporte_quejas_sugerencias/', views.reporte_quejas_sugerencias, name='reporte_quejas_sugerencias'),
-    path('admin/reporte_quejas_sugerencias_pdf/', views.reporte_quejas_sugerencias_pdf, name='reporte_quejas_sugerencias_pdf'),
+    path('admin/reporte_quejas_sugerencias_export/', views.reporte_quejas_sugerencias_export, name='reporte_quejas_sugerencias_export'),
     
 ]
