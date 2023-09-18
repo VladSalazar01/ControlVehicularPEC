@@ -21,9 +21,6 @@ from django.http import HttpResponseRedirect
 
 
 
-
-
-
 def check_internet_connection():
     try:
         response = requests.get('https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVin/5UXWX7C5*BA?format=json', timeout=5)
@@ -311,13 +308,7 @@ class PersonalPolicialAdmin(admin.ModelAdmin):
             kwargs["queryset"] = FlotaVehicular.objects.all()
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
 
-'''
-class PersonalPolicialInline(admin.TabularInline):    
-    model = PersonalPolicial
-    readonly_fields = ['usuario']
-    extra = 0   
-admin.site.register(PersonalPolicial, PersonalPolicialAdmin) 
-''' 
+
 
 class FlotaVehicularAdmin(admin.ModelAdmin):
     #inlines = [PersonalPolicialInline]                 
@@ -391,7 +382,8 @@ class UsuarioInline(NestedStackedInline):
 class UserAdmin(BaseUserAdmin, NestedModelAdmin):
     inlines = [UsuarioInline]
 class TecnicoAdmin(admin.ModelAdmin):
-    list_display = ('nombres','apellidos')
+    search_fields = ['usuario__user__username', 'usuario__user__first_name', 'usuario__user__last_name']
+    list_display = ('nombres','apellidos' )
     def nombres(self, obj):
         return obj.usuario.user.first_name
     nombres.short_description = 'Nombres'

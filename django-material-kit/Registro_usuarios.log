@@ -25103,3 +25103,227 @@ Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
 Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
 https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
 Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: None</p>\n<p>Fecha final: None</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 2</td>\n            <td>2</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>VILCABAMBA</td>\n            <td>VILCABAMBA 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>TAQUIL</td>\n            <td>TAQUIL 1</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n        <tr>\n            <td>Sugerencia</td>\n            <td>ESTEBAN GODOY</td>\n            <td>ESTEBAN GODOY 1</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+books not found when generating links
+pisaDocument options:
+  src = '<!DOCTYPE html>\n<html lang="es">\n<head>\n    <meta charset="UTF-8">\n    <title>Documento PDF</title>\n    <style>\n        /* Aquí puedes añadir estilos CSS para el PDF */\n    </style>\n</head>\n<body>\n    \n\n    <title>Reporte de Quejas y Sugerencias</title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid black;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            background-color: #f2f2f2;\n        }\n    </style>\n\n<h2>Reporte de Quejas y Sugerencias</h2>\n<p>Reporte solicitado por: AdminVlad</p>\n<p>Fecha de inicio: 15 de septiembre de 2023 a las 00:00</p>\n<p>Fecha final: 17 de septiembre de 2023 a las 00:00</p>\n\n<table>\n    <tr>\n        <th>Tipo</th>\n        <th>Circuito</th>\n        <th>Subcircuito</th>\n        <th>Número de reportes</th>\n    </tr>\n    \n        <tr>\n            <td>Reclamo</td>\n            <td>VILCABAMBA</td>\n            <td>ESTEBAN GODOY 2</td>\n            <td>1</td>\n        </tr>\n    \n</table>\n\n\n</body>\n</html>\n'
+  dest = <HttpResponse status_code=200, "application/pdf">
+  path = None
+  link_callback = None
+  xhtml = False
+  context_meta = None
+None
+None
+None
+None
+None
+None
+None
+None
+Col widths: [None, None, None, None]
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
+books not found when generating links
+books not found when generating links
+C:\CVPL2\django-material-kit\home\admin.py changed, reloading.
+matplotlib data path: C:\CVPL2\env\lib\site-packages\matplotlib\mpl-data
+CONFIGDIR=C:\Users\VladM\.matplotlib
+interactive is False
+platform is win32
+CACHEDIR=C:\Users\VladM\.matplotlib
+Using fontManager instance from C:\Users\VladM\.matplotlib\fontlist-v330.json
+Starting new HTTPS connection (1): vpic.nhtsa.dot.gov:443
+https://vpic.nhtsa.dot.gov:443 "GET /api/vehicles/DecodeVin/5UXWX7C5*BA?format=json HTTP/1.1" 200 3376
+Watching for file changes with StatReloader
