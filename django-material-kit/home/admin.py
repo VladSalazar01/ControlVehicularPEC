@@ -17,6 +17,29 @@ from django.utils import timezone
 from django.core.exceptions import ValidationError
 import datetime
 from django.http import HttpResponseRedirect
+from .utils import *
+
+#funciones wrapper para exportacion de reportes# 
+#el modelo Usuario
+def export_usuario_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['user', 'identificacion', 'genero'])
+
+def export_usuario_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['user', 'identificacion', 'genero'])
+
+# modelo Tecnico
+def export_tecnico_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['usuario', 'titular'])
+
+def export_tecnico_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['usuario', 'titular'])
+
+# modelo PersonalPolicial
+def export_personal_policial_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['usuario', 'flota_vehicular', 'turno_inicio', 'turno_fin'])
+
+def export_personal_policial_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['usuario', 'flota_vehicular', 'turno_inicio', 'turno_fin'])
 
 
 
@@ -267,8 +290,8 @@ class SubcircuitoForm(forms.Form):
 class PersonalPolicialAdmin(admin.ModelAdmin):
     list_filter = ['usuario', 'flota_vehicular', 'subcircuito']
     list_display = ['usuario',  'flota_vehicular', 'turno_inicio', 'turno_fin','subcircuito',]    
-    actions = ['asignar_subcircuito']
-
+    actions = ['asignar_subcircuito', export_personal_policial_pdf, export_personal_policial_csv]
+   
     def asignar_subcircuito(self, request, queryset):
         selected = request.POST.getlist('_selected_action')
         subcircuitos = Subcircuitos.objects.all()
@@ -373,8 +396,9 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
         return obj.subcircuito.nombre_subcircuito 
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
-
+    
 class UsuarioInline(NestedStackedInline):
+    actions = [export_usuario_pdf, export_usuario_csv]
     model = Usuario
     can_delete = False
     verbose_name_plural = 'Información de usuario'
@@ -384,6 +408,8 @@ class UserAdmin(BaseUserAdmin, NestedModelAdmin):
 class TecnicoAdmin(admin.ModelAdmin):
     search_fields = ['usuario__user__username', 'usuario__user__first_name', 'usuario__user__last_name']
     list_display = ('nombres','apellidos' )
+    actions = [export_tecnico_pdf, export_tecnico_csv]
+
     def nombres(self, obj):
         return obj.usuario.user.first_name
     nombres.short_description = 'Nombres'
