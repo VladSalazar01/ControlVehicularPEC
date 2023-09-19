@@ -1,11 +1,11 @@
-from django.contrib import admin
+from django.contrib import admin, messages
 from django.contrib.auth.models import User, Group
 from django.urls import path
 from .models import *
 from .views import *
 from .forms import *
 from django.shortcuts import render, redirect
-from django.contrib import messages
+
 from django.utils.translation import gettext_lazy as _
 import logging
 from django.urls import reverse
@@ -23,25 +23,100 @@ from .utils import *
 #el modelo Usuario
 def export_usuario_pdf(modeladmin, request, queryset):
     return export_generic_pdf(modeladmin, request, queryset, ['user', 'identificacion', 'genero'])
+export_usuario_pdf.short_description = "Exportar a PDF"    
 
 def export_usuario_csv(modeladmin, request, queryset):
     return export_generic_csv(modeladmin, request, queryset, ['user', 'identificacion', 'genero'])
-
+export_usuario_csv.short_description = "Exportar a CSV"
 # modelo Tecnico
 def export_tecnico_pdf(modeladmin, request, queryset):
     return export_generic_pdf(modeladmin, request, queryset, ['usuario', 'titular'])
-
+export_tecnico_pdf.short_description = "Exportar a PDF"
 def export_tecnico_csv(modeladmin, request, queryset):
     return export_generic_csv(modeladmin, request, queryset, ['usuario', 'titular'])
-
+export_tecnico_csv.short_description = "Exportar a CSV"
 # modelo PersonalPolicial
 def export_personal_policial_pdf(modeladmin, request, queryset):
     return export_generic_pdf(modeladmin, request, queryset, ['usuario', 'flota_vehicular', 'turno_inicio', 'turno_fin'])
-
+export_personal_policial_pdf.short_description = "Exportar a PDF"
 def export_personal_policial_csv(modeladmin, request, queryset):
     return export_generic_csv(modeladmin, request, queryset, ['usuario', 'flota_vehicular', 'turno_inicio', 'turno_fin'])
+export_personal_policial_csv.short_description = "Exportar a CSV"
+# Desregistra el modelo User para poder registrarlo de nuevo
+#admin.site.unregister(User)
+# Funciones wrapper específicas para el modelo UserProxy
+def export_user_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['username', 'email', 'first_name', 'last_name'])
+export_user_pdf.short_description = "Exportar a PDF"
+def export_user_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['username', 'email', 'first_name', 'last_name'])
+export_user_csv.short_description = "Exportar a CSV"
+
+# Funciones wrapper específicas para el modelo GroupProxy
+def export_group_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['name'])
+export_group_pdf.short_description = "Exportar a PDF"
+def export_group_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['name'])
+export_group_csv.short_description = "Exportar a CSV"
+
+# Funciones wrapper específicas para el modelo OrdenMantenimiento
+def export_orden_mantenimiento_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['fecha', 'estado', 'creador', 'aprobador'])
+export_orden_mantenimiento_pdf.short_description = "Exportar a PDF"
+def export_orden_mantenimiento_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['fecha', 'estado', 'creador', 'aprobador'])
+export_orden_mantenimiento_csv.short_description = "Exportar a CSV"
+
+# Funciones wrapper específicas para el modelo PartePolicial
+def export_parte_policial_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['fecha', 'tipo_parte', 'observaciones', 'estado', 'personalPolicial'])
+export_parte_policial_pdf.short_description = "Exportar a PDF"
+def export_parte_policial_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['fecha', 'tipo_parte', 'observaciones', 'estado', 'personalPolicial'])
+export_parte_policial_csv.short_description = "Exportar a CSV"
+
+# Funciones wrapper específicas para el modelo FlotaVehicular
+def export_flota_vehicular_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito'])
+export_flota_vehicular_pdf.short_description = "Exportar a PDF"
+def export_flota_vehicular_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito'])
+export_flota_vehicular_csv.short_description = "Exportar a CSV"
+# Funciones wrapper específicas para el modelo Provincia
+def export_provincia_pdf(modeladmin, request, queryset):
+    return export_generic_pdf(modeladmin, request, queryset, ['nombre'])
+export_provincia_pdf.short_description = "Exportar a PDF"
+def export_provincia_csv(modeladmin, request, queryset):
+    return export_generic_csv(modeladmin, request, queryset, ['nombre'])
+export_provincia_csv.short_description = "Exportar a CSV"
 
 
+class GroupProxyAdmin(admin.ModelAdmin):
+    list_filter =['name']
+    list_display = ['name']
+    actions = [export_group_pdf, export_group_csv]
+admin.site.register(GroupProxy, GroupProxyAdmin)
+
+class UsuarioInline(NestedStackedInline):
+    list_display =['cedula']
+    actions = [export_usuario_pdf, export_usuario_csv]
+    model = Usuario
+    can_delete = False
+    verbose_name_plural = 'Información de usuario'
+  
+class UserAdmin(BaseUserAdmin, NestedModelAdmin):
+    inlines = [UsuarioInline]
+
+# Configuración de la administración para el modelo UserProxy
+class UserProxyAdmin(BaseUserAdmin, NestedModelAdmin):
+    inlines = [UsuarioInline]
+    actions = [export_user_pdf, export_user_csv]
+
+# Desregistra el modelo User original para poder registrarlo de nuevo con la nueva configuración
+#admin.site.unregister(User)
+# Registra el modelo UserProxy con la clase de administración personalizada
+admin.site.register(UserProxy, UserProxyAdmin)
 
 
 def check_internet_connection():
@@ -77,8 +152,12 @@ class ParroquiaInline(NestedStackedInline):
     numero_de_subcircuitos.short_description = 'Número de Subcircuitos'
 #admin.site.register(Parroquia, )
 class ProvinciaAdmin(NestedModelAdmin):
+    search_fields = ('nombre',)
+    list_filter = ('nombre',)
     list_display = ('nombre','numero_de_distritos')
     inlines = [ParroquiaInline]
+    actions = [export_provincia_pdf, export_provincia_csv]  # Añade las nuevas acciones aquí
+ 
     def numero_de_distritos(self, obj):
         return obj.distritos.count()
     numero_de_distritos.short_description = 'Número de Distritos'
@@ -100,7 +179,9 @@ class CircuitoInline(NestedStackedInline):
     class Media:
         js = ('js/admin_dependencias.js',) 
 class DistritoAdmin(NestedModelAdmin):
-    list_display = ('cod_Distrito','provincia','nombre_Distrito', 'numero_de_circuitos')
+    #search_fields = ('cod_Distrito','provincia','nombre_Distrito')
+    list_filter = ('cod_Distrito','provincia','nombre_Distrito')
+    list_display = ('cod_Distrito','provincia','nombre_Distrito')
     inlines = [CircuitoInline]
     def numero_de_circuitos(self, obj):
         return obj.circuito.count()
@@ -112,14 +193,13 @@ admin.site.register(Distrito, DistritoAdmin)
 class OrdenMantenimientoAdmin(admin.ModelAdmin):
     change_form_template = 'admin/orden_trabajo/ordenmantenimiento_change_form.html'
     change_list_template = 'admin/orden_trabajo/ordenmantenimiento_change_list.html'
-
-    #search_fields = ['fecha', 'tipos_mantenimiento__tipo', 'creador__username', 'aprobador__username', 'estado']
-
+    
     list_filter = ['fecha', 'tipos_mantenimiento', 'creador', 'aprobador']
     list_display = ('fecha','fecha_de_entrega', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link', 'descargar_pdf_link',)
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
     readonly_fields = ('creador', 'aprobador', 'fecha',)
+    actions = [export_orden_mantenimiento_pdf, export_orden_mantenimiento_csv]  
 
     
     def save_model(self, request, obj, form, change):
@@ -249,6 +329,8 @@ class PartePolicialAdmin(admin.ModelAdmin):
     list_filter = ['fecha', 'tipo_parte',  'estado', 'personalPolicial__usuario__user__username']
     list_display = ('fecha', 'tipo_parte', 'observaciones', 'estado', 'nombre_personal_policial', 'rechazar_parte')
     readonly_fields = ['personalPolicial', 'fecha']
+    actions = [export_parte_policial_pdf, export_parte_policial_csv]  # Añade las nuevas acciones aquí
+
 
     def nombre_personal_policial(self, obj):
         return obj.personalPolicial.usuario.user.username 
@@ -341,7 +423,7 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     list_filter = ['marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito__cod_subcircuito', 'subcircuito__nombre_subcircuito']        
     list_display = ('marca', 'modelo', 'chasis', 'placa', 'kilometraje', 'subcircuito_cod', 'subcircuito_nombre', 'subcircuito_display')    
     
-    actions = ['asignar_subcircuito']
+    actions = ['asignar_subcircuito', export_flota_vehicular_pdf, export_flota_vehicular_csv]  
 
     def change_view(self, request, object_id, form_url='', extra_context=None):
         extra_context = extra_context or {}
@@ -397,14 +479,6 @@ class FlotaVehicularAdmin(admin.ModelAdmin):
     subcircuito_nombre.short_description = 'Nombre Subcircuito'
 admin.site.register(FlotaVehicular, FlotaVehicularAdmin)
     
-class UsuarioInline(NestedStackedInline):
-    actions = [export_usuario_pdf, export_usuario_csv]
-    model = Usuario
-    can_delete = False
-    verbose_name_plural = 'Información de usuario'
-    #inlines = [PersonalPolicialInline]
-class UserAdmin(BaseUserAdmin, NestedModelAdmin):
-    inlines = [UsuarioInline]
 class TecnicoAdmin(admin.ModelAdmin):
     search_fields = ['usuario__user__username', 'usuario__user__first_name', 'usuario__user__last_name']
     list_display = ('nombres','apellidos' )
@@ -430,6 +504,8 @@ admin.site.register(TipoMantenimiento, TipoMantenimientoAdmin)
 
 #EVALUACIÓN buzon de quejas
 class QuejaSugerenciaAdmin(admin.ModelAdmin):   
+    search_fields = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito') 
+    list_filter = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito') 
     list_display = ('fecha_creacion','tipo', 'nombres', 'apellidos', 'circuito',  'subcircuito') 
     readonly_fields = ('fecha_creacion',)
     change_list_template = 'admin/reportes_quejas/change_list.html'

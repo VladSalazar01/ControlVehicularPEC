@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 import requests
 from django.core.validators import RegexValidator
 from django.contrib.auth.models import Permission
@@ -12,7 +12,19 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.validators import FileExtensionValidator
 
 
+
+class UserProxy(User):
+    class Meta:
+        proxy = True    
+        db_table = 'Usuarios_primario'
+        verbose_name_plural='Datos de Usuario'    
 #clase abstracta para el borrado suave
+class GroupProxy(Group):
+    class Meta:
+        proxy = True
+        db_table = 'Roles_grupos'
+        verbose_name_plural='Roles'  
+
 class SoftDeletionModel(models.Model):
     is_deleted = models.BooleanField(default=False)
     def delete(self):

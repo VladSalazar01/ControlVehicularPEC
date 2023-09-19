@@ -43,10 +43,12 @@ if RENDER_EXTERNAL_HOSTNAME:
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    'home',
     'tinymce',
 
     'nested_admin',
+    
+    "jazzmin",
 
     "django.contrib.admin",
     "django.contrib.auth",
@@ -54,9 +56,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",    
+        'theme_material_kit',
+        
+    
 
-    'theme_material_kit',
-    "home",
     #"nested_inline",
 ]
 #lenguajes
@@ -308,10 +311,10 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": [], #["TipoMantenimiento", "OrdenMantenimiento"],
+    "hide_models": ["auth.User"], #["home.TipoMantenimiento"],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
-    "order_with_respect_to": ["auth", "home.usuario", "home.personalpolicial", "Home.tecnico",
+    "order_with_respect_to": ["auth", "home.usuario", "home.UserProxy","home.personalpolicial", "Home.tecnico",
                               "Home.Provincia","Home.Parroquia","Home.Distrito","Home.Circuito","Home.Subcircuitos",
                               "Home.ordendetrabajo","Home.ordenmantenimiento","Home.ordencombustible",
                               "Home.mantenimientos","Home.flotavehicular","Home.tallermecanico",                             
