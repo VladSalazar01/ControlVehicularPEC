@@ -25,18 +25,17 @@
     /* Agregar un pseudo-elemento para la superposición */
         body::before {
             content: "";
-            position: absolute;
+
+            position: fixed; /* Cambiado de 'absolute' a 'fixed' */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.7); /* Superposición negra con 50% de opacidad */
             z-index: -1;
-        }
-    
+        }   
     
   </style>
-
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link rel="apple-touch-icon" sizes="76x76" href="{% static 'img/apple-icon.png' %}">
@@ -60,6 +59,7 @@
     /* Nueva regla CSS para el color del texto */
     body, h1, h2, h3, h4, h5, h6, p, a {
         color: #FF8C00; /* Esto establece el color del texto a Naranja Clásico */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
     }
     .btn {
       display: inline-block;
@@ -70,6 +70,7 @@
       border: none;
       background-color: #4CAF50;
       color: white;
+      text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
       cursor: pointer;
       } 
   </style>
@@ -96,7 +97,7 @@
 
   {% block footer %}
   
-    {% include 'includes/footer_background.html' %}
+    
 
   {% endblock footer %}
 

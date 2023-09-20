@@ -45,7 +45,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 INSTALLED_APPS = [
     'home',
     'tinymce',
-
+    
     'nested_admin',
     
     "jazzmin",
@@ -67,6 +67,7 @@ LANGUAGE_CODE = 'es'
 
 
 MIDDLEWARE = [
+    #'home.navs_personalizados.AddButtonsMiddleware',
     
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -311,15 +312,14 @@ JAZZMIN_SETTINGS = {
     "hide_apps": [],
 
     # Hide these models when generating side menu (e.g auth.user)
-    "hide_models": ["auth.User"], #["home.TipoMantenimiento"],
+    "hide_models": ["auth.User", "auth.Group","home.TipoMantenimiento", "Home.ordencombustible","Home.tallermecanico",
+                    "Home.mantenimientos","home.Rango_ctlg", "home.CustomPermission",], #["home.TipoMantenimiento"],
 
     # List of apps (and/or models) to base side menu ordering off of (does not need to contain all apps/models)
-    "order_with_respect_to": ["auth", "home.usuario", "home.UserProxy","home.personalpolicial", "Home.tecnico",
-                              "Home.Provincia","Home.Parroquia","Home.Distrito","Home.Circuito","Home.Subcircuitos",
-                              "Home.ordendetrabajo","Home.ordenmantenimiento","Home.ordencombustible",
-                              "Home.mantenimientos","Home.flotavehicular","Home.tallermecanico",                             
-                              "Home.partepolicial","Home.TipoMantenimiento",
-                              ],
+    "order_with_respect_to": ["auth", "home.usuario", "home.UserProxy","home.GroupProxy","home.personalpolicial",
+                               "Home.tecnico", "Home.Provincia","Home.Parroquia","Home.Distrito","Home.Circuito",
+                               "Home.Subcircuitos", "Home.ordenmantenimiento","Home.flotavehicular","Home.partepolicial",
+                              "home.QuejaSugerencia",],
 
     # Custom links to append to app groups, keyed on app name
     "custom_links": {

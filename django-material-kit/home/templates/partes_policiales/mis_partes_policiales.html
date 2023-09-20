@@ -1,5 +1,6 @@
 
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 <h1>Mis Partes Policiales</h1>
@@ -67,22 +68,30 @@
 {% endblock %}
 
 {% block extrastyle %}
-<style>
-    
-    table {
+<style>    
+    table{
         width: 100%;
         border-collapse: collapse;
     }
 
-    th, td {
+    th, td  {
         padding: 8px;
         text-align: left;
         border-bottom: 1px solid #ddd;
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
     }
-
+    h1, form {
+        padding: 8px;
+        text-align: left;
+        
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
     .estado-rechazado {
         background-color: red;
         color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
     }
 
     .estado-en proceso {
@@ -93,6 +102,7 @@
     .estado-completado {
         background-color: green;
         color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
     }
 
     .pagination {
@@ -105,7 +115,8 @@
     }
 
     .pagination .step-links a, .pagination .step-links span {
-        color: #0366d6;
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
         padding: 5px;
         text-decoration: none;
         border: 1px solid #ddd;
@@ -113,10 +124,12 @@
     }
 
     .pagination .step-links .current {
-        background-color: #0366d6;
+        background-color: #FF8C00; /* Color de fondo naranja */
         color: white;
         border: none;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
     }
+
     .btn {
         display: inline-block;
         padding: 10px 20px;
@@ -124,9 +137,11 @@
         font-size: 16px;
         text-align: center;
         border: none;
-        background-color: #4CAF50;
+        background-color: #4CAF50; /* Color de fondo verde */
         color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
         cursor: pointer;
-        }
+    }
 </style>
+
 {% endblock %}

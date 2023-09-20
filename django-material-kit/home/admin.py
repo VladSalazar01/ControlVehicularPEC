@@ -198,7 +198,7 @@ class OrdenMantenimientoAdmin(admin.ModelAdmin):
     list_display = ('fecha','fecha_de_entrega', 'get_tipo_mantenimiento', 'estado', 'creador', 'aprobador', 'ver_parte_asociado','pdf_link','finalizar_orden_link', 'descargar_pdf_link',)
     fecha = models.DateField(auto_now_add=True)
     form = OrdenMantenimientoForm
-    readonly_fields = ('creador', 'aprobador', 'fecha',)
+    readonly_fields = ('creador', 'aprobador', 'fecha','estado')
     actions = [export_orden_mantenimiento_pdf, export_orden_mantenimiento_csv]  
 
     
