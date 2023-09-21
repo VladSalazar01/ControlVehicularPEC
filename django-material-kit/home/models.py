@@ -17,12 +17,14 @@ class UserProxy(User):
     class Meta:
         proxy = True    
         db_table = 'Usuarios_primario'
+        verbose_name ='Usuario'
         verbose_name_plural='Datos de Usuario'    
 #clase abstracta para el borrado suave
 class GroupProxy(Group):
     class Meta:
         proxy = True
         db_table = 'Roles_grupos'
+        verbose_name ='Rol+'
         verbose_name_plural='Roles'  
 
 class SoftDeletionModel(models.Model):

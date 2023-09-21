@@ -96,6 +96,7 @@ class GroupProxyAdmin(admin.ModelAdmin):
     list_filter =['name']
     list_display = ['name']
     actions = [export_group_pdf, export_group_csv]
+
 admin.site.register(GroupProxy, GroupProxyAdmin)
 
 class UsuarioInline(NestedStackedInline):
