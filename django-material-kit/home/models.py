@@ -12,7 +12,6 @@ from django.contrib.postgres.fields import ArrayField
 from django.core.validators import FileExtensionValidator
 
 
-
 class UserProxy(User):
     class Meta:
         proxy = True    
@@ -353,4 +352,64 @@ class QuejaSugerencia(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
 ##fin evaluacion buzon de quejas----  
 
+#evaluacion orden de movilizavcion
 
+class Ocupante(models.Model):
+    nombre = models.CharField(max_length=100)
+    datos = models.TextField(max_length=530)
+    def __str__(self):
+        return self.nombre
+
+    class Meta:
+        verbose_name = "Ocupante"
+        verbose_name_plural = "Ocupantes"
+
+class OrdenMovilizacion(models.Model):
+    motivo = models.CharField(max_length=200)
+    fecha_salida = models.DateField()
+    hora_salida = models.TimeField()
+    ruta = models.CharField(max_length=200)
+    kilometraje_inicio = models.IntegerField()
+    ESTADOS = (
+    ('Pendiente', 'Pendiente'),
+    ('Aprobado', 'Aprobado'),
+    ('Rechazado', 'Rechazado'),)
+    estado = models.CharField(max_length=10, choices=ESTADOS, default='Pendiente')
+    aprobador = models.ForeignKey(User, null=True, blank=True, on_delete=models.SET_NULL)
+
+    personal_policial_solicitante = models.ForeignKey(PersonalPolicial, related_name='ordenes_movilizacion', on_delete=models.CASCADE)
+    conductor = models.ForeignKey(PersonalPolicial, related_name='ordenes_como_conductor', on_delete=models.CASCADE)
+    vehiculo = models.ForeignKey(FlotaVehicular, related_name='ordenes_movilizacion', on_delete=models.CASCADE)
+
+    numero_ocupantes = models.IntegerField(default=0)
+    fecha_solicitud = models.DateField(auto_now_add=True)
+
+    ocupantes = models.ManyToManyField(Ocupante)
+
+    def nombre_dependencia(self):
+        return self.personal_policial_solicitante.subcircuito.nombre_subcircuito
+
+    def nombre_completo_conductor(self):
+        usuario_conductor = self.conductor.usuario
+        user_conductor = usuario_conductor.user
+        return f"{user_conductor.first_name} {user_conductor.last_name}"
+
+    def nombre_completo_solicitante(self):
+        usuario_solicitante = self.personal_policial_solicitante.usuario
+        user_solicitante = usuario_solicitante.user
+        return f"{user_solicitante.first_name} {user_solicitante.last_name}"
+
+    def placa_vehiculo(self):
+        return self.vehiculo.placa
+
+    def marca_vehiculo(self):
+        return self.vehiculo.marca
+    def nombres_ocupantes(self):
+        ocupantes = self.ocupantes.all()
+        return ",\n".join([ocupante.nombre for ocupante in ocupantes])
+    
+    class Meta:
+        verbose_name = "Orden de movilización"
+        verbose_name_plural = "Ordenes de movilización"
+
+#fin orden de movilizacion

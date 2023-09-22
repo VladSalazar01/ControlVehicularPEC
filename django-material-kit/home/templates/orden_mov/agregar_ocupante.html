@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Agregar Ocupante {% endblock %}
+
+{% block content %}
+
+<h1>Agregar Nuevo Ocupante</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+        {% for field in form %}
+        <tr>
+            <td>{{ field.label_tag }}</td>
+            <td>{{ field }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="submit">Agregar Ocupante</button>
+    <a href="/crear_orden/" class="btn btn-danger">Cancelar</a> 
+</form>
+
+{% endblock %}

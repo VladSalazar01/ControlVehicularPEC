@@ -7,6 +7,7 @@ from .forms import *
 from .models import *
 from datetime import date, datetime
 
+
 from django.db.models import F, Value, CharField, Count
 from django.db.models.functions import Concat
 from django.contrib.admin.views.decorators import staff_member_required
@@ -558,4 +559,46 @@ def reporte_quejas_sugerencias_export(request):
     return response
 #EVALUACION
 
+#exacomplex exect
+@login_required
+def crear_orden_movilizacion(request):
+    if request.method == 'POST':
+        form = OrdenMovilizacionForm(request.POST)
+        if form.is_valid():
+            orden = form.save(commit=False)
+            personal_policial = PersonalPolicial.objects.get(usuario__user=request.user)
+            orden.personal_policial_solicitante = personal_policial
+            orden.save()
+            return redirect('numero_ocupantes', orden_id=orden.id)  
+    else:
+        form = OrdenMovilizacionForm()
+    return render(request, 'orden_mov/orden_mov_formu.html', {'form': form})
+
+@login_required
+def numero_ocupantes(request, orden_id):
+    orden = OrdenMovilizacion.objects.get(id=orden_id)
+    if request.method == 'POST':
+        form = NumeroOcupantesForm(request.POST)
+        if form.is_valid():
+            orden.numero_ocupantes = form.cleaned_data['numero_ocupantes']
+            orden.save()
+            return redirect('seleccionar_ocupantes', orden_id=orden.id)
+    else:
+        form = NumeroOcupantesForm()
+    return render(request, 'orden_mov/numero_ocupantes.html', {'form': form, 'orden': orden})
+
+@login_required
+def seleccionar_ocupantes(request, orden_id):
+    orden = OrdenMovilizacion.objects.get(id=orden_id)
+    max_ocupantes = orden.numero_ocupantes  
+    
+    if request.method == 'POST':
+        form = SeleccionarOcupantesForm(max_ocupantes, request.POST)
+        if form.is_valid():
+            orden.ocupantes.set(form.cleaned_data['ocupantes'])
+            return redirect('profile')
+    else:
+        form = SeleccionarOcupantesForm(max_ocupantes)
+        
+    return render(request, 'orden_mov/seleccionar_ocupantes.html', {'form': form, 'orden': orden})
 

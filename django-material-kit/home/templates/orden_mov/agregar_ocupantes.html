@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Agregar Ocupantes{% endblock %}
+
+{% block content %}
+<h1>Agregar Ocupantes a la Orden de Movilización #{{ orden.id }}</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Añadir Ocupante</button>
+</form>
+
+<a href="{% url 'profile' %}" class="btn btn-danger">Finalizar</a>
+
+{% endblock %}
+

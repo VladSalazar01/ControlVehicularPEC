@@ -518,3 +518,58 @@ class QuejaSugerenciaAdmin(admin.ModelAdmin):
 
 admin.site.register(QuejaSugerencia, QuejaSugerenciaAdmin)
 
+#exacompexec
+
+admin.site.register(Ocupante)
+
+
+class OrdenMovilizacionAdmin(admin.ModelAdmin):
+    list_display = (        'motivo',         'fecha_salida',         'hora_salida',         'ruta',        'kilometraje_inicio',        'nombre_conductor',
+        'vehiculo',
+        'nombre_servidor_policial_solicitante',
+        'nombres_ocupantes',
+        'fecha_solicitud','estado', 'aprobador', 'boton_aprobar'
+    )    
+    readonly_fields = ('fecha_solicitud',)
+    change_list_template = "orden_mov/admin_orden_movilizacion_changelist.html"
+    def boton_aprobar(self, obj):
+        return f'<a class="button" href="aprobar/{obj.id}/">Aprobar</a>'
+
+    boton_aprobar.allow_tags = True
+    boton_aprobar.short_description = 'Acciones'
+
+    def get_urls(self):
+        urls = super().get_urls()
+        my_urls = [
+            path('aprobar/<int:orden_id>/', self.aprobar_orden),
+            path('aprobar/', self.aprobar_ordenes),
+        ]
+        return my_urls + urls
+
+    def aprobar_orden(self, request, orden_id):
+        obj = OrdenMovilizacion.objects.get(id=orden_id)
+        obj.estado = 'Aprobado'
+        obj.aprobador = request.user
+        obj.save()
+        return HttpResponseRedirect("../../")
+
+ 
+
+    def aprobar_ordenes(self, request):
+        selected = request.POST.getlist(admin.ACTION_CHECKBOX_NAME)
+        OrdenMovilizacion.objects.filter(id__in=selected).update(estado='Aprobado', aprobador=request.user)
+        return HttpResponseRedirect("../")
+
+    def nombre_conductor(self, obj):
+        return obj.conductor.usuario.user.get_full_name()
+
+    def nombre_servidor_policial_solicitante(self, obj):
+        return obj.personal_policial_solicitante.usuario.user.get_full_name()
+
+    def nombres_ocupantes(self, obj):
+        ocupantes = obj.ocupantes.all()
+        return ",\n".join([str(ocupante.nombre) for ocupante in ocupantes])
+
+
+
+admin.site.register(OrdenMovilizacion, OrdenMovilizacionAdmin)

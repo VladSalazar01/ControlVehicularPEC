@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+
+{% block title %} Crear Orden de Movilización {% endblock %}
+
+{% block content %}
+
+<head>
+    <title>Crear Orden de Movilización</title>
+</head>
+<body>
+
+<h1>Crear Orden de Movilización</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <table>
+        <tr>
+            <td>Personal policial solicitante:</td>
+            <td>{{ request.user.get_full_name }} (Solo lectura)</td>
+        </tr>
+        {% for field in form %}
+        <tr>
+            <td>{{ field.label_tag }}</td>
+            <td>{{ field }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <button type="submit">Siguiente</button>
+    <a href="{% url 'profile' %}" class="btn btn-danger">Cancelar</a>
+</form>
+
+</body>
+
+{% endblock %}
+{% block extrastyle %}
+<style>    
+    table{
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td  {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
+    h1, form {
+        padding: 8px;
+        text-align: left;
+        
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
+    .estado-rechazado {
+        background-color: red;
+        color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
+
+    .estado-en proceso {
+        background-color: yellow;
+        color: black;
+    }
+
+    .estado-completado {
+        background-color: green;
+        color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
+
+    .pagination {
+        margin: 10px 0;
+    }
+
+    .pagination .step-links {
+        display: inline-block;
+        padding: 0;
+    }
+
+    .pagination .step-links a, .pagination .step-links span {
+        color: #FF8C00; /* Color de texto naranja */
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+        padding: 5px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+        margin-right: 5px;
+    }
+
+    .pagination .step-links .current {
+        background-color: #FF8C00; /* Color de fondo naranja */
+        color: white;
+        border: none;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+        background-color: #4CAF50; /* Color de fondo verde */
+        color: white;
+        text-shadow: 2px 2px 4px #000000; /* Sombra en negro */
+        cursor: pointer;
+    }
+</style>
+
+{% endblock %}

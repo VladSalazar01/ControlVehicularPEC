@@ -27,11 +27,15 @@ urlpatterns = [
     path('descargar_pdf_orden_finalizada/<int:orden_mantenimiento_id>/', views.descargar_pdf_orden_finalizada, name='descargar_pdf_orden_finalizada'),
 
     
-
     #evaluacion buzon de quejas
     path('queja_sugerencia/', views.queja_sugerencia, name='queja_sugerencia'),
     path('get_subcircuitos/<int:circuito_id>/', views.get_subcircuitos, name='get_subcircuitos'),
     path('admin/reporte_quejas_sugerencias/', views.reporte_quejas_sugerencias, name='reporte_quejas_sugerencias'),
     path('admin/reporte_quejas_sugerencias_export/', views.reporte_quejas_sugerencias_export, name='reporte_quejas_sugerencias_export'),
-    
+
+    #orden movilizacion
+    path('crear_orden/', views.crear_orden_movilizacion, name='crear_orden_movilizacion'),
+    path('numero_ocupantes/<int:orden_id>/', views.numero_ocupantes, name='numero_ocupantes'),
+    path('seleccionar_ocupantes/<int:orden_id>/', views.seleccionar_ocupantes, name='seleccionar_ocupantes'),
 ]
+
